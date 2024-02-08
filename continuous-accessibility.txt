@@ -1,3 +1,5 @@
-Continuous Accessibility
+Continuous Accessibility: Adding Lighthouse to Your CI/CD Pipeline
 
+You may be writing unit tests to test the health of your codebase, but are you also testing the health of your architecture? Fitness functions, popularized by the book "Building Evolutionary Architectures", are how you measure and optimize the aspects of your app that unit tests can't -- aspects like performance, SEO, and accessibility. 
 
+Scott Davis (author and digital accessibility advocate) will demostrate how adding Lighthouse to your CI/CD pipeline opens up a whole new world of detailed, actionable advice -- what is your app doing well, and what hidden deficits are working against you and robbing your users of a good experience? You'll learn about projects that are doing this across millions of websites -- the WebAIM Million, the Web Almanac -- and how you can do the same for your software project.  
