@@ -1,0 +1,11 @@
+{
+  "name": "continuous-accessibility",
+  "version": "0.1.0",
+  "description": "PRESENTATION: Continuous Accessibility",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Scott Davis <scott@thirstyhead.com> (https://thirstyhead.com/)",
+  "license": "CC-BY-4.0"
+}
