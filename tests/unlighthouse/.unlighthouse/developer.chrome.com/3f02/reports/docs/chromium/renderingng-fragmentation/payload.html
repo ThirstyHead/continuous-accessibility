@@ -1,0 +1,3546 @@
+<!doctype html>
+<html 
+      lang="en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="157101835696-ooapojlodmuabs2do2vuhhnf90bccmoi.apps.googleusercontent.com">
+    <meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award">
+    <meta property="og:site_name" content="Chrome for Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#1a73e8"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/chrome/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//apis.google.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/css/app.css">
+      
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/touchicon-180.png"><link rel="canonical" href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation"><link rel="search" type="application/opensearchdescription+xml"
+            title="Chrome for Developers" href="https://developer.chrome.com/s/opensearch.xml">
+      <link rel="alternate" hreflang="en"
+          href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation" /><link rel="alternate" hreflang="x-default" href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation" /><link rel="alternate" hreflang="ar"
+          href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation?hl=ar" /><link rel="alternate" hreflang="bn"
+          href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation?hl=bn" /><link rel="alternate" hreflang="zh-Hans"
+          href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant"
+          href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation?hl=zh-tw" /><link rel="alternate" hreflang="nl"
+          href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation?hl=nl" /><link rel="alternate" hreflang="fa"
+          href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation?hl=fa" /><link rel="alternate" hreflang="fr"
+          href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation?hl=fr" /><link rel="alternate" hreflang="de"
+          href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation?hl=de" /><link rel="alternate" hreflang="he"
+          href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation?hl=he" /><link rel="alternate" hreflang="hi"
+          href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation?hl=hi" /><link rel="alternate" hreflang="id"
+          href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation?hl=id" /><link rel="alternate" hreflang="it"
+          href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation?hl=it" /><link rel="alternate" hreflang="ja"
+          href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation?hl=ja" /><link rel="alternate" hreflang="ko"
+          href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation?hl=ko" /><link rel="alternate" hreflang="pl"
+          href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation?hl=pl" /><link rel="alternate" hreflang="pt-BR"
+          href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation?hl=pt-br" /><link rel="alternate" hreflang="ru"
+          href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation?hl=ru" /><link rel="alternate" hreflang="es-419"
+          href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation?hl=es-419" /><link rel="alternate" hreflang="th"
+          href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation?hl=th" /><link rel="alternate" hreflang="tr"
+          href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation?hl=tr" /><link rel="alternate" hreflang="vi"
+          href="https://developer.chrome.com/docs/chromium/renderingng-fragmentation?hl=vi" /><link rel="alternate" hreflang="en-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-fragmentation" /><link rel="alternate" hreflang="x-default" href="https://developer.chrome.google.cn/docs/chromium/renderingng-fragmentation" /><link rel="alternate" hreflang="ar-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-fragmentation?hl=ar" /><link rel="alternate" hreflang="bn-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-fragmentation?hl=bn" /><link rel="alternate" hreflang="zh-Hans-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-fragmentation?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-fragmentation?hl=zh-tw" /><link rel="alternate" hreflang="nl-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-fragmentation?hl=nl" /><link rel="alternate" hreflang="fa-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-fragmentation?hl=fa" /><link rel="alternate" hreflang="fr-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-fragmentation?hl=fr" /><link rel="alternate" hreflang="de-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-fragmentation?hl=de" /><link rel="alternate" hreflang="he-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-fragmentation?hl=he" /><link rel="alternate" hreflang="hi-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-fragmentation?hl=hi" /><link rel="alternate" hreflang="id-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-fragmentation?hl=id" /><link rel="alternate" hreflang="it-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-fragmentation?hl=it" /><link rel="alternate" hreflang="ja-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-fragmentation?hl=ja" /><link rel="alternate" hreflang="ko-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-fragmentation?hl=ko" /><link rel="alternate" hreflang="pl-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-fragmentation?hl=pl" /><link rel="alternate" hreflang="pt-BR-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-fragmentation?hl=pt-br" /><link rel="alternate" hreflang="ru-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-fragmentation?hl=ru" /><link rel="alternate" hreflang="es-419-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-fragmentation?hl=es-419" /><link rel="alternate" hreflang="th-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-fragmentation?hl=th" /><link rel="alternate" hreflang="tr-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-fragmentation?hl=tr" /><link rel="alternate" hreflang="vi-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-fragmentation?hl=vi" /><title>RenderingNG deep-dive: LayoutNG block fragmentation &nbsp;|&nbsp; Chromium &nbsp;|&nbsp; Chrome for Developers</title>
+
+<meta property="og:title" content="RenderingNG deep-dive: LayoutNG block fragmentation &nbsp;|&nbsp; Chromium &nbsp;|&nbsp; Chrome for Developers"><meta name="description" content="Block fragmentation in LayoutNG is now complete. Learn how it works and why it is important in this article.">
+  <meta property="og:description" content="Block fragmentation in LayoutNG is now complete. Learn how it works and why it is important in this article."><meta property="og:url" content="https://developer.chrome.com/docs/chromium/renderingng-fragmentation"><meta property="og:image" content="https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/thumbnail.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675"><meta property="og:locale" content="en"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "dateModified": "2023-01-03",
+    "headline": "RenderingNG deep-dive: LayoutNG block fragmentation"
+  }
+</script><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Docs",
+      "item": "https://developer.chrome.com/docs"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Chromium",
+      "item": "https://developer.chrome.com/docs/chromium"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "RenderingNG deep-dive: LayoutNG block fragmentation",
+      "item": "https://developer.chrome.com/docs/chromium/renderingng-fragmentation"
+    }]
+  }
+  </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+    
+      <link rel="stylesheet" href="/extras.css"></head>
+  <body class=""
+        template="page"
+        theme="chrome-theme"
+        type="article"
+        
+        
+        appearance
+        layout="docs"
+        
+        
+        
+        
+        display-toc
+        pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+    <section class="devsite-wrapper">
+      
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar>
+      <devsite-header role="banner">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner nocontent">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="chromeForDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme"
+            alt="Chrome for Developers">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup.svg" class="devsite-site-logo" alt="Chrome for Developers">
+  </picture>
+  
+</a>
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+              
+              
+  <devsite-tabs class="upper-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Upper tabs">
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/case-studies"
+      track-metadata-eventdetail="https://developer.chrome.com/case-studies"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - get inspired"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Get inspired"
+         
+           track-name="get inspired"
+         
+       >
+    Get inspired
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/blog"
+      track-metadata-eventdetail="https://developer.chrome.com/blog"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - blog"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Blog"
+         
+           track-name="blog"
+         
+       >
+    Blog
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab class="devsite-dropdown
+    devsite-dropdown-full
+    devsite-active
+    
+    ">
+  
+    <a href="https://developer.chrome.com/docs"
+      track-metadata-eventdetail="https://developer.chrome.com/docs"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - docs"
+       track-metadata-module="primary nav"
+       aria-label="Docs, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Docs"
+         
+           track-name="docs"
+         
+       >
+    Docs
+  
+    </a>
+  
+  
+    <a href="#"
+       role="button"
+       aria-haspopup="true"
+       aria-expanded="false"
+       aria-label="Dropdown menu for Docs"
+       track-type="nav"
+       track-metadata-eventdetail="https://developer.chrome.com/docs"
+       track-metadata-position="nav - docs"
+       track-metadata-module="primary nav"
+       
+        
+          data-category="Site-Wide Custom Events"
+        
+          data-label="Tab: Docs"
+        
+          track-name="docs"
+        
+      
+       class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+  
+  <div class="devsite-tabs-dropdown" aria-label="submenu" hidden>
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       build-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Build with Chrome</li>
+              
+              
+                <li class="devsite-nav-description">Learn how Chrome works, participate in origin trials, and build with Chrome everywhere.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/web-platform"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/web-platform"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Web Platform
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/capabilities"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/capabilities"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Capabilities
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/extensions"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/extensions"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Extensions
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/webstore"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/webstore"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chrome Web Store
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/chromium"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/chromium"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chromium
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/aurora"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/aurora"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Aurora
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/android"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/android"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Web on Android
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/origintrials/"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/origintrials/"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Origin trials
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/release-notes"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/release-notes"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Release notes
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       productivity-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Productivity</li>
+              
+              
+                <li class="devsite-nav-description">Create the best experience for your users with the web&#39;s best tools.</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/devtools"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/devtools"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      DevTools
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/lighthouse"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/lighthouse"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Lighthouse
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/crux"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/crux"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chrome UX Report
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/accessibility"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/accessibility"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Accessibility
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       dcc-subnav second-column-list">
+              
+              
+                <li class="devsite-nav-description">Get things done quicker and neater, with our ready-made libraries.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/workbox"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/workbox"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Workbox
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/puppeteer"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/puppeteer"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Puppeteer
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       experience-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Experience</li>
+              
+              
+                <li class="devsite-nav-description">Design a beautiful and performant web with Chrome.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/performance"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/performance"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Performance
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/css-ui"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/css-ui"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      CSS and UI
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/identity"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/identity"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Identity
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/payments"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/payments"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Payments
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/privacy-security"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/privacy-security"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Privacy and security
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       resources-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Resources</li>
+              
+              
+                <li class="devsite-nav-description">More from the Chrome team.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="resources"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      All documentation
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/baseline"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/baseline"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="resources"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Baseline
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="resources"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      web.dev
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    
+    project-name="Chromium"
+    tenant-name="Chrome for Developers"
+    
+    
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://developer.chrome.com/s/results" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Open search"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Search"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Search"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Close search"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+        
+
+        <devsite-appearance-selector></devsite-appearance-selector>
+
+        
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="nl"
+        >Nederlands</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+        
+
+        
+          
+          
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>Sign in</span>
+            
+        </devsite-user>
+           
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+      
+        
+          <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+              
+                
+                  
+                  
+                  <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs/chromium"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Lower Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Chromium"
+      
+    >
+    
+        Chromium
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+                
+              
+              
+            </div>
+            
+          </div>
+          
+        
+      
+      
+        <div class="devsite-doc-set-nav-row">
+          
+          
+            
+            
+  <devsite-tabs class="lower-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Lower tabs">
+      
+        
+          <tab  class="devsite-active">
+            
+    <a href="https://developer.chrome.com/docs/chromium"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/chromium"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - chromium"
+       track-metadata-module="primary nav"
+       aria-label="Chromium, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Chromium"
+         
+           track-name="chromium"
+         
+       >
+    Chromium
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/docs/chromium/chronicle"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/chromium/chronicle"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - chromium chronicle"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Chromium Chronicle"
+         
+           track-name="chromium chronicle"
+         
+       >
+    Chromium Chronicle
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/docs/chromedriver"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/chromedriver"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - chromedriver"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: ChromeDriver"
+         
+           track-name="chromedriver"
+         
+       >
+    ChromeDriver
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+          
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+
+  
+</devsite-header>
+      <devsite-book-nav scrollbars >
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     hidden>
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="Filter"
+         
+         aria-label="Type to filter"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="Clear filter"
+        aria-label="Clear filter"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent"
+     aria-label="Side menu">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="chromeForDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme"
+            alt="Chrome for Developers">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup.svg" class="devsite-site-logo" alt="Chrome for Developers">
+  </picture>
+  
+</a>
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/case-studies"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Get inspired"
+      
+        track-name="get inspired"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Get inspired"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Get inspired
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/blog"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Blog"
+      
+        track-name="blog"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Blog"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Blog
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Docs"
+      
+        track-name="docs"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Docs"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Docs
+   </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Docs"
+      
+        track-name="docs"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Docs">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Docs">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+                <ul class="devsite-nav-responsive-tabs">
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/chromium"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Chromium"
+      
+        track-name="chromium"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chromium"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip menu="_book">
+      Chromium
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/chromium/chronicle"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Chromium Chronicle"
+      
+        track-name="chromium chronicle"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chromium Chronicle"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chromium Chronicle
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/chromedriver"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: ChromeDriver"
+      
+        track-name="chromedriver"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ChromeDriver"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ChromeDriver
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Get started</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/cvd"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/cvd"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/cvd"
+      ><span class="devsite-nav-text" tooltip>Simulate color vision deficiencies in the Blink Renderer</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/new-headless"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/new-headless"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/new-headless"
+      ><span class="devsite-nav-text" tooltip>Chrome&#39;s Headless mode</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>RenderingNG</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/renderingng"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/renderingng"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/renderingng"
+      ><span class="devsite-nav-text" tooltip>Overview of RenderingNG</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/renderingng-architecture"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/renderingng-architecture"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/renderingng-architecture"
+      ><span class="devsite-nav-text" tooltip>RenderingNG architecture</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/renderingng-data-structures"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/renderingng-data-structures"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/renderingng-data-structures"
+      ><span class="devsite-nav-text" tooltip>Key data structures</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/blinkng"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/blinkng"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/blinkng"
+      ><span class="devsite-nav-text" tooltip>BlinkNG</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/videong"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/videong"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/videong"
+      ><span class="devsite-nav-text" tooltip>VideoNG</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/layoutng"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/layoutng"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/layoutng"
+      ><span class="devsite-nav-text" tooltip>LayoutNG</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/renderingng-fragmentation"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/renderingng-fragmentation"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/renderingng-fragmentation"
+      ><span class="devsite-nav-text" tooltip>LayoutNG block fragmentation</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Resources</span>
+      </div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/README.md"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/README.md"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/README.md"
+      ><span class="devsite-nav-text" tooltip>Read Chromium&#39;s docs</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="https://www.chromium.org/chromium-projects/"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: https://www.chromium.org/chromium-projects/"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="https://www.chromium.org/chromium-projects/"
+      ><span class="devsite-nav-text" tooltip>Chromium projects</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li>
+          </ul>
+        
+        
+          
+    
+  
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="Docs"
+          aria-label="Side menu" hidden>
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Build with Chrome
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/web-platform"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Web Platform"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Web Platform
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/capabilities"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Capabilities"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Capabilities
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/extensions"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Extensions"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Extensions
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/webstore"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chrome Web Store"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chrome Web Store
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/chromium"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chromium"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chromium
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/aurora"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Aurora"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Aurora
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/android"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Web on Android"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Web on Android
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developer.chrome.com/origintrials/"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Origin trials"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Origin trials
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/release-notes"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Release notes"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Release notes
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Productivity
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/devtools"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: DevTools"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      DevTools
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/lighthouse"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Lighthouse"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Lighthouse
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/crux"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chrome UX Report"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chrome UX Report
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/accessibility"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Accessibility"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Accessibility
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/workbox"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Workbox"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Workbox
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/puppeteer"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Puppeteer"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Puppeteer
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Experience
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/performance"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Performance"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Performance
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/css-ui"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: CSS and UI"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      CSS and UI
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/identity"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Identity"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Identity
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/payments"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Payments"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Payments
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/privacy-security"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Privacy and security"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Privacy and security
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Resources
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: All documentation"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      All documentation
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://web.dev/baseline"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Baseline"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Baseline
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://web.dev"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: web.dev"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      web.dev
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+        
+        
+          
+    
+  
+    
+  
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+        
+      </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+            
+              has-book-nav
+              has-sidebar
+            >
+          
+          
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="On this page"
+                            depth="2"
+                            scrollbars
+                  ></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav">
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article">
+  
+  
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation">
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        Home
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail="Docs"
+      
+    >
+    
+        Docs
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs/chromium"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail="Chromium"
+      
+    >
+    
+        Chromium
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+  
+    
+  </div>
+  
+      <h1 class="devsite-page-title" tabindex="-1">RenderingNG deep-dive: LayoutNG block fragmentation</h1>
+  <devsite-feature-tooltip
+          ack-key="AckCollectionsBookmarkTooltipDismiss"
+          analytics-category="Site-Wide Custom Events"
+          analytics-action-show="Callout Profile displayed"
+          analytics-action-close="Callout Profile dismissed"
+          analytics-label="Create Collection Callout"
+          class="devsite-page-bookmark-tooltip nocontent"
+          dismiss-button="true"
+          id="devsite-collections-dropdown"
+
+          
+          dismiss-button-text="Dismiss"
+
+          
+          close-button-text="Got it">
+
+        
+        <devsite-bookmark></devsite-bookmark>
+
+        <span slot="popout-heading">
+          
+          Stay organized with collections
+        </span>
+        <span slot="popout-contents">
+          
+          Save and categorize content based on your preferences.
+        </span>
+      </devsite-feature-tooltip>
+  <div class="devsite-page-title-meta"><devsite-view-release-notes></devsite-view-release-notes></div>
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    >
+  </devsite-toc>
+  
+    
+  
+
+  
+
+
+
+
+
+
+<div class="devsite-article-body clearfix
+  ">
+
+  
+    
+
+
+
+
+<p>Block fragmentation in LayoutNG is now complete. Learn how it works and why it is important in this article.</p>
+
+<p><style>
+.wd-authors {
+  --avatar-size: 65px;
+  display: flex;
+  gap: 2em;
+}
+
+.wd-author {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  line-height: calc(var(--avatar-size) / 2);
+}
+
+.wd-author img {
+  border-radius: 50%;
+  height: var(--avatar-size, 65px);
+  width: var(--avatar-size, 65px);
+}
+
+.dcc-authors {
+  --avatar-size: 65px;
+  display: flex;
+  gap: 2em;
+}
+
+.dcc-author {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  line-height: calc(var(--avatar-size) / 2);
+}
+
+.dcc-author img {
+  border-radius: 50%;
+  height: var(--avatar-size, 65px);
+  width: var(--avatar-size, 65px);
+}
+
+.dcc-author__links a {
+  margin-inline-end: 6px;
+}
+
+.dcc-author__links a:last-of-type {
+  margin-inline-end: 0;
+}
+</style>
+
+<div class="dcc-authors" translate="no">
+  
+    
+    
+      <div class="dcc-author">
+        
+          <img class="devsite-landing-row-item-icon" alt="Morten Stenshorne" 
+            src="https://web.dev/images/authors/mstensho.jpg" 
+            decoding="async" height="64" loading="lazy" width="64"> 
+        
+        <div>
+          <span> 
+            Morten Stenshorne
+          </span>
+          <div class="dcc-author__links">
+            
+            
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+    
+  
+</div>
+<aside class="note"><b>Note:</b> This post is a part of a series on the Chromium rendering engine. Check out the rest of the series to learn more.</aside></p>
+
+<p>I&#39;m Morten Stenshorne, a layout engineer on the Blink rendering team at Google. I&#39;ve been involved in browser engine development since the early 2000s, and I&#39;ve had a lot of fun, such as helping make the <a href="https://en.wikipedia.org/wiki/Acid2#Timeline_of_passing_applications">acid2 test</a> pass in the Presto engine (Opera 12 and earlier), and reverse-engineering other browsers to fix table layout in Presto. I&#39;ve also spent more of those years than I&#39;d like to admit on block fragmentation, and, in particular, <a href="https://www.w3.org/TR/css-multicol-1/">multicol</a> in Presto, WebKit, and Blink. During the past few years at Google I have mainly been focusing on leading the work of adding block fragmentation support to <a href="/articles/layoutng">LayoutNG</a>. Join me in this deep-dive into the block fragmentation implementation, as it may very well be the last time that I implement block fragmentation. :)</p>
+
+<h2 id="what_is_block_fragmentation" data-text="What is block fragmentation?" tabindex="-1">What is block fragmentation?</h2>
+
+<p><a href="https://www.w3.org/TR/css-break-3/">Block fragmentation</a> is about splitting a CSS block-level box (such as a section or paragraph) into multiple fragments when it doesn&#39;t fit as a whole inside one fragment container called a <a href="https://www.w3.org/TR/css-break-3/#fragmentainer"><em>fragmentainer</em></a>. A fragmentainer is not an element, but represents a column in multi-column layout, or a page in paged media. For fragmentation to happen, the content needs to be inside a <em>fragmentation context</em>. A fragmentation context is most commonly established by a multi-column container (content will be split into columns), or when printing (content will be split into pages). A long paragraph with many lines may need to be split into multiple fragments, so that the first lines are placed in the first fragment, and the remaining lines are placed in subsequent fragments. </p>
+
+<figure>
+<img src="/static/docs/chromium/renderingng-fragmentation/image/a-paragraph-text-broken-9d19ed438bdc3.png" alt="A paragraph of text broken into two columns." width="800" height="576" srcset="https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/a-paragraph-text-broken-9d19ed438bdc3_36.png 36w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/a-paragraph-text-broken-9d19ed438bdc3_48.png 48w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/a-paragraph-text-broken-9d19ed438bdc3_72.png 72w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/a-paragraph-text-broken-9d19ed438bdc3_96.png 96w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/a-paragraph-text-broken-9d19ed438bdc3_480.png 480w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/a-paragraph-text-broken-9d19ed438bdc3_720.png 720w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/a-paragraph-text-broken-9d19ed438bdc3_856.png 856w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/a-paragraph-text-broken-9d19ed438bdc3_960.png 960w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/a-paragraph-text-broken-9d19ed438bdc3_1440.png 1440w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/a-paragraph-text-broken-9d19ed438bdc3_1920.png 1920w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/a-paragraph-text-broken-9d19ed438bdc3_2880.png 2880w" sizes="(max-width: 840px) 100vw, 856px">
+
+<figcaption class="dcc-caption">In this example a paragraph has been split into two columns using multi-column layout. Each column is a fragmentainer, representing a fragment of the fragmented flow.</figcaption>
+</figure>
+
+<p>Block fragmentation is analogous to another well-known type of fragmentation: line fragmentation (otherwise known as &quot;line breaking&quot;). Any inline element that consists of more than one word (any text node, any <code translate="no" dir="ltr">&lt;a&gt;</code> element, and so on), and allows line breaks, may be split into multiple fragments. Each fragment is placed into a different line box. A line box is the inline fragmentation equivalent to a <em>fragmentainer</em> for columns and pages.</p>
+
+<h2 id="what_is_layoutng_block_fragmentation" data-text="What is LayoutNG block fragmentation?" tabindex="-1">What is LayoutNG block fragmentation?</h2>
+
+<p>LayoutNGBlockFragmentation is a rewrite of the fragmentation engine for LayoutNG, and after many years of work, the first parts finally shipped in Chrome 102 earlier this year. This fixed long-standing issues that were essentially unfixable in our &quot;legacy&quot; engine. In terms of data structures, it replaces multiple pre-NG data structures with <em>NG fragments</em> represented directly in the <a href="/articles/renderingng-data-structures#the-immutable-fragment-tree">fragment tree</a>.</p>
+
+<p>For instance, we now support the <a href="https://www.w3.org/TR/css-break-3/#break-between">&#39;avoid&#39; value for the &#39;break-before&#39; and &#39;break-after&#39; CSS properties</a>, which allow authors to avoid breaks right after a header. It generally doesn&#39;t look good if the last thing that is placed on a page is a header, while the section&#39;s content starts on the next page. Instead, it&#39;s better to break <strong>before</strong> the header. See the figure below for an example.</p>
+
+<p><img src="/static/docs/chromium/renderingng-fragmentation/image/the-example-shows-headi-f569d50783019.png" alt="The first example shows a heading at the bottom of the page, the second shows it at the top of the following page with its associated content." width="800" height="589" srcset="https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/the-example-shows-headi-f569d50783019_36.png 36w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/the-example-shows-headi-f569d50783019_48.png 48w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/the-example-shows-headi-f569d50783019_72.png 72w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/the-example-shows-headi-f569d50783019_96.png 96w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/the-example-shows-headi-f569d50783019_480.png 480w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/the-example-shows-headi-f569d50783019_720.png 720w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/the-example-shows-headi-f569d50783019_856.png 856w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/the-example-shows-headi-f569d50783019_960.png 960w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/the-example-shows-headi-f569d50783019_1440.png 1440w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/the-example-shows-headi-f569d50783019_1920.png 1920w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/the-example-shows-headi-f569d50783019_2880.png 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<p>Chrome 102 also supports fragmentation overflow, so that monolithic (supposed to be unbreakable) content isn&#39;t sliced into multiple columns, and paint effects like shadows and transforms are applied correctly.</p>
+
+<h2 id="block_fragmentation_in_layoutng_is_now_complete" data-text="Block fragmentation in LayoutNG is now complete" tabindex="-1">Block fragmentation in LayoutNG is now complete</h2>
+
+<p>At the time of writing this, we have completed full block fragmentation support in LayoutNG. Core fragmentation (block containers, including line layout, floats, and out-of-flow positioning) shipped in Chrome 102. Flex and grid fragmentation shipped in Chrome 103, and table fragmentation shipped in Chrome 106. Lastly, <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1121942">printing</a> shipped in Chrome 108. Block fragmentation was the last feature that depended on the legacy engine for performing layout. This means that, as of Chrome 108, the legacy engine will no longer be used to perform layout.</p>
+
+<p>In addition to actually laying out the content, LayoutNG data structures support painting and hit-testing, but we still rely on some legacy data structures for JavaScript APIs that read layout information, such as <code translate="no" dir="ltr">offsetLeft</code> and <code translate="no" dir="ltr">offsetTop</code>.</p>
+
+<p>Laying out everything with NG will make it possible to implement and ship new features that only have LayoutNG implementations (and no legacy engine counterpart), such as <a href="https://www.w3.org/TR/css-contain-3/#container-rule">CSS container queries</a>, anchor positioning, <a href="https://www.w3.org/Math/">MathML</a>, and <a href="https://www.w3.org/TR/css-layout-api-1/">custom layout (Houdini)</a>. For container queries, we shipped it a bit in advance, with a warning to developers that printing wasn&#39;t yet supported.</p>
+
+<p>We shipped the first part of LayoutNG in 2019, which consisted of regular block container layout, inline layout, floats and out-of-flow positioning, but no support for flex, grid, or tables, and no block fragmentation support at all. We would fall back to using the legacy layout engine for flex, grid, tables, plus anything that involved block fragmentation. That was true even for block, inline, floating and out-of-flow elements within fragmented content—as you can see, upgrading such a complex layout engine in-place is a very delicate dance.</p>
+
+<p>In addition, believe it or not, by mid-2019 the majority of the core functionality of LayoutNG block fragmentation layout was already implemented (behind a flag). So, why did it take so long for it to ship? The short answer is: fragmentation has to coexist correctly with various legacy parts of the system, which cannot be removed or upgraded until all dependencies are upgraded. For the long answer, see the following details.</p>
+
+<h3 id="legacy_engine_interaction" data-text="Legacy engine interaction" tabindex="-1">Legacy engine interaction</h3>
+
+<p>Legacy data structures are still in charge of JavaScript APIs that read layout information, so we need to write back data to the legacy engine in a manner that it understands. This includes updating the legacy multi-column data structures, like <a href="https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/layout/layout_multi_column_flow_thread.h;l=144;drc=237a52e7e2b6d22eb1b5912e134384254d5b8974">LayoutMultiColumnFlowThread</a>, correctly. </p>
+
+<h3 id="legacy_engine_fallback_detection_and_handling" data-text="Legacy engine fallback detection and handling" tabindex="-1">Legacy engine fallback detection and handling</h3>
+
+<p>We had to fall back to the legacy layout engine when there was content inside that couldn&#39;t yet be handled by LayoutNG block fragmentation. At the time of shipping core LayoutNG block fragmentation (spring 2022), that included flex, grid, tables, and anything that&#39;s printed. This was particularly tricky because we needed to detect the need for legacy fallback before creating <a href="/articles/layoutng#a-30000-foot-view-of-layout-engine-architectures">objects in the layout tree</a>. For example, we needed to detect before we knew if there was a multi-column container ancestor, and before we knew which DOM nodes would become a <a href="https://developer.mozilla.org/docs/Web/Guide/CSS/Block_formatting_context">formatting context</a> or not. It&#39;s a chicken-and-egg problem that doesn&#39;t have a perfect solution, but as long as its only misbehavior is false positives (fallback to legacy when there&#39;s actually no need), it&#39;s ok, because any bugs in that layout behavior are ones Chromium already has, not new ones.</p>
+
+<h3 id="pre-paint_tree_walk" data-text="Pre-paint tree walk" tabindex="-1">Pre-paint tree walk</h3>
+
+<p>Pre-paint is something we <a href="/articles/renderingng-architecture#rendering-pipeline-structure">do after layout</a>, but before painting. The main challenge is that we still need to walk the <a href="/articles/layoutng#a-30000-foot-view-of-layout-engine-architectures">layout object tree</a>, but we have NG fragments now—so how do we deal with that? We walk both the layout object and NG fragment trees at the same time! This is quite complicated, because mapping between the two trees isn&#39;t trivial. While the layout object tree structure closely resembles that of the DOM tree, the fragment tree is an <strong>output</strong> of layout, not an input to it. Apart from actually reflecting the effect of any fragmentation including inline fragmentation (line fragments) and block fragmentation (column or page fragments), the fragment tree also has a direct parent-child relationship between a <a href="https://developer.mozilla.org/docs/Web/CSS/Containing_block">containing block</a> and the DOM descendants that have that fragment as their containing block. For example, in the fragment tree, a fragment generated by an absolutely positioned element is a direct child of its containing block fragment, even if there are other nodes in the ancestry chain between the out-of-flow positioned descendant and its containing block.  </p>
+
+<p>It gets even more complicated when there&#39;s an out-of-flow positioned element inside fragmentation, because then the out-of-flow fragments become direct children of the <a href="https://developer.mozilla.org/docs/Glossary/Fragmentainer">fragmentainer</a> (and not a child of what CSS thinks is the containing block). This was unfortunately a problem that had to be solved in order to co-exist with the legacy engine without too much trouble. In the future, we should be able to simplify a lot of this code, because LayoutNG is designed to flexibly support all modern layout modes.</p>
+
+<h2 id="the_problems_with_the_legacy_fragmentation_engine" data-text="The problems with the legacy fragmentation engine" tabindex="-1">The problems with the legacy fragmentation engine</h2>
+
+<p>The legacy engine, designed in an earlier era of the web, doesn&#39;t really have a concept of fragmentation, even if fragmentation technically existed back then as well (in order to support printing). Fragmentation support was just something that got bolted on top (printing) or retrofitted (multi-column).</p>
+
+<p>When laying out fragmentable content, the legacy engine lays out everything into a tall strip whose width is the inline-size of a column or page, and height is as tall as it needs to be to contain its content. This tall strip is not rendered to the page—think of it as rendering to a virtual page that is then rearranged for final display. It&#39;s conceptually similar to printing an entire paper newspaper article into one column, and then using scissors to cut it into multiple as a second step. (Back in the day, some newspapers actually used techniques similar to this!)</p>
+
+<p>The legacy engine keeps track of an imaginary page or column boundary in the strip. That lets it nudge content that doesn&#39;t fit past the boundary into the next page or column. For example, if only the upper half of a line would fit on what the engine thinks is the current page, it will insert a &quot;pagination strut&quot; to push it down to the position where the engine assumes that the top of the next page is. Then, most of the actual fragmentation work (the &quot;cutting with scissors and placement&quot;) takes place after layout during pre-paint and painting, by slicing the tall strip of content into pages or columns (by clipping and translating portions). This made a few things essentially impossible, such as applying transforms and relative positioning <strong>after</strong> fragmentation (which is what the spec requires). Furthermore, while there&#39;s some support for table fragmentation in the legacy engine, there&#39;s no flex or grid fragmentation support at all.</p>
+
+<p>Here&#39;s an illustration of how a three-column layout is represented internally in the legacy engine, before using scissors, placement and glue (we have a specified height, so that only four lines fit, but there&#39;s some excess space at the bottom):</p>
+
+<p><img src="/static/docs/chromium/renderingng-fragmentation/image/the-internal-representati-5a7302c1d6de2.png" alt="The internal representation as one column with pagination struts where the content breaks, and the on screen representation as three columns." width="664" height="411" srcset="https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/the-internal-representati-5a7302c1d6de2_36.png 36w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/the-internal-representati-5a7302c1d6de2_48.png 48w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/the-internal-representati-5a7302c1d6de2_72.png 72w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/the-internal-representati-5a7302c1d6de2_96.png 96w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/the-internal-representati-5a7302c1d6de2_480.png 480w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/the-internal-representati-5a7302c1d6de2_720.png 720w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/the-internal-representati-5a7302c1d6de2_856.png 856w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/the-internal-representati-5a7302c1d6de2_960.png 960w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/the-internal-representati-5a7302c1d6de2_1440.png 1440w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/the-internal-representati-5a7302c1d6de2_1920.png 1920w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/the-internal-representati-5a7302c1d6de2_2880.png 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<p>Because the legacy layout engine doesn&#39;t actually fragment content during layout, there are many strange artifacts, such as relative positioning and transforms applying incorrectly, and box-shadows being clipped at column edges.</p>
+
+<p>Here is a simple example with text-shadow:</p>
+
+<div class="codepen-embed-wrap" style="height: 300px; width: 100%">
+<iframe
+  allow="camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;"
+  loading="lazy"
+  src="https://codepen.io/web-dot-dev/embed/vYrPdWW?height=300&theme-id=dark&default-tab=css%2Chtml&editable=true"
+  style="height: 100%; width: 100%; border: 0;"
+  title="Pen vYrPdWW by web-dot-dev on Codepen"
+  >See the Pen <a href="https://codepen.io/web-dot-dev/embed/vYrPdWW">Pen vYrPdWW by web-dot-dev on Codepen</a></iframe
+></div>
+
+<p>The legacy engine doesn&#39;t handle this well:</p>
+
+<p><img src="/static/docs/chromium/renderingng-fragmentation/image/clipped-text-shadows-plac-f3b1624435c9a.png" alt="Clipped text shadows placed into the second column." width="571" height="41" srcset="https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/clipped-text-shadows-plac-f3b1624435c9a_36.png 36w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/clipped-text-shadows-plac-f3b1624435c9a_48.png 48w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/clipped-text-shadows-plac-f3b1624435c9a_72.png 72w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/clipped-text-shadows-plac-f3b1624435c9a_96.png 96w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/clipped-text-shadows-plac-f3b1624435c9a_480.png 480w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/clipped-text-shadows-plac-f3b1624435c9a_720.png 720w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/clipped-text-shadows-plac-f3b1624435c9a_856.png 856w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/clipped-text-shadows-plac-f3b1624435c9a_960.png 960w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/clipped-text-shadows-plac-f3b1624435c9a_1440.png 1440w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/clipped-text-shadows-plac-f3b1624435c9a_1920.png 1920w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/clipped-text-shadows-plac-f3b1624435c9a_2880.png 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<p>Do you see how the text-shadow from the line in the first column is clipped, and instead placed at the top of the second column? That&#39;s because the legacy layout engine doesn&#39;t understand fragmentation!</p>
+
+<p>It should look like this (and this is how it shows with NG):</p>
+
+<p><img src="/static/docs/chromium/renderingng-fragmentation/image/two-columns-text-the-sh-6c9350d5b35e1.png" alt="Two columns of text with the shadows correctly displaying." width="563" height="41" srcset="https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/two-columns-text-the-sh-6c9350d5b35e1_36.png 36w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/two-columns-text-the-sh-6c9350d5b35e1_48.png 48w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/two-columns-text-the-sh-6c9350d5b35e1_72.png 72w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/two-columns-text-the-sh-6c9350d5b35e1_96.png 96w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/two-columns-text-the-sh-6c9350d5b35e1_480.png 480w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/two-columns-text-the-sh-6c9350d5b35e1_720.png 720w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/two-columns-text-the-sh-6c9350d5b35e1_856.png 856w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/two-columns-text-the-sh-6c9350d5b35e1_960.png 960w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/two-columns-text-the-sh-6c9350d5b35e1_1440.png 1440w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/two-columns-text-the-sh-6c9350d5b35e1_1920.png 1920w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/two-columns-text-the-sh-6c9350d5b35e1_2880.png 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<p>Next, let&#39;s make it a bit more complicated, with transforms and box-shadow. Notice how in the legacy engine, there&#39;s incorrect clipping and column bleed. That&#39;s because transforms are by spec supposed to be applied as a post-layout, post-fragmentation effect. With LayoutNG fragmentation both work correctly. This increases interop with Firefox, which has had good fragmentation support for some time with most tests in this area also passing there.</p>
+
+<div class="codepen-embed-wrap" style="height: 400px; width: 100%">
+<iframe
+  allow="camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;"
+  loading="lazy"
+  src="https://codepen.io/web-dot-dev/embed/gOKEveK?height=400&theme-id=dark&default-tab=css%2Chtml&editable=true"
+  style="height: 100%; width: 100%; border: 0;"
+  title="Pen gOKEveK by web-dot-dev on Codepen"
+  >See the Pen <a href="https://codepen.io/web-dot-dev/embed/gOKEveK">Pen gOKEveK by web-dot-dev on Codepen</a></iframe
+></div>
+
+<p><img src="/static/docs/chromium/renderingng-fragmentation/image/boxes-are-incorrectly-bro-773e602adbb1c.jpg" alt="Boxes are incorrectly broken across two columns." width="800" height="602" srcset="https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/boxes-are-incorrectly-bro-773e602adbb1c_36.jpg 36w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/boxes-are-incorrectly-bro-773e602adbb1c_48.jpg 48w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/boxes-are-incorrectly-bro-773e602adbb1c_72.jpg 72w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/boxes-are-incorrectly-bro-773e602adbb1c_96.jpg 96w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/boxes-are-incorrectly-bro-773e602adbb1c_480.jpg 480w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/boxes-are-incorrectly-bro-773e602adbb1c_720.jpg 720w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/boxes-are-incorrectly-bro-773e602adbb1c_856.jpg 856w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/boxes-are-incorrectly-bro-773e602adbb1c_960.jpg 960w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/boxes-are-incorrectly-bro-773e602adbb1c_1440.jpg 1440w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/boxes-are-incorrectly-bro-773e602adbb1c_1920.jpg 1920w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/boxes-are-incorrectly-bro-773e602adbb1c_2880.jpg 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<p>The legacy engine also has problems with tall monolithic content. Content is <a href="https://www.w3.org/TR/css-break-3/#monolithic"><em>monolithic</em></a> if it is not eligible for breaking into multiple fragments. Elements with overflow scrolling are monolithic, because it doesn&#39;t make sense to users to scroll in a non-rectangular region. Line boxes and images are other examples of monolithic content. Here&#39;s an example:</p>
+
+<div class="codepen-embed-wrap" style="height: 300px; width: 100%">
+<iframe
+  allow="camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;"
+  loading="lazy"
+  src="https://codepen.io/web-dot-dev/embed/oNyVEdw?height=300&theme-id=dark&default-tab=css%2Chtml&editable=true"
+  style="height: 100%; width: 100%; border: 0;"
+  title="Pen oNyVEdw by web-dot-dev on Codepen"
+  >See the Pen <a href="https://codepen.io/web-dot-dev/embed/oNyVEdw">Pen oNyVEdw by web-dot-dev on Codepen</a></iframe
+></div>
+
+<p>If the piece of monolithic content is too tall to fit inside a column, the legacy engine will brutally slice it (leading to very &quot;interesting&quot; behavior when attempting to scroll the scrollable container):</p>
+
+<video autoplay controls muted > <source src="/static/docs/chromium/renderingng-fragmentation/video/kheDArv5csY6rvQUJDbWRscckLr1/3GKrMI61GIsEMgaNi6vp.mp4" type="video/mp4" /> </video>
+
+<p>Rather than letting it overflow the first column (as it does with LayoutNG block fragmentation):</p>
+
+<p><img src="/static/docs/chromium/renderingng-fragmentation/image/alttexthere-335c99ecc7aa.png" alt="ALT_TEXT_HERE" width="571" height="212" srcset="https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/alttexthere-335c99ecc7aa_36.png 36w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/alttexthere-335c99ecc7aa_48.png 48w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/alttexthere-335c99ecc7aa_72.png 72w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/alttexthere-335c99ecc7aa_96.png 96w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/alttexthere-335c99ecc7aa_480.png 480w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/alttexthere-335c99ecc7aa_720.png 720w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/alttexthere-335c99ecc7aa_856.png 856w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/alttexthere-335c99ecc7aa_960.png 960w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/alttexthere-335c99ecc7aa_1440.png 1440w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/alttexthere-335c99ecc7aa_1920.png 1920w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/alttexthere-335c99ecc7aa_2880.png 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<p>The legacy engine supports forced breaks. For example, <code translate="no" dir="ltr">&lt;div style=&quot;break-before:page;&quot;&gt;</code> will insert a page break before the DIV. However, it only has limited support for finding optimal <em>unforced</em> breaks. It does support <a href="https://www.w3.org/TR/css-break-3/#break-within"><code translate="no" dir="ltr">break-inside:avoid</code></a> and <a href="https://www.w3.org/TR/css-break-3/#widows-orphans">orphans and widows</a>, but there&#39;s no support for avoiding breaks between blocks, if requested via <a href="https://www.w3.org/TR/css-break-3/#break-between"><code translate="no" dir="ltr">break-before:avoid</code></a>, for example. Consider this example:</p>
+
+<div class="codepen-embed-wrap" style="height: 400px; width: 100%">
+<iframe
+  allow="camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;"
+  loading="lazy"
+  src="https://codepen.io/web-dot-dev/embed/WNymMym?height=400&theme-id=dark&default-tab=css%2Chtml&editable=true"
+  style="height: 100%; width: 100%; border: 0;"
+  title="Pen WNymMym by web-dot-dev on Codepen"
+  >See the Pen <a href="https://codepen.io/web-dot-dev/embed/WNymMym">Pen WNymMym by web-dot-dev on Codepen</a></iframe
+></div>
+
+<p><img src="/static/docs/chromium/renderingng-fragmentation/image/text-broken-two-columns-ac1efcfd5a48a.png" alt="Text broken into two columns." width="559" height="113" srcset="https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/text-broken-two-columns-ac1efcfd5a48a_36.png 36w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/text-broken-two-columns-ac1efcfd5a48a_48.png 48w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/text-broken-two-columns-ac1efcfd5a48a_72.png 72w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/text-broken-two-columns-ac1efcfd5a48a_96.png 96w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/text-broken-two-columns-ac1efcfd5a48a_480.png 480w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/text-broken-two-columns-ac1efcfd5a48a_720.png 720w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/text-broken-two-columns-ac1efcfd5a48a_856.png 856w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/text-broken-two-columns-ac1efcfd5a48a_960.png 960w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/text-broken-two-columns-ac1efcfd5a48a_1440.png 1440w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/text-broken-two-columns-ac1efcfd5a48a_1920.png 1920w,https://developer.chrome.com/static/docs/chromium/renderingng-fragmentation/image/text-broken-two-columns-ac1efcfd5a48a_2880.png 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<p>Here, the <code translate="no" dir="ltr">#multicol</code> element  has room for 5 lines in each column (because it&#39;s 100px tall, and the line-height is 20px), so all of <code translate="no" dir="ltr">#firstchild</code> could fit in the first column. However, its sibling <code translate="no" dir="ltr">#secondchild</code> has break-before:avoid, meaning the content wishes a break not to occur between them. Since the value of <code translate="no" dir="ltr">widows</code> is 2, we need to push 2 lines of <code translate="no" dir="ltr">#firstchild</code> to the second column, to honor all the break avoidance requests. Chromium is the first browser engine that fully supports this combination of features.</p>
+
+<h2 id="how_ng_fragmentation_works" data-text="How NG fragmentation works" tabindex="-1">How NG fragmentation works</h2>
+
+<p>The NG layout engine generally lays out the document by traversing the CSS box tree depth-first. When all the descendants of a node are laid out, the layout of that node can be completed, by producing an <a href="https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/layout/ng/ng_physical_fragment.h;l=54;drc=2e4d3a01c56738b228fa18b11fc720539d8d32bb">NGPhysicalFragment</a> and returning to the parent layout algorithm. That algorithm adds the fragment to its list of child fragments, and, once all children are completed, generates a fragment for itself with all its child fragments inside. By this method it creates a fragment tree for the entire document. This is an over-simplification however: for instance, out-of-flow positioned elements will have to bubble up from where they exist in the DOM tree to their containing block before they can be laid out. I&#39;m ignoring this advanced detail here for the sake of simplicity.</p>
+
+<p>Along with the CSS box itself, LayoutNG provides a constraint space to a layout algorithm. This provides the algorithm with information such as the available space for layout, whether a new formatting context is established, and intermediate margin collapsing results from preceding content. The constraint space also knows the laid-out block-size of the fragmentainer, and the current block offset into it. This indicates where to break.</p>
+
+<p>When block fragmentation is involved, the layout of descendants has to stop at a break. The reasons for breaking include running out of space in the page or column, or a forced break. We then produce fragments for the nodes that we visited, and return all the way up to the fragmentation context root (the multicol container, or, in case of printing, the document root). Then, at the fragmentation context root, we prepare for a new fragmentainer, and descend into the tree again, resuming where we left off before the break.</p>
+
+<p>The crucial data structure for providing the means of resuming layout after a break is called <a href="https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/layout/ng/ng_block_break_token.h;l=23;drc=efd8f9c31239adeeacb892591cca33726cfae678">NGBlockBreakToken</a>. It contains all the information needed to resume layout correctly in the next fragmentainer. An NGBlockBreakToken is associated with a node, and it forms an NGBlockBreakToken tree, so that each node that needs to be resumed is represented. An NGBlockBreakToken is attached to the <a href="https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/layout/ng/ng_physical_box_fragment.h;l=30;drc=b1d9026c8346d992f3e386dbd81e569cd644fea1">NGPhysicalBoxFragment</a> generated for nodes that break inside. The break tokens are propagated to the parents, forming a tree of break tokens. If we need to break <strong>before</strong> a node (instead of inside it), no fragment will be produced, but the parent node still needs to create a &quot;break-before&quot; break token for the node, so that we can start laying it out when we get to the same position in the node tree in the next fragmentainer.</p>
+
+<p>Breaks are inserted when we either run out of fragmentainer space (an unforced break), or when a forced break is requested.</p>
+
+<p>There are rules in the specification for optimal unforced breaks, and simply inserting a break exactly where we run out of space isn&#39;t always the right thing to do. For example, there are various CSS properties like <code translate="no" dir="ltr">break-before</code> that influence the choice of break location. Therefore, during layout, in order to implement the <a href="https://www.w3.org/TR/css-break-3/#unforced-breaks.">unforced breaks</a> specification section correctly, we need to keep track of possibly good breakpoints. This record means we can go back and use the last best possible breakpoint found, if we run out of space at a point where we&#39;d violate break avoidance requests (for example, <code translate="no" dir="ltr">break-before:avoid</code> or <code translate="no" dir="ltr">orphans:7</code>). Each possible breakpoint is given a score, ranging from &quot;only do this as a last resort&quot; to &quot;perfect place to break&quot;, with some values in between. If a break location scores as &quot;perfect&quot;, it means that no breaking rules will be violated if we break there (and if we get this score exactly at the point where we run out of space, there&#39;s no need to look back for something better). If the score is &quot;last-resort&quot;, the breakpoint isn&#39;t even a valid one, but we may still break there if we don&#39;t find anything better, to avoid fragmentainer overflow.</p>
+
+<p>Valid breakpoints generally only occur <em>between</em> siblings (line boxes or blocks), and not, for example, between a parent and its first child (<a href="https://www.w3.org/TR/css-break-3/#end-block">class C breakpoints</a> are an exception, but we don&#39;t need to discuss those here). There <strong>is</strong> a valid breakpoint for instance before a block sibling with break-before:avoid, but it&#39;s somewhere between &quot;perfect&quot; and &quot;last-resort&quot;.</p>
+
+<p>During layout we keep track of the best breakpoint found so far in a structure called <a href="https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/layout/ng/ng_early_break.h;l=19;drc=b8fa54319e902f372603a30005227aaa9e5957b2">NGEarlyBreak</a>. An early-break is a possible breakpoint before or inside a block node, or before a line (either a block container line, or a flex line). We may form a chain or path of NGEarlyBreak objects, in case the best breakpoint is somewhere deep inside something we walked past earlier at the time we run out of space. Here&#39;s an example:</p>
+
+<div class="codepen-embed-wrap" style="height: 400px; width: 100%">
+<iframe
+  allow="camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;"
+  loading="lazy"
+  src="https://codepen.io/web-dot-dev/embed/gOKEvjj?height=400&theme-id=dark&default-tab=css%2Chtml&editable=true"
+  style="height: 100%; width: 100%; border: 0;"
+  title="Pen gOKEvjj by web-dot-dev on Codepen"
+  >See the Pen <a href="https://codepen.io/web-dot-dev/embed/gOKEvjj">Pen gOKEvjj by web-dot-dev on Codepen</a></iframe
+></div>
+
+<p>In this case, we run out of space right before <code translate="no" dir="ltr">#second</code>, but it has &quot;break-before:avoid&quot;, which gets a break location score of &quot;violating break avoid&quot;. At that point we have an NGEarlyBreak chain of &quot;inside <code translate="no" dir="ltr">#outer</code> &gt; inside <code translate="no" dir="ltr">#middle</code> &gt; inside <code translate="no" dir="ltr">#inner</code> &gt; before &quot;line 3&quot;&#39;, with &quot;perfect&quot;, so we would rather break there. So we need to return and re-run layout from the beginning of #outer (and this time pass the NGEarlyBreak that we found), so that we can break before &quot;line 3&quot; in #inner. (We break before &quot;line 3&quot;, so that the remaining 4 lines end up in the next fragmentainer, and in order to honor <code translate="no" dir="ltr">widows:4</code>.)</p>
+
+<p>The algorithm is designed to always break at the best possible breakpoint—as defined in the <a href="https://www.w3.org/TR/css-break-3/#unforced-breaks">spec</a>—by dropping rules in the correct order, if not all of them can be satisfied. Note that we only have to re-layout at most once per <a href="https://www.w3.org/TR/css-break-3/#parallel-flows">fragmentation flow</a>. By the time we are in the second layout pass, the best break location has already been passed to the layout algorithms, this is the break location that was discovered in the first layout pass, and provided as part of layout output in that round. In the second layout pass, we&#39;re <strong>not</strong> laying out until we run out of space—in fact we&#39;re not expected to run out of space (that would actually be an error), because we have been provided with a super-sweet (well, as sweet as there was available) place to insert an early break, to avoid violating any breaking rules unnecessarily. So we just lay out to that point, and break.</p>
+
+<p>On that note, sometimes we do need to violate some of the break avoidance requests, if that helps avoid fragmentainer overflow. Example:</p>
+
+<div class="codepen-embed-wrap" style="height: 400px; width: 100%">
+<iframe
+  allow="camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi;"
+  loading="lazy"
+  src="https://codepen.io/web-dot-dev/embed/yLEwvRL?height=400&theme-id=dark&default-tab=css%2Chtml&editable=true"
+  style="height: 100%; width: 100%; border: 0;"
+  title="Pen yLEwvRL by web-dot-dev on Codepen"
+  >See the Pen <a href="https://codepen.io/web-dot-dev/embed/yLEwvRL">Pen yLEwvRL by web-dot-dev on Codepen</a></iframe
+></div>
+
+<p>Here, we run out of space right before <code translate="no" dir="ltr">#second</code>, but it has &quot;break-before:avoid&quot;. That&#39;s translated to &quot;violating break avoid&quot;, just like the last example. We also have an NGEarlyBreak with &quot;violating orphans and widows&quot; (inside <code translate="no" dir="ltr">#first</code> &gt; before &quot;line 2&quot;), which still isn&#39;t perfect, but better than &quot;violating break avoid&quot;. So we&#39;ll break before &quot;line 2&quot;, violating the orphans / widows request. The spec deals with this in <a href="https://www.w3.org/TR/css-break-3/#unforced-breaks">4.4. Unforced Breaks</a>, where it defines which breaking rules are ignored first if we don&#39;t have enough breakpoints to avoid fragmentainer overflow.</p>
+
+<h2 id="summary" data-text="Summary" tabindex="-1">Summary</h2>
+
+<p>The main functional goal with the LayoutNG block fragmentation project was to provide  LayoutNG-architecture-supporting implementation of everything that the legacy engine supports, and as little else as possible, apart from bug fixes. The main exception here is better break avoidance support (<code translate="no" dir="ltr">break-before:avoid</code>, for instance), because this is a core part of the fragmentation engine, so it had to be in there from the start, as adding it later would mean another rewrite.</p>
+
+<p>Now that LayoutNG block fragmentation is finished, we can start working on adding new functionality, such as supporting mixed page sizes when printing, <code translate="no" dir="ltr">@page</code> margin boxes when printing, <code translate="no" dir="ltr">box-decoration-break:clone</code>, and more. And <a href="/articles/layoutng#correctness">as with LayoutNG generally</a>, we expect the bug rate and maintenance burden of the new system to be substantially lower over time.</p>
+
+<p>Thanks for reading!</p>
+
+<h2 id="acknowledgements" data-text="Acknowledgements" tabindex="-1">Acknowledgements</h2>
+
+<ul>
+<li><a href="mailto:unakravets@google.com">Una Kravets</a> for the nice &quot;handmade screenshot&quot;.</li>
+<li><a href="mailto:chrishtr@google.com">Chris Harrelson</a> for proofreading, feedback, and suggestions.  </li>
+<li><a href="mailto:foolip@google.com">Philip Jägenstedt</a> for feedback and suggestions.  </li>
+<li><a href="mailto:rachelandrew@google.com">Rachel Andrew</a> for editing and the first multi-column example figure.</li>
+</ul>
+
+  
+
+  
+</div>
+
+  
+
+  
+    
+    
+      
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+  
+       
+    
+    
+  
+
+  
+  
+</article>
+
+
+<devsite-content-footer class="nocontent">
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  <p>Last updated 2023-01-03 UTC.</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  <template class="devsite-thumb-rating-down-categories">
+  [{
+      "type": "thumb-down",
+      "id": "missingTheInformationINeed",
+      "label":"Missing the information I need"
+    },{
+      "type": "thumb-down",
+      "id": "tooComplicatedTooManySteps",
+      "label":"Too complicated / too many steps"
+    },{
+      "type": "thumb-down",
+      "id": "outOfDate",
+      "label":"Out of date"
+    },{
+      "type": "thumb-down",
+      "id": "samplesCodeIssue",
+      "label":"Samples / code issue"
+    },{
+      "type": "thumb-down",
+      "id": "otherDown",
+      "label":"Other"
+    }]
+  </template>
+  <template class="devsite-thumb-rating-up-categories">
+  [{
+      "type": "thumb-up",
+      "id": "easyToUnderstand",
+      "label":"Easy to understand"
+    },{
+      "type": "thumb-up",
+      "id": "solvedMyProblem",
+      "label":"Solved my problem"
+    },{
+      "type": "thumb-up",
+      "id": "otherUp",
+      "label":"Other"
+    }]
+  </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent" aria-label="Footer links">
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Contribute</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://issuetracker.google.com/issues/new?component=1400036&amp;template=1897236"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            File a bug
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://issuetracker.google.com/issues?q=status:open%20componentid:1400036&amp;s=created_time:desc"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+              
+              
+            
+          
+            See open issues
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Related content</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://blog.chromium.org/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Chromium updates
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/case-studies"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Case studies
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/deprecated"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Archive
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://web.dev/shows"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+              
+              
+            
+          
+            Podcasts &amp; shows
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Connect</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://twitter.com/ChromiumDev"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            @ChromiumDev on X
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.youtube.com/user/ChromeDevelopers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            YouTube
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.linkedin.com/showcase/chrome-for-developers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+              
+              
+            
+          
+            Chrome for Developers on LinkedIn
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent">
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Utility links">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          Terms
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privacy
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="nl"
+        >Nederlands</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel></devsite-panel>
+        
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar
+    
+    >
+</devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics analytics-iframe enable-cb>
+      
+        <script type="application/json" analytics>[]</script>
+<script type="application/json" tag-management>{&#34;ga4&#34;: [], &#34;ga4p&#34;: [], &#34;gtm&#34;: [{&#34;id&#34;: &#34;GTM-5QF3RT2&#34;, &#34;purpose&#34;: 0}], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;False&#34;, &#34;requested&#34;: &#34;en&#34;, &#34;served&#34;: &#34;en&#34;}, &#34;pageType&#34;: &#34;article&#34;, &#34;projectName&#34;: &#34;Chromium&#34;, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;chrome&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    <script nonce="rZYlP+nUhP8akNmuK8m0ipUrYNjOQy">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/js/app_loader.js', '[53,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome","https://chrome-dot-devsite-v2-prod-3p.appspot.com",1,null,["/_pwa/chrome/manifest.json","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/favicon.png","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup.svg","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,112,113,116,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,147,148,149,151,152,156,157,158,159,161,163,164,168,169,170,179,180,182,183,186,191,193,196],"AIzaSyCNm9YxQumEXwGJgTDjxoxXK6m1F-9720Q","AIzaSyCc76DZePGtoyUjqKrLdsMGk_ry7sljLbY","developer.chrome.com","AIzaSyB9bqgQ2t11WJsOX8qNsCQ6U-w91mmqF-I","AIzaSyAdYnStPdzjcJJtQ0mvIaeaMKj7_t6J_Fg",null,null,null,["MiscFeatureFlags__emergency_css","Cloud__enable_cloud_facet_chat","Analytics__enable_cookie_bar","TpcFeatures__enable_mirror_tenant_redirects","Profiles__enable_public_developer_profiles","CloudShell__cloud_shell_button","Cloud__enable_cloud_shell","Profiles__enable_developer_profiles_callout","Experiments__reqs_query_experiments","MiscFeatureFlags__enable_variable_operator","Concierge__enable_pushui","Search__enable_suggestions_from_borg","MiscFeatureFlags__enable_project_variables","Cloud__enable_cloudx_experiment_ids","OnSwitch__enable","Profiles__require_profile_eligibility_for_signin","BookNav__enable_tenant_cache_key","MiscFeatureFlags__enable_explain_this_code","Profiles__enable_release_notes_notifications","Cloud__enable_free_trial_server_call","Cloud__enable_cloud_shell_fte_user_flow","CloudShell__cloud_code_overflow_menu","Cloud__enable_cloudx_ping","Profiles__enable_awarding_url","MiscFeatureFlags__developers_footer_dark_image","Search__enable_ai_eligibility_checks","MiscFeatureFlags__developers_footer_image","MiscFeatureFlags__enable_firebase_utm","Profiles__enable_page_saving","Search__enable_dynamic_content_confidential_banner","Search__enable_faceted_search","Profiles__enable_profile_collections","Cloud__enable_cloud_dlp_service","MiscFeatureFlags__enable_new_sitemap","Search__enable_page_map","EngEduTelemetry__enable_engedu_telemetry"],null,null,"AIzaSyA58TaKli1DculwmAmbpzLVGuWc8eCQgQc","https://developerscontentserving-pa.googleapis.com","AIzaSyDWBU60w0P9hEkr29kkksYs8Z7gvZ8u_wc","https://developerscontentsearch-pa.googleapis.com",2,4]')
+  
+</script>
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>

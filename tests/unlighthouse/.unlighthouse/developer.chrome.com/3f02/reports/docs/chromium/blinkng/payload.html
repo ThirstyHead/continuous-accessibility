@@ -1,0 +1,3563 @@
+<!doctype html>
+<html 
+      lang="en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="157101835696-ooapojlodmuabs2do2vuhhnf90bccmoi.apps.googleusercontent.com">
+    <meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award">
+    <meta property="og:site_name" content="Chrome for Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#1a73e8"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/chrome/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//apis.google.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/css/app.css">
+      
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/touchicon-180.png"><link rel="canonical" href="https://developer.chrome.com/docs/chromium/blinkng"><link rel="search" type="application/opensearchdescription+xml"
+            title="Chrome for Developers" href="https://developer.chrome.com/s/opensearch.xml">
+      <link rel="alternate" hreflang="en"
+          href="https://developer.chrome.com/docs/chromium/blinkng" /><link rel="alternate" hreflang="x-default" href="https://developer.chrome.com/docs/chromium/blinkng" /><link rel="alternate" hreflang="ar"
+          href="https://developer.chrome.com/docs/chromium/blinkng?hl=ar" /><link rel="alternate" hreflang="bn"
+          href="https://developer.chrome.com/docs/chromium/blinkng?hl=bn" /><link rel="alternate" hreflang="zh-Hans"
+          href="https://developer.chrome.com/docs/chromium/blinkng?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant"
+          href="https://developer.chrome.com/docs/chromium/blinkng?hl=zh-tw" /><link rel="alternate" hreflang="nl"
+          href="https://developer.chrome.com/docs/chromium/blinkng?hl=nl" /><link rel="alternate" hreflang="fa"
+          href="https://developer.chrome.com/docs/chromium/blinkng?hl=fa" /><link rel="alternate" hreflang="fr"
+          href="https://developer.chrome.com/docs/chromium/blinkng?hl=fr" /><link rel="alternate" hreflang="de"
+          href="https://developer.chrome.com/docs/chromium/blinkng?hl=de" /><link rel="alternate" hreflang="he"
+          href="https://developer.chrome.com/docs/chromium/blinkng?hl=he" /><link rel="alternate" hreflang="hi"
+          href="https://developer.chrome.com/docs/chromium/blinkng?hl=hi" /><link rel="alternate" hreflang="id"
+          href="https://developer.chrome.com/docs/chromium/blinkng?hl=id" /><link rel="alternate" hreflang="it"
+          href="https://developer.chrome.com/docs/chromium/blinkng?hl=it" /><link rel="alternate" hreflang="ja"
+          href="https://developer.chrome.com/docs/chromium/blinkng?hl=ja" /><link rel="alternate" hreflang="ko"
+          href="https://developer.chrome.com/docs/chromium/blinkng?hl=ko" /><link rel="alternate" hreflang="pl"
+          href="https://developer.chrome.com/docs/chromium/blinkng?hl=pl" /><link rel="alternate" hreflang="pt-BR"
+          href="https://developer.chrome.com/docs/chromium/blinkng?hl=pt-br" /><link rel="alternate" hreflang="ru"
+          href="https://developer.chrome.com/docs/chromium/blinkng?hl=ru" /><link rel="alternate" hreflang="es-419"
+          href="https://developer.chrome.com/docs/chromium/blinkng?hl=es-419" /><link rel="alternate" hreflang="th"
+          href="https://developer.chrome.com/docs/chromium/blinkng?hl=th" /><link rel="alternate" hreflang="tr"
+          href="https://developer.chrome.com/docs/chromium/blinkng?hl=tr" /><link rel="alternate" hreflang="vi"
+          href="https://developer.chrome.com/docs/chromium/blinkng?hl=vi" /><link rel="alternate" hreflang="en-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/blinkng" /><link rel="alternate" hreflang="x-default" href="https://developer.chrome.google.cn/docs/chromium/blinkng" /><link rel="alternate" hreflang="ar-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/blinkng?hl=ar" /><link rel="alternate" hreflang="bn-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/blinkng?hl=bn" /><link rel="alternate" hreflang="zh-Hans-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/blinkng?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/blinkng?hl=zh-tw" /><link rel="alternate" hreflang="nl-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/blinkng?hl=nl" /><link rel="alternate" hreflang="fa-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/blinkng?hl=fa" /><link rel="alternate" hreflang="fr-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/blinkng?hl=fr" /><link rel="alternate" hreflang="de-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/blinkng?hl=de" /><link rel="alternate" hreflang="he-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/blinkng?hl=he" /><link rel="alternate" hreflang="hi-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/blinkng?hl=hi" /><link rel="alternate" hreflang="id-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/blinkng?hl=id" /><link rel="alternate" hreflang="it-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/blinkng?hl=it" /><link rel="alternate" hreflang="ja-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/blinkng?hl=ja" /><link rel="alternate" hreflang="ko-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/blinkng?hl=ko" /><link rel="alternate" hreflang="pl-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/blinkng?hl=pl" /><link rel="alternate" hreflang="pt-BR-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/blinkng?hl=pt-br" /><link rel="alternate" hreflang="ru-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/blinkng?hl=ru" /><link rel="alternate" hreflang="es-419-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/blinkng?hl=es-419" /><link rel="alternate" hreflang="th-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/blinkng?hl=th" /><link rel="alternate" hreflang="tr-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/blinkng?hl=tr" /><link rel="alternate" hreflang="vi-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/blinkng?hl=vi" /><title>RenderingNG deep-dive: BlinkNG &nbsp;|&nbsp; Chromium &nbsp;|&nbsp; Chrome for Developers</title>
+
+<meta property="og:title" content="RenderingNG deep-dive: BlinkNG &nbsp;|&nbsp; Chromium &nbsp;|&nbsp; Chrome for Developers"><meta name="description" content="Find out about BlinkNG and the various sub-projects that addressed long-standing problems in the organization and structure of Blink code.">
+  <meta property="og:description" content="Find out about BlinkNG and the various sub-projects that addressed long-standing problems in the organization and structure of Blink code."><meta property="og:url" content="https://developer.chrome.com/docs/chromium/blinkng"><meta property="og:image" content="https://developer.chrome.com/static/docs/chromium/blinkng/image/thumbnail.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675"><meta property="og:locale" content="en"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "dateModified": "2022-04-19",
+    "headline": "RenderingNG deep-dive: BlinkNG"
+  }
+</script><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Docs",
+      "item": "https://developer.chrome.com/docs"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Chromium",
+      "item": "https://developer.chrome.com/docs/chromium"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "RenderingNG deep-dive: BlinkNG",
+      "item": "https://developer.chrome.com/docs/chromium/blinkng"
+    }]
+  }
+  </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+    
+      <link rel="stylesheet" href="/extras.css"></head>
+  <body class=""
+        template="page"
+        theme="chrome-theme"
+        type="article"
+        
+        
+        appearance
+        layout="docs"
+        
+        
+        
+        
+        display-toc
+        pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+    <section class="devsite-wrapper">
+      
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar>
+      <devsite-header role="banner">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner nocontent">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="chromeForDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme"
+            alt="Chrome for Developers">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup.svg" class="devsite-site-logo" alt="Chrome for Developers">
+  </picture>
+  
+</a>
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+              
+              
+  <devsite-tabs class="upper-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Upper tabs">
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/case-studies"
+      track-metadata-eventdetail="https://developer.chrome.com/case-studies"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - get inspired"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Get inspired"
+         
+           track-name="get inspired"
+         
+       >
+    Get inspired
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/blog"
+      track-metadata-eventdetail="https://developer.chrome.com/blog"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - blog"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Blog"
+         
+           track-name="blog"
+         
+       >
+    Blog
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab class="devsite-dropdown
+    devsite-dropdown-full
+    devsite-active
+    
+    ">
+  
+    <a href="https://developer.chrome.com/docs"
+      track-metadata-eventdetail="https://developer.chrome.com/docs"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - docs"
+       track-metadata-module="primary nav"
+       aria-label="Docs, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Docs"
+         
+           track-name="docs"
+         
+       >
+    Docs
+  
+    </a>
+  
+  
+    <a href="#"
+       role="button"
+       aria-haspopup="true"
+       aria-expanded="false"
+       aria-label="Dropdown menu for Docs"
+       track-type="nav"
+       track-metadata-eventdetail="https://developer.chrome.com/docs"
+       track-metadata-position="nav - docs"
+       track-metadata-module="primary nav"
+       
+        
+          data-category="Site-Wide Custom Events"
+        
+          data-label="Tab: Docs"
+        
+          track-name="docs"
+        
+      
+       class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+  
+  <div class="devsite-tabs-dropdown" aria-label="submenu" hidden>
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       build-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Build with Chrome</li>
+              
+              
+                <li class="devsite-nav-description">Learn how Chrome works, participate in origin trials, and build with Chrome everywhere.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/web-platform"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/web-platform"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Web Platform
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/capabilities"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/capabilities"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Capabilities
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/extensions"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/extensions"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Extensions
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/webstore"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/webstore"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chrome Web Store
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/chromium"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/chromium"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chromium
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/aurora"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/aurora"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Aurora
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/android"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/android"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Web on Android
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/origintrials/"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/origintrials/"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Origin trials
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/release-notes"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/release-notes"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Release notes
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       productivity-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Productivity</li>
+              
+              
+                <li class="devsite-nav-description">Create the best experience for your users with the web&#39;s best tools.</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/devtools"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/devtools"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      DevTools
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/lighthouse"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/lighthouse"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Lighthouse
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/crux"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/crux"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chrome UX Report
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/accessibility"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/accessibility"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Accessibility
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       dcc-subnav second-column-list">
+              
+              
+                <li class="devsite-nav-description">Get things done quicker and neater, with our ready-made libraries.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/workbox"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/workbox"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Workbox
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/puppeteer"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/puppeteer"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Puppeteer
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       experience-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Experience</li>
+              
+              
+                <li class="devsite-nav-description">Design a beautiful and performant web with Chrome.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/performance"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/performance"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Performance
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/css-ui"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/css-ui"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      CSS and UI
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/identity"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/identity"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Identity
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/payments"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/payments"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Payments
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/privacy-security"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/privacy-security"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Privacy and security
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       resources-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Resources</li>
+              
+              
+                <li class="devsite-nav-description">More from the Chrome team.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="resources"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      All documentation
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/baseline"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/baseline"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="resources"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Baseline
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="resources"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      web.dev
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    
+    project-name="Chromium"
+    tenant-name="Chrome for Developers"
+    
+    
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://developer.chrome.com/s/results" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Open search"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Search"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Search"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Close search"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+        
+
+        <devsite-appearance-selector></devsite-appearance-selector>
+
+        
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="nl"
+        >Nederlands</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+        
+
+        
+          
+          
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>Sign in</span>
+            
+        </devsite-user>
+           
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+      
+        
+          <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+              
+                
+                  
+                  
+                  <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs/chromium"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Lower Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Chromium"
+      
+    >
+    
+        Chromium
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+                
+              
+              
+            </div>
+            
+          </div>
+          
+        
+      
+      
+        <div class="devsite-doc-set-nav-row">
+          
+          
+            
+            
+  <devsite-tabs class="lower-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Lower tabs">
+      
+        
+          <tab  class="devsite-active">
+            
+    <a href="https://developer.chrome.com/docs/chromium"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/chromium"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - chromium"
+       track-metadata-module="primary nav"
+       aria-label="Chromium, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Chromium"
+         
+           track-name="chromium"
+         
+       >
+    Chromium
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/docs/chromium/chronicle"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/chromium/chronicle"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - chromium chronicle"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Chromium Chronicle"
+         
+           track-name="chromium chronicle"
+         
+       >
+    Chromium Chronicle
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/docs/chromedriver"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/chromedriver"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - chromedriver"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: ChromeDriver"
+         
+           track-name="chromedriver"
+         
+       >
+    ChromeDriver
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+          
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+
+  
+</devsite-header>
+      <devsite-book-nav scrollbars >
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     hidden>
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="Filter"
+         
+         aria-label="Type to filter"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="Clear filter"
+        aria-label="Clear filter"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent"
+     aria-label="Side menu">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="chromeForDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme"
+            alt="Chrome for Developers">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup.svg" class="devsite-site-logo" alt="Chrome for Developers">
+  </picture>
+  
+</a>
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/case-studies"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Get inspired"
+      
+        track-name="get inspired"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Get inspired"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Get inspired
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/blog"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Blog"
+      
+        track-name="blog"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Blog"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Blog
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Docs"
+      
+        track-name="docs"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Docs"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Docs
+   </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Docs"
+      
+        track-name="docs"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Docs">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Docs">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+                <ul class="devsite-nav-responsive-tabs">
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/chromium"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Chromium"
+      
+        track-name="chromium"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chromium"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip menu="_book">
+      Chromium
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/chromium/chronicle"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Chromium Chronicle"
+      
+        track-name="chromium chronicle"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chromium Chronicle"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chromium Chronicle
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/chromedriver"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: ChromeDriver"
+      
+        track-name="chromedriver"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ChromeDriver"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ChromeDriver
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Get started</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/cvd"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/cvd"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/cvd"
+      ><span class="devsite-nav-text" tooltip>Simulate color vision deficiencies in the Blink Renderer</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/new-headless"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/new-headless"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/new-headless"
+      ><span class="devsite-nav-text" tooltip>Chrome&#39;s Headless mode</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>RenderingNG</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/renderingng"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/renderingng"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/renderingng"
+      ><span class="devsite-nav-text" tooltip>Overview of RenderingNG</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/renderingng-architecture"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/renderingng-architecture"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/renderingng-architecture"
+      ><span class="devsite-nav-text" tooltip>RenderingNG architecture</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/renderingng-data-structures"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/renderingng-data-structures"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/renderingng-data-structures"
+      ><span class="devsite-nav-text" tooltip>Key data structures</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/blinkng"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/blinkng"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/blinkng"
+      ><span class="devsite-nav-text" tooltip>BlinkNG</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/videong"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/videong"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/videong"
+      ><span class="devsite-nav-text" tooltip>VideoNG</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/layoutng"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/layoutng"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/layoutng"
+      ><span class="devsite-nav-text" tooltip>LayoutNG</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/renderingng-fragmentation"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/renderingng-fragmentation"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/renderingng-fragmentation"
+      ><span class="devsite-nav-text" tooltip>LayoutNG block fragmentation</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Resources</span>
+      </div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/README.md"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/README.md"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/README.md"
+      ><span class="devsite-nav-text" tooltip>Read Chromium&#39;s docs</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="https://www.chromium.org/chromium-projects/"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: https://www.chromium.org/chromium-projects/"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="https://www.chromium.org/chromium-projects/"
+      ><span class="devsite-nav-text" tooltip>Chromium projects</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li>
+          </ul>
+        
+        
+          
+    
+  
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="Docs"
+          aria-label="Side menu" hidden>
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Build with Chrome
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/web-platform"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Web Platform"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Web Platform
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/capabilities"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Capabilities"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Capabilities
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/extensions"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Extensions"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Extensions
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/webstore"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chrome Web Store"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chrome Web Store
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/chromium"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chromium"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chromium
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/aurora"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Aurora"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Aurora
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/android"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Web on Android"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Web on Android
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developer.chrome.com/origintrials/"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Origin trials"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Origin trials
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/release-notes"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Release notes"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Release notes
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Productivity
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/devtools"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: DevTools"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      DevTools
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/lighthouse"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Lighthouse"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Lighthouse
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/crux"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chrome UX Report"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chrome UX Report
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/accessibility"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Accessibility"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Accessibility
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/workbox"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Workbox"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Workbox
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/puppeteer"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Puppeteer"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Puppeteer
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Experience
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/performance"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Performance"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Performance
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/css-ui"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: CSS and UI"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      CSS and UI
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/identity"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Identity"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Identity
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/payments"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Payments"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Payments
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/privacy-security"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Privacy and security"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Privacy and security
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Resources
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: All documentation"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      All documentation
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://web.dev/baseline"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Baseline"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Baseline
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://web.dev"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: web.dev"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      web.dev
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+        
+        
+          
+    
+  
+    
+  
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+        
+      </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+            
+              has-book-nav
+              has-sidebar
+            >
+          
+          
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="On this page"
+                            depth="2"
+                            scrollbars
+                  ></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav">
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article">
+  
+  
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation">
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        Home
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail="Docs"
+      
+    >
+    
+        Docs
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs/chromium"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail="Chromium"
+      
+    >
+    
+        Chromium
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+  
+    
+  </div>
+  
+      <h1 class="devsite-page-title" tabindex="-1">RenderingNG deep-dive: BlinkNG</h1>
+  <devsite-feature-tooltip
+          ack-key="AckCollectionsBookmarkTooltipDismiss"
+          analytics-category="Site-Wide Custom Events"
+          analytics-action-show="Callout Profile displayed"
+          analytics-action-close="Callout Profile dismissed"
+          analytics-label="Create Collection Callout"
+          class="devsite-page-bookmark-tooltip nocontent"
+          dismiss-button="true"
+          id="devsite-collections-dropdown"
+
+          
+          dismiss-button-text="Dismiss"
+
+          
+          close-button-text="Got it">
+
+        
+        <devsite-bookmark></devsite-bookmark>
+
+        <span slot="popout-heading">
+          
+          Stay organized with collections
+        </span>
+        <span slot="popout-contents">
+          
+          Save and categorize content based on your preferences.
+        </span>
+      </devsite-feature-tooltip>
+  <div class="devsite-page-title-meta"><devsite-view-release-notes></devsite-view-release-notes></div>
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    >
+  </devsite-toc>
+  
+    
+  
+
+  
+
+
+
+
+
+
+<div class="devsite-article-body clearfix
+  ">
+
+  
+    
+
+
+
+
+<p><style>
+.wd-authors {
+  --avatar-size: 65px;
+  display: flex;
+  gap: 2em;
+}
+
+.wd-author {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  line-height: calc(var(--avatar-size) / 2);
+}
+
+.wd-author img {
+  border-radius: 50%;
+  height: var(--avatar-size, 65px);
+  width: var(--avatar-size, 65px);
+}
+
+.dcc-authors {
+  --avatar-size: 65px;
+  display: flex;
+  gap: 2em;
+}
+
+.dcc-author {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  line-height: calc(var(--avatar-size) / 2);
+}
+
+.dcc-author img {
+  border-radius: 50%;
+  height: var(--avatar-size, 65px);
+  width: var(--avatar-size, 65px);
+}
+
+.dcc-author__links a {
+  margin-inline-end: 6px;
+}
+
+.dcc-author__links a:last-of-type {
+  margin-inline-end: 0;
+}
+</style>
+
+<div class="dcc-authors" translate="no">
+  
+    
+    
+      <div class="dcc-author">
+        
+          <img class="devsite-landing-row-item-icon" alt="Stefan Zager" 
+            src="https://web.dev/images/authors/stefanzager.jpg" 
+            decoding="async" height="64" loading="lazy" width="64"> 
+        
+        <div>
+          <span> 
+            Stefan Zager
+          </span>
+          <div class="dcc-author__links">
+            
+            
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+    
+  
+    
+    
+      <div class="dcc-author">
+        
+          <img class="devsite-landing-row-item-icon" alt="Chris Harrelson" 
+            src="https://web.dev/images/authors/chrishtr.jpg" 
+            decoding="async" height="64" loading="lazy" width="64"> 
+        
+        <div>
+          <span> 
+            Chris Harrelson
+          </span>
+          <div class="dcc-author__links">
+            
+              <a href="https://twitter.com/chrishtr" aria-label="Chris Harrelson on X">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 300 271">
+                  <title>X</title>
+                  <path fill="currentColor" d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z"></path>
+                </svg></a>
+            
+            
+              <a href="https://github.com/chrishtr" aria-label="Chris Harrelson on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 32.6 31.8">
+                  <title>GitHub</title>
+                  <path d="M16.3 0C7.3 0 0 7.3 0 16.3c0 7.2 4.7 13.3 11.1 15.5.8.1 1.1-.4 1.1-.8v-2.8c-4.5 1-5.5-2.2-5.5-2.2-.7-1.9-1.8-2.4-1.8-2.4-1.5-1 .1-1 .1-1 1.6.1 2.5 1.7 2.5 1.7 1.5 2.5 3.8 1.8 4.7 1.4.1-1.1.6-1.8 1-2.2-3.6-.4-7.4-1.8-7.4-8.1 0-1.8.6-3.2 1.7-4.4-.1-.3-.7-2 .2-4.2 0 0 1.4-.4 4.5 1.7 1.3-.4 2.7-.5 4.1-.5 1.4 0 2.8.2 4.1.5 3.1-2.1 4.5-1.7 4.5-1.7.9 2.2.3 3.9.2 4.3 1 1.1 1.7 2.6 1.7 4.4 0 6.3-3.8 7.6-7.4 8 .6.5 1.1 1.5 1.1 3V31c0 .4.3.9 1.1.8 6.5-2.2 11.1-8.3 11.1-15.5C32.6 7.3 25.3 0 16.3 0z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" />
+                </svg></a>
+            
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+    
+  
+</div>
+<aside class="note"><b>Note:</b> This post is a part of a series on the Chromium rendering engine. Check out the rest of the series to learn more about <a href="/docs/chromium/renderingng">RenderingNG</a>, <a href="/docs/chromium/renderingng-architecture">RenderingNG architecture</a>, <a href="/docs/chromium/renderingng-data-structures">key data structures</a>, <a href="/docs/chromium/videong">VideoNG</a>, and <a href="/docs/chromium/layoutng">LayoutNG</a>.</aside></p>
+
+<p><em>Blink</em> refers to Chromium&#39;s implementation of the <a href="https://en.wikipedia.org/wiki/Web_platform">web platform</a>, and it encompasses all the phases of rendering prior to compositing, culminating in <em>compositor commit</em>. You can read more about blink rendering architecture in a previous <a href="/docs/chromium/renderingng-architecture#render_process_main_thread_components">article</a> in this series. </p>
+
+<p><a href="https://en.wikipedia.org/wiki/Blink_(browser_engine)">Blink</a> began life as a fork of <a href="https://en.wikipedia.org/wiki/WebKit">WebKit</a>, which is itself a fork of <a href="https://en.wikipedia.org/wiki/KHTML">KHTML</a>, which dates to 1998. It contains some of the oldest (and most critical) code in Chromium, and by 2014 it was definitely showing its age. In that year, we embarked on a set of ambitious projects under the banner of what we&#39;re calling BlinkNG, with the goal of addressing long-standing deficiencies in the organization and structure of the Blink code. This article will explore BlinkNG and its constituent projects: why we did them, what they accomplished, the guiding principles that shaped their design, and the opportunities for future improvements they afford.</p>
+
+<p><img src="/static/docs/chromium/blinkng/image/the-rendering-pipeline-be-0e13644cd2b28.png" alt="The rendering pipeline before and after BlinkNG." width="800" height="362" srcset="https://developer.chrome.com/static/docs/chromium/blinkng/image/the-rendering-pipeline-be-0e13644cd2b28_36.png 36w,https://developer.chrome.com/static/docs/chromium/blinkng/image/the-rendering-pipeline-be-0e13644cd2b28_48.png 48w,https://developer.chrome.com/static/docs/chromium/blinkng/image/the-rendering-pipeline-be-0e13644cd2b28_72.png 72w,https://developer.chrome.com/static/docs/chromium/blinkng/image/the-rendering-pipeline-be-0e13644cd2b28_96.png 96w,https://developer.chrome.com/static/docs/chromium/blinkng/image/the-rendering-pipeline-be-0e13644cd2b28_480.png 480w,https://developer.chrome.com/static/docs/chromium/blinkng/image/the-rendering-pipeline-be-0e13644cd2b28_720.png 720w,https://developer.chrome.com/static/docs/chromium/blinkng/image/the-rendering-pipeline-be-0e13644cd2b28_856.png 856w,https://developer.chrome.com/static/docs/chromium/blinkng/image/the-rendering-pipeline-be-0e13644cd2b28_960.png 960w,https://developer.chrome.com/static/docs/chromium/blinkng/image/the-rendering-pipeline-be-0e13644cd2b28_1440.png 1440w,https://developer.chrome.com/static/docs/chromium/blinkng/image/the-rendering-pipeline-be-0e13644cd2b28_1920.png 1920w,https://developer.chrome.com/static/docs/chromium/blinkng/image/the-rendering-pipeline-be-0e13644cd2b28_2880.png 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<h2 id="rendering_pre-ng" data-text="Rendering pre-NG" tabindex="-1">Rendering pre-NG</h2>
+
+<p>The rendering pipeline within Blink was always conceptually split into phases (<em>style</em>, <em>layout</em>, <em>paint</em>, and so on), but the abstraction barriers were leaky. Broadly speaking, the data associated with rendering consisted of long-lived, mutable objects. These objects could be—and were—modified at any time, and were frequently recycled and reused by successive rendering updates. It was impossible to reliably answer simple questions such as:</p>
+
+<ul>
+<li>Does the output of style, layout, or paint need to be updated?</li>
+<li>When will these data get their &quot;final&quot; value?</li>
+<li>When is it OK to modify these data?</li>
+<li>When will this object be deleted?</li>
+</ul>
+
+<p>There are many examples of this, including:</p>
+
+<p><em>Style</em> would generate <code translate="no" dir="ltr">ComputedStyle</code>s based on stylesheets; but <code translate="no" dir="ltr">ComputedStyle</code> was not immutable; in some cases it would be modified by later pipeline stages.</p>
+
+<p><em>Style</em> would generate a tree of <code translate="no" dir="ltr">LayoutObject</code>, and then <em>layout</em> would annotate those objects with size and positioning information. In some cases, <em>layout</em> would even modify the tree structure. There was no clear separation between the inputs and outputs of <em>layout</em>.</p>
+
+<p><em>Style</em> would generate accessory data structures that determined the course of <em>compositing</em>, and those data structures were modified in place by every phase after <em>style</em>.</p>
+
+<p>At a lower level, rendering data types largely consists of specialized trees (for example, the DOM tree, style tree, layout tree, paint property tree); and rendering phases are implemented as recursive tree walks. Ideally, a tree walk should be <em>contained</em>: when processing a given tree node, we should not access any information outside of the subtree rooted at that node. That was never true pre-RenderingNG; tree walks frequently accessed information from the ancestors of the node being processed. This made the system very fragile and error-prone. It was also impossible to begin a tree walk from anywhere but the root of the tree.</p>
+
+<p>Finally, there were many on-ramps into the rendering pipeline sprinkled throughout the code: forced layouts triggered by JavaScript, partial updates triggered during document load, forced updates to prepare for event targeting, scheduled updates requested by the display system, and specialized APIs exposed only to test code, to name a few. There were even a few <em>recursive</em> and <em>reentrant</em> paths into the rendering pipeline (that is, jumping to the beginning of one stage from the middle of another). Each of these on-ramps had their own idiosyncratic behavior, and in some cases the output of rendering would depend on the manner in which the rendering update was triggered.</p>
+
+<h2 id="what_we_changed" data-text="What we changed" tabindex="-1">What we changed</h2>
+
+<p>BlinkNG is composed of many sub-projects, big and small, all with the shared goal of eliminating the architectural deficits described earlier. These projects share a few guiding principles designed to make the rendering pipeline more of an actual pipeline:</p>
+
+<ul>
+<li><strong>Uniform point of entry</strong>: We should always enter the pipeline at the beginning.</li>
+<li><strong>Functional stages</strong>: Each stage should have well-defined inputs and outputs, and its behavior should be <em>functional</em>, that is, deterministic and repeatable, and the outputs should depend only on the defined inputs.</li>
+<li><strong>Constant inputs</strong>: The inputs of any stage should be effectively constant while the stage is running.</li>
+<li><strong>Immutable outputs</strong>: Once a stage has finished, its outputs should be immutable for the remainder of the rendering update.</li>
+<li><strong>Checkpoint consistency</strong>: At the end of each stage, the rendering data produced thus far should be in a self-consistent state.</li>
+<li><strong>Deduplication of work</strong>: Only compute each thing once.</li>
+</ul>
+
+<p>A complete list of BlinkNG sub-projects would make for tedious reading, but following are a few of particular consequence.</p>
+
+<h3 id="the_document_lifecycle" data-text="The document lifecycle" tabindex="-1">The document lifecycle</h3>
+
+<p>The <a href="https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/dom/document_lifecycle.h;l=45">DocumentLifecycle</a> class keeps track of our progress through the rendering pipeline. It allows us to do basic checks that enforce the invariants listed earlier, such as:</p>
+
+<ul>
+<li>If we are modifying a ComputedStyle property, then the document lifecycle must be <code translate="no" dir="ltr">kInStyleRecalc</code>.</li>
+<li>If the DocumentLifecycle state is <code translate="no" dir="ltr">kStyleClean</code> or later, then <code translate="no" dir="ltr">NeedsStyleRecalc()</code> must return <em>false</em> for any attached node.</li>
+<li>When entering the <em>paint</em> lifecycle phase, the lifecycle state must be <code translate="no" dir="ltr">kPrePaintClean</code>.</li>
+</ul>
+
+<p>Over the course of implementing BlinkNG, we systematically eliminated code paths that violated these invariants, and sprinkled many more assertions throughout the code to ensure we don&#39;t regress.</p>
+
+<p>If you&#39;ve ever been down the rabbit hole looking at low-level rendering code, you may well ask yourself, &quot;How did I get here?&quot; As mentioned earlier, there are a variety of points of entry into the rendering pipeline. Previously, this included recursive and reentrant call paths, and places where we entered the pipeline at an intermediate phase, rather than starting from the beginning. In the course of BlinkNG, we analyzed these call paths and determined that they were all reducible to two basic scenarios:</p>
+
+<ul>
+<li>All rendering data need to be updated—for example, when generating new pixels for display or doing a hit test for event targeting.</li>
+<li>We need an up-to-date value for a specific query which can be answered without updating all rendering data. This includes most JavaScript queries, for example, <code translate="no" dir="ltr">node.offsetTop</code>.</li>
+</ul>
+
+<p>There are now only two points of entry into the rendering pipeline, corresponding to these two scenarios. The reentrant code paths have been removed or refactored, and it is no longer possible to enter the pipeline starting at an intermediate phase. This has eliminated a lot of mystery around exactly when and how rendering updates happen, making it much easier to reason about the behavior of the system.</p>
+
+<h3 id="pipelining_style_layout_and_pre-paint" data-text="Pipelining style, layout, and pre-paint" tabindex="-1">Pipelining style, layout, and pre-paint</h3>
+
+<p>Collectively, the rendering phases before <em>paint</em> are responsible for the following:</p>
+
+<ul>
+<li>Running the <em>style cascade</em> algorithm to calculate final style properties for DOM nodes.</li>
+<li>Generating the layout tree representing the box hierarchy of the document.</li>
+<li>Determining size and position information for all boxes.</li>
+<li>Rounding or snapping sub-pixel geometry to whole pixel boundaries for painting.</li>
+<li>Determining the properties of composited layers (affine transformation, filters, opacity, or anything else that can be GPU accelerated).</li>
+<li>Determining what content has changed since the previous paint phase, and needs to be painted or repainted (paint invalidation).</li>
+</ul>
+
+<p>This list hasn&#39;t changed, but before BlinkNG much of this work was done in an ad hoc way, spread across multiple rendering phases, with lots of duplicated functionality and built-in inefficiencies. For example, the <em>style</em> phase has always been primarily responsible for calculating the final style properties for nodes, but there were a few special cases where we didn&#39;t determine final style property values until after the <em>style</em> phase was complete. There was no formal or enforceable point in the rendering process where we could say with certainty that style information was complete and immutable.</p>
+
+<p>Another good example of pre-BlinkNG trouble is paint invalidation. Previously, paint invalidation was strewn throughout all rendering phases leading up to paint. When modifying style or layout code, it was difficult to know what changes to paint invalidation logic were needed, and it was easy to make a mistake leading to under- or over-invalidation bugs. You can read more about the intricacies of the old paint invalidation system in the article from this series devoted to <a href="/docs/chromium/layoutng#under-invalidation">LayoutNG</a>.</p>
+
+<p>Snapping subpixel layout geometry to whole pixel boundaries for painting is an example of where we had multiple implementations of the same functionality, and did a lot of redundant work. There was one pixel-snapping code path used by the paint system, and an entirely separate code path used whenever we needed a one-off, on-the-fly calculation of pixel-snapped coordinates outside of the paint code. Needless to say, each implementation had its own bugs, and their results did not always match. Because there was no caching of this information, the system would sometimes perform the exact same computation repeatedly—another strain on performance.</p>
+
+<p>Here are some significant projects that eliminated the architectural deficits of the rendering phases prior to paint.</p>
+
+<h3 id="project_squad_pipelining_the_style_phase" data-text="Project Squad: Pipelining the style phase" tabindex="-1">Project Squad: Pipelining the style phase</h3>
+
+<p>This project tackled two main deficits in the style phase which prevented it from being cleanly pipelined:  </p>
+
+<p>There are two primary outputs of the style phase: <code translate="no" dir="ltr">ComputedStyle</code>, containing the result of running the CSS cascade algorithm over the DOM tree; and a tree of <code translate="no" dir="ltr">LayoutObjects</code>, which establishes the order of operations for the layout phase. Conceptually, running the cascade algorithm should happen strictly before generating the layout tree; but previously, these two operations were interleaved. <em>Project Squad</em> succeeded in splitting these two into distinct, sequential phases.</p>
+
+<p>Previously, <code translate="no" dir="ltr">ComputedStyle</code> did not always get its final value during style recalc; there were a few situations where <code translate="no" dir="ltr">ComputedStyle</code> was updated during a later pipeline phase. Project Squad successfully refactored these code paths, so that <code translate="no" dir="ltr">ComputedStyle</code> is never modified after the style phase.</p>
+
+<h3 id="layoutng_pipelining_the_layout_phase" data-text="LayoutNG: Pipelining the layout phase" tabindex="-1">LayoutNG: Pipelining the layout phase</h3>
+
+<p>This <a href="/docs/chromium/layoutng">monumental project</a>—one of the cornerstones of RenderingNG—was a complete rewrite of the layout rendering phase. We won&#39;t do justice to the entire project here, but there are a few notable aspects for the overall BlinkNG project:</p>
+
+<ul>
+<li>Previously, the layout phase received a tree of <code translate="no" dir="ltr">LayoutObject</code> created by the style phase, and annotated the tree with size and position information. Thus, there was no clean separation of inputs from outputs. LayoutNG introduced the <em>fragment tree</em>, which is the primary, read-only output of layout, and serves as the primary input to subsequent rendering phases.  </li>
+<li>LayoutNG brought the <em>containment property</em> to layout: when calculating the size and position of a given <code translate="no" dir="ltr">LayoutObject</code>, we no longer look outside the subtree rooted at that object. All of the information needed to update layout for a given object is calculated beforehand and provided as a read-only input to the algorithm.  </li>
+<li>Previously, there were edge cases where the layout algorithm was not strictly functional: the result of the algorithm depended on the most recent prior layout update. LayoutNG eliminated those cases.</li>
+</ul>
+
+<h3 id="the_pre-paint_phase" data-text="The pre-paint phase" tabindex="-1">The pre-paint phase</h3>
+
+<p>Previously, there was no formal pre-paint rendering phase, just a grab bag of post-layout operations. The <em>pre-paint</em> phase grew out of the recognition that there were a few related functions that could be best implemented as a systematic traversal of the layout tree after layout was complete; most importantly:  </p>
+
+<ul>
+<li><strong>Issuing paint invalidations</strong>: It&#39;s very difficult to do paint invalidation correctly during the course of layout, when we have incomplete information. It&#39;s much easier to get right, and can be very efficient, if it&#39;s split into two distinct processes: during style and layout, content can be marked with a simple boolean flag as &quot;possibly needs paint invalidation.&quot; During the pre-paint tree walk, we check these flags and issue invalidations as necessary.  </li>
+<li><strong>Generating paint property trees</strong>: A process described in greater detail further on.  </li>
+<li><strong>Computing and recording pixel-snapped paint locations</strong>: The recorded results can be used by the paint phase, and also by any downstream code that needs them, without any redundant computation.</li>
+</ul>
+
+<h3 id="property_trees_consistent_geometry" data-text="Property trees: Consistent geometry" tabindex="-1">Property trees: Consistent geometry</h3>
+
+<p><a href="/docs/chromium/renderingng-data-structures#property_trees">Property trees</a> were introduced early in RenderingNG to deal with the complexity of scrolling, which on the web has a different structure than all other kinds of visual effects. Before property trees, Chromium&#39;s compositor used a single &quot;layer&quot; hierarchy to represent the geometrical relationship of composited content, but that quickly fell apart as the full complexities of features such as position:fixed became apparent. The layer hierarchy grew extra non-local pointers indicating the &quot;scroll parent&quot; or &quot;clip parent&quot; of a layer, and before long it was very hard to understand the code.</p>
+
+<p>Property trees fixed this by representing the overflow scroll and clip aspects of content separately from all other visual effects. This made it possible to correctly model the true visual and scrolling structure of websites. Next, &quot;all&quot; we had to do was to implement algorithms on top of the property trees, such as the screen-space transform of composited layers, or determining which layers scrolled and which did not.</p>
+
+<p>In fact, we soon noticed that there were many other places in the code where similar geometrical questions were raised. (The <a href="/docs/chromium/renderingng-data-structures#property_trees">key data structures post</a> has a more complete list.) Several of them had duplicate implementations of the same thing the compositor code was doing; all had a different subset of bugs; and none of them properly modeled true website structure. The solution then became clear: centralize all the geometry algorithms in one place and refactor all the code to use it.</p>
+
+<p>These algorithms in turn all depend on property trees, which is why property trees are a <em>key</em> data structure–that is, one used throughout the pipeline–of RenderingNG. So to achieve this goal of centralized geometry code, we needed to introduce the concept of property trees much earlier in the pipeline–in pre-paint–and change all APIs that now depended on them to require pre-paint be run before they could execute.</p>
+
+<p>This story is yet another aspect of the BlinkNG refactoring pattern: identify key computations, refactor to avoid duplicating them, and create well-defined pipeline stages which create the data structures feeding them. We compute property trees at exactly the point when all of the necessary information is available; and we ensure that the property trees cannot change while later rendering stages are running.</p>
+
+<h3 id="composite_after_paint_pipelining_paint_and_compositing" data-text="Composite after paint: Pipelining paint and compositing" tabindex="-1">Composite after paint: Pipelining paint and compositing</h3>
+
+<p><em>Layerization</em> is the process of figuring out which DOM content goes into its own composited layer (which, in turn, represents a GPU texture). Before RenderingNG, layerization ran before paint, not after (see <a href="/docs/chromium/renderingng-architecture#rendering_pipeline_structure">here</a> for the current pipeline–note the change of order). We would first decide which parts of the DOM went into which composited layer, and only then draw display lists for those textures. Naturally, the decisions depended on factors such as which DOM elements were animating or scrolling, or had 3D transforms, and which elements painted on top of which.</p>
+
+<p>This caused major problems, because it more or less required that there were circular dependencies in the code, which is a big problem for a rendering pipeline. Let&#39;s see why through an example. Suppose we need to <em>invalidate</em> paint (meaning that we need to re-draw the display list and then raster it again). The need to invalidate could come from a change in the DOM, or from a changed style or layout. But of course, we&#39;d like to only invalidate the parts that have actually changed. That meant finding out which composited layers were affected, and then invalidating part or all of the display lists for those layers.</p>
+
+<p>This means that invalidation depended on DOM, style, layout, and past layerization decisions (past: meaning for the previous rendered frame). But the current layerization depends on all of those things as well. And since we didn&#39;t have two copies of all layerization data, it was hard to tell the difference between the past and future layerization decisions.  So we ended up with lots of code that had circular reasoning. This led sometimes to illogical or incorrect code, or even crashes or security issues, if we weren&#39;t very careful.</p>
+
+<p>To deal with this situation, early on we introduced the concept of the <code translate="no" dir="ltr">DisableCompositingQueryAsserts</code> object. Most of the time, if code tried to query past layerization decisions, it would cause an assertion failure and crash the browser if it was in debug mode. This helped us avoid introducing new bugs. And in each case where the code legitimately needed to query past layerization decisions, we put in code to allow it by allocating a <code translate="no" dir="ltr">DisableCompositingQueryAsserts</code> object.</p>
+
+<p>Our plan was to, over time, get rid of all call sites <code translate="no" dir="ltr">DisableCompositingQueryAssert</code> objects, and then declare the code safe and correct. But what we discovered is that a number of the calls were essentially impossible to remove as long as layerization happened before paint. (We were finally able to remove it <a href="https://chromium-review.googlesource.com/c/chromium/src/+/3321653">only very recently</a>!) This was the first reason discovered for the Composite After Paint project. What we learned was that, even if you have a well-defined pipeline phase for an operation, if it is in the wrong place in the pipeline you will eventually get stuck.</p>
+
+<p>The second reason for the Composite After Paint project was the Fundamental Compositing bug. One way to state this bug is that DOM elements are not a good 1:1 representation of an efficient or complete layerization scheme for web page contents. And since compositing was before paint, it more or less inherently depended on DOM elements, not display lists or property trees. This is very similar to the reason we introduced property trees, and just as with property trees, the solution falls out directly if you figure out the right pipeline phase, run it at the right time, and provide it with the correct key data structures. And as with property trees, this was a good opportunity to guarantee that once the paint phase is complete, its output is immutable for all subsequent pipeline phases.</p>
+
+<h2 id="benefits" data-text="Benefits" tabindex="-1">Benefits</h2>
+
+<p>As you&#39;ve seen, a well-defined rendering pipeline yields enormous long-term benefits. There are even more than you might think:</p>
+
+<ul>
+<li><strong>Greatly improved reliability</strong>: This one is pretty straightforward. Cleaner code with well-defined and understandable interfaces is easier to understand, write, and test. This makes it more reliable. It also makes the code safer and more stable, with fewer crashes and fewer use-after-free bugs.</li>
+<li><strong>Expanded test coverage</strong>: In the course of BlinkNG, we added a great many new tests to our suite. This includes unit tests that provide focused verification of internals; regression tests that prevent us from reintroducing old bugs we&#39;ve fixed (so many!); and lots of additions to the public, collectively-maintained <a href="https://wpt.fyi">Web Platform Test suite</a>, which all browsers use to measure conformance to web standards.</li>
+<li><strong>Easier to extend</strong>: If a system is broken down into clear components, it&#39;s not necessary to understand other components at any level of detail in order to make progress on the current one. This makes it easier for everyone to add value to the rendering code without having to be a deep expert, and it also makes it easier to reason about the behavior of the entire system.</li>
+<li><strong>Performance</strong>: Optimizing algorithms written in spaghetti code is difficult enough, but it&#39;s almost impossible to achieve even bigger things such as <a href="/docs/chromium/renderingng#threaded_scrolling_animations_and_decode">universal threaded scrolling and animations</a> or the <a href="/docs/chromium/renderingng-architecture#process_and_thread_structure">processes and threads for site isolation</a> without such a pipeline. Parallelism can help us to improve performance tremendously, but is also extremely complicated.</li>
+<li><strong>Yielding and containment</strong>: There are several new features made possible by BlinkNG that exercise the pipeline in new and novel ways. For example, what if we wanted to only run the rendering pipeline until a budget has expired? Or skip rendering for subtrees known to be not relevant to the user right now? That&#39;s what the <a href="/docs/chromium/renderingng#extensibility_the_right_tools_for_the_job">content-visibility</a> CSS property enables. What about making the style of a component depend on its layout? That&#39;s <a href="/docs/chromium/renderingng#extensibility_the_right_tools_for_the_job">container queries</a>.</li>
+</ul>
+
+<h2 id="case_study_container_queries" data-text="Case study: Container queries" tabindex="-1">Case study: Container queries</h2>
+
+<p>Container queries is a highly anticipated upcoming web platform feature (it has been the number one most requested feature from CSS developers for years). If it&#39;s so great, why doesn&#39;t it exist yet? The reason is that an implementation of container queries requires very careful understanding and control of the relationship between the style and layout code. Let&#39;s take a closer look.</p>
+
+<p>A container query allows the styles that apply to an element to depend on the laid-out size of an ancestor. Since the laid-out size is computed during layout, that means that we need to run style recalc after layout; but <a href="/docs/chromium/renderingng-architecture#rendering_pipeline_structure">style recalc runs before layout</a>! This chicken-and-egg paradox is the entire reason why we couldn&#39;t implement container queries prior to BlinkNG.</p>
+
+<p>How can we resolve this? Isn&#39;t it a backwards pipeline dependency, that is, the same problem that projects such as Composite After Paint solved? Even worse, what if the new styles change the size of the ancestor? Won&#39;t this sometimes lead to an infinite loop?</p>
+
+<p>In principle, the circular dependency can be solved by use of the contain CSS property, which allows rendering outside of an element <em>not to depend on rendering within that element&#39;s subtree</em>. That means that the new styles applied by a container can&#39;t affect the container&#39;s size, because container queries <a href="https://drafts.csswg.org/css-contain-3/#container-type">requires containment</a>.</p>
+
+<p>But actually, that was not enough, and it was necessary to introduce a weaker type of containment than just size containment. This is because it&#39;s common to want a container queries container to be able to resize in only one direction (usually block) based on its inline dimensions. So the concept of <a href="https://drafts.csswg.org/css-contain-3/#containment-inline-size">inline-size containment</a> was added. But as you can see from the very long note in that section, it was not at all clear for a long time if inline size containment was possible.</p>
+
+<p>It&#39;s one thing to describe containment in abstract spec language, and it&#39;s quite another thing to implement it correctly. Recall that one of the goals of BlinkNG was to bring the containment principle to the tree walks that constitute the main logic of rendering: when traversing a subtree, no information should be required from outside the subtree. As it happens (well, it wasn&#39;t exactly an accident), it&#39;s <em>much</em> cleaner and easier to implement CSS containment if the rendering code abides by the containment principle.</p>
+
+<h2 id="future_off-main-thread_compositing_…_and_beyond" data-text="Future: off-main-thread compositing … and beyond!" tabindex="-1">Future: off-main-thread compositing … and beyond!</h2>
+
+<p>The rendering pipeline shown <a href="/docs/chromium/renderingng-architecture#rendering_pipeline_structure">here</a> is actually a bit ahead of the current RenderingNG implementation. It shows layerization as being off the main thread, whereas currently it&#39;s still on the main thread. However, it&#39;s only a matter of time before this is done, now that Composite After Paint has shipped and layerization is after paint.</p>
+
+<p>To understand why this is important, and where else it may lead, we need to consider the architecture of the rendering engine from a somewhat higher vantage point. One of the most durable obstacles to improving Chromium&#39;s performance is the simple fact that the main thread of the renderer handles both main application logic (that is, running script) and the bulk of rendering. As a result, the main thread is frequently saturated with work, and main thread congestion is frequently the bottleneck in the entire browser.</p>
+
+<p>The good news is that it doesn&#39;t have to be this way! This aspect of Chromium&#39;s architecture dates all the way back to the <a href="https://en.wikipedia.org/wiki/KHTML">KHTML</a> days, when single-threaded execution was the dominant programing model. By the time multi-core processors became common in consumer-grade devices, the single-threaded assumption was thoroughly baked into Blink (previously WebKit). We have wanted to introduce more threading into the rendering engine for a long time, but it was simply impossible in the old system. One of the main objectives of Rendering NG was to dig ourselves out of this hole, and make it possible to move rendering work, in part or in whole, to another thread (or threads).</p>
+
+<p>Now that BlinkNG is approaching completion, we are already starting to explore this area; <a href="http://crbug.com/1255972">Non-Blocking Commit</a> is a first foray into changing the renderer&#39;s threading model. <em>Compositor commit</em> (or just <em>commit</em>) is a synchronization step between the main thread and the compositor thread. During commit, we make copies of rendering data that are produced on the main thread, to be used by the downstream compositing code running on the compositor thread. While this synchronization is happening, main thread execution is stopped while the copying code runs on the compositor thread. This is done to ensure that the main thread doesn&#39;t modify its rendering data while the compositor thread is copying it.</p>
+
+<p>Non-Blocking Commit will eliminate the need for the main thread to stop and wait for the commit stage to end—the main thread will continue doing work while commit runs concurrently on the compositor thread. The net effect of Non-Blocking Commit will be a reduction in the time dedicated to rendering work on the main thread, which will decrease congestion on the main thread, and improve performance. As of this writing (March 2022), we have a working prototype of Non-Blocking Commit, and we&#39;re preparing to do a detailed analysis of its impact on performance.</p>
+
+<p>Waiting in the wings is <a href="https://docs.google.com/document/d/1BfIqMcJvmMFdk8e_KKeOEofz16610Mql6gmfeFhrsZk/preview">Off-main-thread Compositing</a>, with the goal of making the rendering engine match the illustration by moving <em>layerization</em> off the main thread, and onto a worker thread. Like Non-Blocking Commit, this will reduce congestion on the main thread by diminishing its rendering workload. A project like this would never have been possible without the architectural improvements of Composite After Paint.</p>
+
+<p>And there are more projects in the pipeline (pun intended)! We finally have a foundation that makes it possible to experiment with redistributing rendering work, and we are very excited to see what&#39;s possible!</p>
+
+  
+
+  
+</div>
+
+  
+
+  
+    
+    
+      
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+  
+       
+    
+    
+  
+
+  
+  
+</article>
+
+
+<devsite-content-footer class="nocontent">
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  <p>Last updated 2022-04-19 UTC.</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  <template class="devsite-thumb-rating-down-categories">
+  [{
+      "type": "thumb-down",
+      "id": "missingTheInformationINeed",
+      "label":"Missing the information I need"
+    },{
+      "type": "thumb-down",
+      "id": "tooComplicatedTooManySteps",
+      "label":"Too complicated / too many steps"
+    },{
+      "type": "thumb-down",
+      "id": "outOfDate",
+      "label":"Out of date"
+    },{
+      "type": "thumb-down",
+      "id": "samplesCodeIssue",
+      "label":"Samples / code issue"
+    },{
+      "type": "thumb-down",
+      "id": "otherDown",
+      "label":"Other"
+    }]
+  </template>
+  <template class="devsite-thumb-rating-up-categories">
+  [{
+      "type": "thumb-up",
+      "id": "easyToUnderstand",
+      "label":"Easy to understand"
+    },{
+      "type": "thumb-up",
+      "id": "solvedMyProblem",
+      "label":"Solved my problem"
+    },{
+      "type": "thumb-up",
+      "id": "otherUp",
+      "label":"Other"
+    }]
+  </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent" aria-label="Footer links">
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Contribute</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://issuetracker.google.com/issues/new?component=1400036&amp;template=1897236"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            File a bug
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://issuetracker.google.com/issues?q=status:open%20componentid:1400036&amp;s=created_time:desc"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+              
+              
+            
+          
+            See open issues
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Related content</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://blog.chromium.org/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Chromium updates
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/case-studies"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Case studies
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/deprecated"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Archive
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://web.dev/shows"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+              
+              
+            
+          
+            Podcasts &amp; shows
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Connect</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://twitter.com/ChromiumDev"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            @ChromiumDev on X
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.youtube.com/user/ChromeDevelopers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            YouTube
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.linkedin.com/showcase/chrome-for-developers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+              
+              
+            
+          
+            Chrome for Developers on LinkedIn
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent">
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Utility links">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          Terms
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privacy
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="nl"
+        >Nederlands</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel></devsite-panel>
+        
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar
+    
+    >
+</devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics analytics-iframe enable-cb>
+      
+        <script type="application/json" analytics>[]</script>
+<script type="application/json" tag-management>{&#34;ga4&#34;: [], &#34;ga4p&#34;: [], &#34;gtm&#34;: [{&#34;id&#34;: &#34;GTM-5QF3RT2&#34;, &#34;purpose&#34;: 0}], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;False&#34;, &#34;requested&#34;: &#34;en&#34;, &#34;served&#34;: &#34;en&#34;}, &#34;pageType&#34;: &#34;article&#34;, &#34;projectName&#34;: &#34;Chromium&#34;, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;chrome&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    <script nonce="WLQVtUlT79j3TB7fgYTuCEp1jNUIiO">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/js/app_loader.js', '[53,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome","https://chrome-dot-devsite-v2-prod-3p.appspot.com",1,null,["/_pwa/chrome/manifest.json","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/favicon.png","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup.svg","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,112,113,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,147,148,149,151,152,156,157,158,159,161,163,164,168,169,170,179,180,182,183,186,191,193,196],"AIzaSyCNm9YxQumEXwGJgTDjxoxXK6m1F-9720Q","AIzaSyCc76DZePGtoyUjqKrLdsMGk_ry7sljLbY","developer.chrome.com","AIzaSyB9bqgQ2t11WJsOX8qNsCQ6U-w91mmqF-I","AIzaSyAdYnStPdzjcJJtQ0mvIaeaMKj7_t6J_Fg",null,null,null,["MiscFeatureFlags__developers_footer_image","CloudShell__cloud_shell_button","MiscFeatureFlags__developers_footer_dark_image","TpcFeatures__enable_mirror_tenant_redirects","MiscFeatureFlags__enable_firebase_utm","Cloud__enable_cloud_dlp_service","Cloud__enable_cloud_facet_chat","Search__enable_ai_eligibility_checks","OnSwitch__enable","MiscFeatureFlags__enable_new_sitemap","Profiles__enable_profile_collections","EngEduTelemetry__enable_engedu_telemetry","Cloud__enable_free_trial_server_call","Profiles__require_profile_eligibility_for_signin","MiscFeatureFlags__enable_variable_operator","Profiles__enable_public_developer_profiles","Cloud__enable_cloudx_ping","Profiles__enable_awarding_url","Analytics__enable_cookie_bar","Profiles__enable_page_saving","Concierge__enable_pushui","Cloud__enable_cloud_shell_fte_user_flow","BookNav__enable_tenant_cache_key","Profiles__enable_release_notes_notifications","CloudShell__cloud_code_overflow_menu","Profiles__enable_developer_profiles_callout","MiscFeatureFlags__enable_explain_this_code","Cloud__enable_cloud_shell","Search__enable_suggestions_from_borg","Search__enable_dynamic_content_confidential_banner","MiscFeatureFlags__enable_project_variables","Search__enable_faceted_search","Cloud__enable_cloudx_experiment_ids","Search__enable_page_map","MiscFeatureFlags__emergency_css","Experiments__reqs_query_experiments"],null,null,"AIzaSyA58TaKli1DculwmAmbpzLVGuWc8eCQgQc","https://developerscontentserving-pa.googleapis.com","AIzaSyDWBU60w0P9hEkr29kkksYs8Z7gvZ8u_wc","https://developerscontentsearch-pa.googleapis.com",2,4]')
+  
+</script>
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>

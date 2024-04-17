@@ -1,0 +1,3858 @@
+<!doctype html>
+<html 
+      lang="en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="157101835696-ooapojlodmuabs2do2vuhhnf90bccmoi.apps.googleusercontent.com">
+    <meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award">
+    <meta property="og:site_name" content="Chrome for Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#1a73e8"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/chrome/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//apis.google.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/css/app.css">
+      
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/touchicon-180.png"><link rel="canonical" href="https://developer.chrome.com/docs/chromium/renderingng-architecture"><link rel="search" type="application/opensearchdescription+xml"
+            title="Chrome for Developers" href="https://developer.chrome.com/s/opensearch.xml">
+      <link rel="alternate" hreflang="en"
+          href="https://developer.chrome.com/docs/chromium/renderingng-architecture" /><link rel="alternate" hreflang="x-default" href="https://developer.chrome.com/docs/chromium/renderingng-architecture" /><link rel="alternate" hreflang="ar"
+          href="https://developer.chrome.com/docs/chromium/renderingng-architecture?hl=ar" /><link rel="alternate" hreflang="bn"
+          href="https://developer.chrome.com/docs/chromium/renderingng-architecture?hl=bn" /><link rel="alternate" hreflang="zh-Hans"
+          href="https://developer.chrome.com/docs/chromium/renderingng-architecture?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant"
+          href="https://developer.chrome.com/docs/chromium/renderingng-architecture?hl=zh-tw" /><link rel="alternate" hreflang="nl"
+          href="https://developer.chrome.com/docs/chromium/renderingng-architecture?hl=nl" /><link rel="alternate" hreflang="fa"
+          href="https://developer.chrome.com/docs/chromium/renderingng-architecture?hl=fa" /><link rel="alternate" hreflang="fr"
+          href="https://developer.chrome.com/docs/chromium/renderingng-architecture?hl=fr" /><link rel="alternate" hreflang="de"
+          href="https://developer.chrome.com/docs/chromium/renderingng-architecture?hl=de" /><link rel="alternate" hreflang="he"
+          href="https://developer.chrome.com/docs/chromium/renderingng-architecture?hl=he" /><link rel="alternate" hreflang="hi"
+          href="https://developer.chrome.com/docs/chromium/renderingng-architecture?hl=hi" /><link rel="alternate" hreflang="id"
+          href="https://developer.chrome.com/docs/chromium/renderingng-architecture?hl=id" /><link rel="alternate" hreflang="it"
+          href="https://developer.chrome.com/docs/chromium/renderingng-architecture?hl=it" /><link rel="alternate" hreflang="ja"
+          href="https://developer.chrome.com/docs/chromium/renderingng-architecture?hl=ja" /><link rel="alternate" hreflang="ko"
+          href="https://developer.chrome.com/docs/chromium/renderingng-architecture?hl=ko" /><link rel="alternate" hreflang="pl"
+          href="https://developer.chrome.com/docs/chromium/renderingng-architecture?hl=pl" /><link rel="alternate" hreflang="pt-BR"
+          href="https://developer.chrome.com/docs/chromium/renderingng-architecture?hl=pt-br" /><link rel="alternate" hreflang="ru"
+          href="https://developer.chrome.com/docs/chromium/renderingng-architecture?hl=ru" /><link rel="alternate" hreflang="es-419"
+          href="https://developer.chrome.com/docs/chromium/renderingng-architecture?hl=es-419" /><link rel="alternate" hreflang="th"
+          href="https://developer.chrome.com/docs/chromium/renderingng-architecture?hl=th" /><link rel="alternate" hreflang="tr"
+          href="https://developer.chrome.com/docs/chromium/renderingng-architecture?hl=tr" /><link rel="alternate" hreflang="vi"
+          href="https://developer.chrome.com/docs/chromium/renderingng-architecture?hl=vi" /><link rel="alternate" hreflang="en-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-architecture" /><link rel="alternate" hreflang="x-default" href="https://developer.chrome.google.cn/docs/chromium/renderingng-architecture" /><link rel="alternate" hreflang="ar-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-architecture?hl=ar" /><link rel="alternate" hreflang="bn-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-architecture?hl=bn" /><link rel="alternate" hreflang="zh-Hans-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-architecture?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-architecture?hl=zh-tw" /><link rel="alternate" hreflang="nl-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-architecture?hl=nl" /><link rel="alternate" hreflang="fa-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-architecture?hl=fa" /><link rel="alternate" hreflang="fr-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-architecture?hl=fr" /><link rel="alternate" hreflang="de-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-architecture?hl=de" /><link rel="alternate" hreflang="he-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-architecture?hl=he" /><link rel="alternate" hreflang="hi-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-architecture?hl=hi" /><link rel="alternate" hreflang="id-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-architecture?hl=id" /><link rel="alternate" hreflang="it-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-architecture?hl=it" /><link rel="alternate" hreflang="ja-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-architecture?hl=ja" /><link rel="alternate" hreflang="ko-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-architecture?hl=ko" /><link rel="alternate" hreflang="pl-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-architecture?hl=pl" /><link rel="alternate" hreflang="pt-BR-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-architecture?hl=pt-br" /><link rel="alternate" hreflang="ru-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-architecture?hl=ru" /><link rel="alternate" hreflang="es-419-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-architecture?hl=es-419" /><link rel="alternate" hreflang="th-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-architecture?hl=th" /><link rel="alternate" hreflang="tr-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-architecture?hl=tr" /><link rel="alternate" hreflang="vi-cn"
+          href="https://developer.chrome.google.cn/docs/chromium/renderingng-architecture?hl=vi" /><title>Overview of the RenderingNG architecture &nbsp;|&nbsp; Chromium &nbsp;|&nbsp; Chrome for Developers</title>
+
+<meta property="og:title" content="Overview of the RenderingNG architecture &nbsp;|&nbsp; Chromium &nbsp;|&nbsp; Chrome for Developers"><meta name="description" content="This post explains the components of the RenderingNG architecture, and how the rendering pipeline flows through them.">
+  <meta property="og:description" content="This post explains the components of the RenderingNG architecture, and how the rendering pipeline flows through them."><meta property="og:url" content="https://developer.chrome.com/docs/chromium/renderingng-architecture"><meta property="og:locale" content="en"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "dateModified": "2021-07-26",
+    "headline": "Overview of the RenderingNG architecture"
+  }
+</script><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Docs",
+      "item": "https://developer.chrome.com/docs"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Chromium",
+      "item": "https://developer.chrome.com/docs/chromium"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Overview of the RenderingNG architecture",
+      "item": "https://developer.chrome.com/docs/chromium/renderingng-architecture"
+    }]
+  }
+  </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+    
+      <link rel="stylesheet" href="/extras.css"></head>
+  <body class=""
+        template="page"
+        theme="chrome-theme"
+        type="article"
+        
+        
+        appearance
+        layout="docs"
+        
+        
+        
+        
+        display-toc
+        pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+    <section class="devsite-wrapper">
+      
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar>
+      <devsite-header role="banner">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner nocontent">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="chromeForDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme"
+            alt="Chrome for Developers">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup.svg" class="devsite-site-logo" alt="Chrome for Developers">
+  </picture>
+  
+</a>
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+              
+              
+  <devsite-tabs class="upper-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Upper tabs">
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/case-studies"
+      track-metadata-eventdetail="https://developer.chrome.com/case-studies"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - get inspired"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Get inspired"
+         
+           track-name="get inspired"
+         
+       >
+    Get inspired
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/blog"
+      track-metadata-eventdetail="https://developer.chrome.com/blog"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - blog"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Blog"
+         
+           track-name="blog"
+         
+       >
+    Blog
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab class="devsite-dropdown
+    devsite-dropdown-full
+    devsite-active
+    
+    ">
+  
+    <a href="https://developer.chrome.com/docs"
+      track-metadata-eventdetail="https://developer.chrome.com/docs"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - docs"
+       track-metadata-module="primary nav"
+       aria-label="Docs, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Docs"
+         
+           track-name="docs"
+         
+       >
+    Docs
+  
+    </a>
+  
+  
+    <a href="#"
+       role="button"
+       aria-haspopup="true"
+       aria-expanded="false"
+       aria-label="Dropdown menu for Docs"
+       track-type="nav"
+       track-metadata-eventdetail="https://developer.chrome.com/docs"
+       track-metadata-position="nav - docs"
+       track-metadata-module="primary nav"
+       
+        
+          data-category="Site-Wide Custom Events"
+        
+          data-label="Tab: Docs"
+        
+          track-name="docs"
+        
+      
+       class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+  
+  <div class="devsite-tabs-dropdown" aria-label="submenu" hidden>
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       build-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Build with Chrome</li>
+              
+              
+                <li class="devsite-nav-description">Learn how Chrome works, participate in origin trials, and build with Chrome everywhere.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/web-platform"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/web-platform"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Web Platform
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/capabilities"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/capabilities"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Capabilities
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/extensions"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/extensions"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Extensions
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/webstore"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/webstore"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chrome Web Store
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/chromium"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/chromium"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chromium
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/aurora"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/aurora"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Aurora
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/android"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/android"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Web on Android
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/origintrials/"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/origintrials/"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Origin trials
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/release-notes"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/release-notes"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Release notes
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       productivity-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Productivity</li>
+              
+              
+                <li class="devsite-nav-description">Create the best experience for your users with the web&#39;s best tools.</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/devtools"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/devtools"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      DevTools
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/lighthouse"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/lighthouse"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Lighthouse
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/crux"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/crux"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chrome UX Report
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/accessibility"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/accessibility"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Accessibility
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       dcc-subnav second-column-list">
+              
+              
+                <li class="devsite-nav-description">Get things done quicker and neater, with our ready-made libraries.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/workbox"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/workbox"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Workbox
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/puppeteer"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/puppeteer"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Puppeteer
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       experience-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Experience</li>
+              
+              
+                <li class="devsite-nav-description">Design a beautiful and performant web with Chrome.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/performance"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/performance"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Performance
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/css-ui"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/css-ui"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      CSS and UI
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/identity"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/identity"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Identity
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/payments"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/payments"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Payments
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/privacy-security"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/privacy-security"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Privacy and security
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       resources-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Resources</li>
+              
+              
+                <li class="devsite-nav-description">More from the Chrome team.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="resources"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      All documentation
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/baseline"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/baseline"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="resources"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Baseline
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="resources"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      web.dev
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    
+    project-name="Chromium"
+    tenant-name="Chrome for Developers"
+    
+    
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://developer.chrome.com/s/results" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Open search"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Search"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Search"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Close search"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+        
+
+        <devsite-appearance-selector></devsite-appearance-selector>
+
+        
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="nl"
+        >Nederlands</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+        
+
+        
+          
+          
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>Sign in</span>
+            
+        </devsite-user>
+           
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+      
+        
+          <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+              
+                
+                  
+                  
+                  <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs/chromium"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Lower Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Chromium"
+      
+    >
+    
+        Chromium
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+                
+              
+              
+            </div>
+            
+          </div>
+          
+        
+      
+      
+        <div class="devsite-doc-set-nav-row">
+          
+          
+            
+            
+  <devsite-tabs class="lower-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Lower tabs">
+      
+        
+          <tab  class="devsite-active">
+            
+    <a href="https://developer.chrome.com/docs/chromium"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/chromium"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - chromium"
+       track-metadata-module="primary nav"
+       aria-label="Chromium, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Chromium"
+         
+           track-name="chromium"
+         
+       >
+    Chromium
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/docs/chromium/chronicle"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/chromium/chronicle"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - chromium chronicle"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Chromium Chronicle"
+         
+           track-name="chromium chronicle"
+         
+       >
+    Chromium Chronicle
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/docs/chromedriver"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/chromedriver"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - chromedriver"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: ChromeDriver"
+         
+           track-name="chromedriver"
+         
+       >
+    ChromeDriver
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+          
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+
+  
+</devsite-header>
+      <devsite-book-nav scrollbars >
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     hidden>
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="Filter"
+         
+         aria-label="Type to filter"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="Clear filter"
+        aria-label="Clear filter"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent"
+     aria-label="Side menu">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="chromeForDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme"
+            alt="Chrome for Developers">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup.svg" class="devsite-site-logo" alt="Chrome for Developers">
+  </picture>
+  
+</a>
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/case-studies"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Get inspired"
+      
+        track-name="get inspired"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Get inspired"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Get inspired
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/blog"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Blog"
+      
+        track-name="blog"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Blog"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Blog
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Docs"
+      
+        track-name="docs"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Docs"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Docs
+   </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Docs"
+      
+        track-name="docs"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Docs">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Docs">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+                <ul class="devsite-nav-responsive-tabs">
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/chromium"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Chromium"
+      
+        track-name="chromium"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chromium"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip menu="_book">
+      Chromium
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/chromium/chronicle"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Chromium Chronicle"
+      
+        track-name="chromium chronicle"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chromium Chronicle"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chromium Chronicle
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/chromedriver"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: ChromeDriver"
+      
+        track-name="chromedriver"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: ChromeDriver"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      ChromeDriver
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Get started</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/cvd"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/cvd"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/cvd"
+      ><span class="devsite-nav-text" tooltip>Simulate color vision deficiencies in the Blink Renderer</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/new-headless"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/new-headless"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/new-headless"
+      ><span class="devsite-nav-text" tooltip>Chrome&#39;s Headless mode</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>RenderingNG</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/renderingng"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/renderingng"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/renderingng"
+      ><span class="devsite-nav-text" tooltip>Overview of RenderingNG</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/renderingng-architecture"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/renderingng-architecture"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/renderingng-architecture"
+      ><span class="devsite-nav-text" tooltip>RenderingNG architecture</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/renderingng-data-structures"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/renderingng-data-structures"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/renderingng-data-structures"
+      ><span class="devsite-nav-text" tooltip>Key data structures</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/blinkng"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/blinkng"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/blinkng"
+      ><span class="devsite-nav-text" tooltip>BlinkNG</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/videong"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/videong"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/videong"
+      ><span class="devsite-nav-text" tooltip>VideoNG</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/layoutng"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/layoutng"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/layoutng"
+      ><span class="devsite-nav-text" tooltip>LayoutNG</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/chromium/renderingng-fragmentation"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/chromium/renderingng-fragmentation"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/chromium/renderingng-fragmentation"
+      ><span class="devsite-nav-text" tooltip>LayoutNG block fragmentation</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Resources</span>
+      </div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/README.md"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/README.md"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/README.md"
+      ><span class="devsite-nav-text" tooltip>Read Chromium&#39;s docs</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="https://www.chromium.org/chromium-projects/"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: https://www.chromium.org/chromium-projects/"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="https://www.chromium.org/chromium-projects/"
+      ><span class="devsite-nav-text" tooltip>Chromium projects</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li>
+          </ul>
+        
+        
+          
+    
+  
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="Docs"
+          aria-label="Side menu" hidden>
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Build with Chrome
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/web-platform"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Web Platform"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Web Platform
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/capabilities"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Capabilities"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Capabilities
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/extensions"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Extensions"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Extensions
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/webstore"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chrome Web Store"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chrome Web Store
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/chromium"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chromium"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chromium
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/aurora"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Aurora"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Aurora
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/android"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Web on Android"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Web on Android
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developer.chrome.com/origintrials/"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Origin trials"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Origin trials
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/release-notes"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Release notes"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Release notes
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Productivity
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/devtools"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: DevTools"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      DevTools
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/lighthouse"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Lighthouse"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Lighthouse
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/crux"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chrome UX Report"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chrome UX Report
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/accessibility"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Accessibility"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Accessibility
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/workbox"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Workbox"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Workbox
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/puppeteer"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Puppeteer"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Puppeteer
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Experience
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/performance"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Performance"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Performance
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/css-ui"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: CSS and UI"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      CSS and UI
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/identity"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Identity"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Identity
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/payments"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Payments"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Payments
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/privacy-security"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Privacy and security"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Privacy and security
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Resources
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: All documentation"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      All documentation
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://web.dev/baseline"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Baseline"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Baseline
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://web.dev"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: web.dev"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      web.dev
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+        
+        
+          
+    
+  
+    
+  
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+        
+      </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+            
+              has-book-nav
+              has-sidebar
+            >
+          
+          
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="On this page"
+                            depth="2"
+                            scrollbars
+                  ></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav">
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article">
+  
+  
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation">
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        Home
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail="Docs"
+      
+    >
+    
+        Docs
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs/chromium"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail="Chromium"
+      
+    >
+    
+        Chromium
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+  
+    
+  </div>
+  
+      <h1 class="devsite-page-title" tabindex="-1">Overview of the RenderingNG architecture</h1>
+  <devsite-feature-tooltip
+          ack-key="AckCollectionsBookmarkTooltipDismiss"
+          analytics-category="Site-Wide Custom Events"
+          analytics-action-show="Callout Profile displayed"
+          analytics-action-close="Callout Profile dismissed"
+          analytics-label="Create Collection Callout"
+          class="devsite-page-bookmark-tooltip nocontent"
+          dismiss-button="true"
+          id="devsite-collections-dropdown"
+
+          
+          dismiss-button-text="Dismiss"
+
+          
+          close-button-text="Got it">
+
+        
+        <devsite-bookmark></devsite-bookmark>
+
+        <span slot="popout-heading">
+          
+          Stay organized with collections
+        </span>
+        <span slot="popout-contents">
+          
+          Save and categorize content based on your preferences.
+        </span>
+      </devsite-feature-tooltip>
+  <div class="devsite-page-title-meta"><devsite-view-release-notes></devsite-view-release-notes></div>
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    >
+  </devsite-toc>
+  
+    
+  
+
+  
+
+
+
+
+
+
+<div class="devsite-article-body clearfix
+  ">
+
+  
+    
+
+
+
+
+<p><style>
+.wd-authors {
+  --avatar-size: 65px;
+  display: flex;
+  gap: 2em;
+}
+
+.wd-author {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  line-height: calc(var(--avatar-size) / 2);
+}
+
+.wd-author img {
+  border-radius: 50%;
+  height: var(--avatar-size, 65px);
+  width: var(--avatar-size, 65px);
+}
+
+.dcc-authors {
+  --avatar-size: 65px;
+  display: flex;
+  gap: 2em;
+}
+
+.dcc-author {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  line-height: calc(var(--avatar-size) / 2);
+}
+
+.dcc-author img {
+  border-radius: 50%;
+  height: var(--avatar-size, 65px);
+  width: var(--avatar-size, 65px);
+}
+
+.dcc-author__links a {
+  margin-inline-end: 6px;
+}
+
+.dcc-author__links a:last-of-type {
+  margin-inline-end: 0;
+}
+</style>
+
+<div class="dcc-authors" translate="no">
+  
+    
+    
+      <div class="dcc-author">
+        
+          <img class="devsite-landing-row-item-icon" alt="Chris Harrelson" 
+            src="https://web.dev/images/authors/chrishtr.jpg" 
+            decoding="async" height="64" loading="lazy" width="64"> 
+        
+        <div>
+          <span> 
+            Chris Harrelson
+          </span>
+          <div class="dcc-author__links">
+            
+              <a href="https://twitter.com/chrishtr" aria-label="Chris Harrelson on X">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 300 271">
+                  <title>X</title>
+                  <path fill="currentColor" d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z"></path>
+                </svg></a>
+            
+            
+              <a href="https://github.com/chrishtr" aria-label="Chris Harrelson on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 32.6 31.8">
+                  <title>GitHub</title>
+                  <path d="M16.3 0C7.3 0 0 7.3 0 16.3c0 7.2 4.7 13.3 11.1 15.5.8.1 1.1-.4 1.1-.8v-2.8c-4.5 1-5.5-2.2-5.5-2.2-.7-1.9-1.8-2.4-1.8-2.4-1.5-1 .1-1 .1-1 1.6.1 2.5 1.7 2.5 1.7 1.5 2.5 3.8 1.8 4.7 1.4.1-1.1.6-1.8 1-2.2-3.6-.4-7.4-1.8-7.4-8.1 0-1.8.6-3.2 1.7-4.4-.1-.3-.7-2 .2-4.2 0 0 1.4-.4 4.5 1.7 1.3-.4 2.7-.5 4.1-.5 1.4 0 2.8.2 4.1.5 3.1-2.1 4.5-1.7 4.5-1.7.9 2.2.3 3.9.2 4.3 1 1.1 1.7 2.6 1.7 4.4 0 6.3-3.8 7.6-7.4 8 .6.5 1.1 1.5 1.1 3V31c0 .4.3.9 1.1.8 6.5-2.2 11.1-8.3 11.1-15.5C32.6 7.3 25.3 0 16.3 0z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" />
+                </svg></a>
+            
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+    
+  
+</div></p>
+
+<aside class="note"><b>Note:</b> This post is a part of a series on the Chromium rendering engine. Check out the rest of the series to learn more.</aside>
+
+<p>In a <a href="/blog/renderingng">previous post</a>,
+I gave an overview of the RenderingNG architecture goals and key properties.
+This post will explain how its component pieces are set up,
+and how the rendering pipeline flows through them.</p>
+
+<p>Starting at the highest level and drilling down from there,
+the tasks of rendering are:</p>
+
+<ol>
+<li><em>Render contents</em> into pixels on the screen.</li>
+<li><em>Animate visual effects</em> on the contents from one state to another.</li>
+<li><em>Scroll</em> in response to input.</li>
+<li><em>Route input</em> efficiently to the right places so that developer scripts and other subsystems can respond.</li>
+</ol>
+
+<p>The <em>contents</em> to render are a tree of <em>frames</em> for each browser tab, plus the browser UI.
+And, a stream of raw input events from touch screens,
+mice, keyboards, and other hardware devices.</p>
+
+<p>Each frame includes:</p>
+
+<ul>
+<li>DOM state</li>
+<li>CSS</li>
+<li>Canvases</li>
+<li>External resources, such as images, video, fonts, and SVG</li>
+</ul>
+
+<p>A <em>frame</em> is an HTML document, plus its URL.
+A web page loaded in a browser tab has a top-level frame,
+child frames for each iframe included in the top-level document,
+and their recursive iframe descendants.</p>
+
+<p>A <em>visual effect</em> is a graphical operation applied to a bitmap,
+such as scroll, transform, clip, filter, opacity, or blend.</p>
+
+<h2 id="architecture_components" data-text="Architecture components" tabindex="-1">Architecture components</h2>
+
+<p>In RenderingNG, these tasks are split logically across several stages and code components.
+The components end up in various CPU processes, threads,
+and sub-components within those threads.
+Each plays an important role in achieving
+<a href="/blog/renderingng#reliability">reliability</a>,
+<a href="/blog/renderingng#scalable-performance">scalable performance</a>
+and <a href="/blog/renderingng#extensibility-the-right-tools-for-the-job">extensibility</a> for all web content.</p>
+
+<h3 id="rendering_pipeline_structure" data-text="Rendering pipeline structure" tabindex="-1">Rendering pipeline structure</h3>
+
+<p><img src="/static/docs/chromium/renderingng-architecture/image/diagram-the-rendering-pi-093c8ed755a54.jpeg" alt="Diagram of the rendering pipeline as explained in the following text." width="800" height="1273" srcset="https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-rendering-pi-093c8ed755a54_36.jpeg 36w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-rendering-pi-093c8ed755a54_48.jpeg 48w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-rendering-pi-093c8ed755a54_72.jpeg 72w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-rendering-pi-093c8ed755a54_96.jpeg 96w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-rendering-pi-093c8ed755a54_480.jpeg 480w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-rendering-pi-093c8ed755a54_720.jpeg 720w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-rendering-pi-093c8ed755a54_856.jpeg 856w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-rendering-pi-093c8ed755a54_960.jpeg 960w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-rendering-pi-093c8ed755a54_1440.jpeg 1440w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-rendering-pi-093c8ed755a54_1920.jpeg 1920w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-rendering-pi-093c8ed755a54_2880.jpeg 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<p>Rendering proceeds in a pipeline with a number of stages and artifacts created along the way.
+Each <em>stage</em> represents code that does one well-defined task within rendering.
+The <em>artifacts</em> are data structures that are inputs or outputs of the stages;
+in the diagram inputs or outputs are indicated with arrows.</p>
+
+<p>This blog post won&#39;t go into much detail about the artifacts;
+that will be discussed in the next post:
+<em>Key Data Structures and their roles in RenderingNG</em>.</p>
+
+<h3 id="the_pipeline_stages" data-text="The pipeline stages" tabindex="-1">The pipeline stages</h3>
+
+<p>In the preceeding diagram, stages are notated with colors indicating in which thread or process they execute:</p>
+
+<ul>
+<li><strong>Green:</strong> render process main thread</li>
+<li><strong>Yellow:</strong> render process compositor</li>
+<li><strong>Orange:</strong> viz process</li>
+</ul>
+
+<p>In some cases they can execute in multiple places,
+depending on the circumstance,
+which is why some have two colors.</p>
+
+<p>The stages are:</p>
+
+<ol>
+<li><em>Animate:</em> change computed styles and mutate <em>property trees</em> over time based on declarative timelines.</li>
+<li><em>Style:</em> apply CSS to the DOM, and create <em>computed styles</em>.</li>
+<li><em>Layout:</em> determine the size and position of DOM elements on the screen,
+and create the <em>immutable fragment tree</em>.</li>
+<li><em>Pre-paint:</em> compute property trees and
+<a href="https://en.wikipedia.org/wiki/Cache_invalidation">invalidate</a>
+any existing <em>display lists</em> and GPU <em>texture tiles</em> as appropriate.</li>
+<li><em>Scroll:</em> update the scroll offset of documents and scrollable DOM elements, by mutating property trees.</li>
+<li><em>Paint:</em> compute a display list that describes how to raster GPU texture tiles from the DOM.</li>
+<li><em>Commit:</em> copy property trees and the display list to the compositor thread.</li>
+<li><em>Layerize:</em> break up the display list into a <em>composited layer list</em> for independent rasterization and animation.</li>
+<li><em>Raster, decode and paint worklets:</em> turn display lists, encoded images, and paint worklet code, respectively, into
+<a href="https://en.wikipedia.org/wiki/Tiled_rendering">GPU texture tiles</a>.</li>
+<li><em>Activate:</em> create a <em>compositor frame</em> representing how to draw and position GPU tiles to the screen, together with any visual effects.</li>
+<li><em>Aggregate:</em> combine compositor frames from all the visible compositor frames into a single, global compositor frame.</li>
+<li><em>Draw:</em> execute the aggregated compositor frame on the GPU to create pixels on-screen.</li>
+</ol>
+
+<p>Stages of the rendering pipeline can be skipped if they aren&#39;t needed.
+For example, animations of visual effects, and scroll, can skip layout, pre-paint and paint.
+This is why animation and scroll are marked with yellow and green dots in the diagram.
+If layout, pre-paint, and paint can be skipped for visual effects,
+they can be run entirely on the compositor thread and skip the main thread.</p>
+
+<p>Browser UI rendering is not depicted directly here,
+but can be thought of as a simplified version of this same pipeline
+(and in fact its implementation shares much of the code).
+Video (also not directly depicted)
+generally renders via independent code that decodes frames into GPU texture tiles
+that are then plugged into compositor frames and the draw step.</p>
+
+<h2 id="process_and_thread_structure" data-text="Process and thread structure" tabindex="-1">Process and thread structure</h2>
+
+<aside class="note"><b>Note:</b> There are more CPU processes and threads in the Chromium architecture than pictured here.
+These diagrams focus only on those critical to rendering.</aside>
+
+<h3 id="cpu_processes" data-text="CPU processes" tabindex="-1">CPU processes</h3>
+
+<p>The use of multiple CPU processes achieves performance and security isolation
+between sites and from browser state,
+and stability and security isolation from GPU hardware.</p>
+
+<p><img src="/static/docs/chromium/renderingng-architecture/image/diagram-the-various-part-4d5baeb7bd8d3.jpeg" alt="Diagram of the various parts of the CPU processes" width="800" height="626" srcset="https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-various-part-4d5baeb7bd8d3_36.jpeg 36w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-various-part-4d5baeb7bd8d3_48.jpeg 48w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-various-part-4d5baeb7bd8d3_72.jpeg 72w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-various-part-4d5baeb7bd8d3_96.jpeg 96w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-various-part-4d5baeb7bd8d3_480.jpeg 480w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-various-part-4d5baeb7bd8d3_720.jpeg 720w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-various-part-4d5baeb7bd8d3_856.jpeg 856w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-various-part-4d5baeb7bd8d3_960.jpeg 960w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-various-part-4d5baeb7bd8d3_1440.jpeg 1440w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-various-part-4d5baeb7bd8d3_1920.jpeg 1920w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-various-part-4d5baeb7bd8d3_2880.jpeg 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<ul>
+<li>The <em>render process</em> renders, animates, scrolls, and routes input for a single site and tab combination.
+There are many render processes.</li>
+<li>The <em>browser process</em> renders, animates, and routes input for the browser UI
+(including the URL bar, tab titles and icons),
+and routes all remaining input to the appropriate render process.
+There is exactly one browser process.</li>
+<li>The <em>Viz process</em> aggregates compositing from multiple render processes
+plus the browser process.
+It rasters and draws using the GPU. There is exactly one Viz process.</li>
+</ul>
+
+<p>Different <a href="https://web.dev/articles/same-site-same-origin">sites</a> always end up in different render processes.
+(In reality,
+<a href="https://blog.chromium.org/2019/10/recent-site-isolation-improvements.html">always on desktop; when possible on mobile</a>.
+I&#39;ll write &quot;always&quot; below,
+but this caveat applies throughout.)</p>
+
+<p>Multiple browser tabs or windows of the same site usually go in different render processes,
+unless the tabs are related (one <a href="https://developer.mozilla.org/docs/Web/API/Window/opener">opening</a>
+the other).
+Under strong memory pressure on desktop Chromium may put multiple tabs
+from the same site into the same render process even if not related.</p>
+
+<p>Within a single browser tab,
+frames from different sites are always in different render processes from each other,
+but frames from the same site are always in the same render process.
+From the perspective of rendering,
+the important advantage of multiple render processes is that cross-site iframes
+and tabs achieve <a href="/blog/renderingng#performance-isolation">performance isolation</a>
+from each other.
+In addition, origins can opt into <a href="https://web.dev/articles/origin-agent-cluster">even more isolation</a>.</p>
+
+<p>There is exactly one Viz process for all of Chromium.
+After all, there is usually only one GPU and screen to draw to.
+Separating Viz into its own process is good for stability in the face of bugs in GPU drivers or hardware.
+It&#39;s also good for security isolation,
+which is important for GPU APIs like <a href="/blog/renderingng#extensibility-the-right-tools-for-the-job">Vulkan</a>.
+It&#39;s also important for
+<a href="http://www.chromium.org/developers/design-documents/oop-iframes/oop-iframes-rendering#TOC-Cross-site-texture-stealing">security in general</a>.</p>
+
+<p>Since the browser can have many tabs and windows,
+and all of them have browser UI pixels to draw,
+you might wonder: why there is exactly one browser process?
+The reason is that only one of them is focused at a time;
+in fact, non-visible browser tabs are mostly deactivated and drop all of their GPU memory.
+However, complex browser UI rendering features are increasingly being implemented
+in render processes as well (known as
+<a href="https://www.chromium.org/developers/webui">WebUI</a>).
+This is not for performance isolation reasons,
+but in order to take advantage of the ease of use of Chromium&#39;s web rendering engine.</p>
+
+<p><a href="https://chromium.googlesource.com/chromium/src/+/HEAD/android_webview/docs/architecture.md">On older Android devices</a>,
+the render and browser process are shared when used in a WebView
+(this does not apply to Chromium on Android generally, just WebView).
+On WebView, the browser process is also shared with the embedding app,
+and WebView has only one render process.</p>
+
+<p>There is also sometimes a utility process for decoding protected video content.
+This process is not depicted above.</p>
+
+<h2 id="threads" data-text="Threads" tabindex="-1">Threads</h2>
+
+<p>Threads help achieve performance isolation and responsiveness in spite of slow tasks,
+pipeline parallelization and multiple buffering.</p>
+
+<p><img src="/static/docs/chromium/renderingng-architecture/image/a-diagram-the-render-pro-5fb6b28a06bf9.jpeg" alt="A diagram of the render process as described in the article." width="800" height="556" srcset="https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-render-pro-5fb6b28a06bf9_36.jpeg 36w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-render-pro-5fb6b28a06bf9_48.jpeg 48w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-render-pro-5fb6b28a06bf9_72.jpeg 72w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-render-pro-5fb6b28a06bf9_96.jpeg 96w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-render-pro-5fb6b28a06bf9_480.jpeg 480w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-render-pro-5fb6b28a06bf9_720.jpeg 720w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-render-pro-5fb6b28a06bf9_856.jpeg 856w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-render-pro-5fb6b28a06bf9_960.jpeg 960w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-render-pro-5fb6b28a06bf9_1440.jpeg 1440w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-render-pro-5fb6b28a06bf9_1920.jpeg 1920w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-render-pro-5fb6b28a06bf9_2880.jpeg 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<ul>
+<li>The <em>main thread</em> runs scripts, the rendering event loop, the document lifecycle,
+hit testing, script event dispatching, and parsing of HTML, CSS and other data formats.
+<ul>
+<li><em>Main thread helpers</em> perform tasks such as creating image bitmaps and blobs that require encoding or decoding.</li>
+<li><em><a href="https://developer.mozilla.org/docs/Web/API/Web_Workers_API">Web Workers</a></em>
+run script, and a rendering event loop for OffscreenCanvas.</li>
+</ul></li>
+<li>The <em>Compositor thread</em> processes input events,
+performs scrolling and animations of web content,
+computes optimal layerization of web content,
+and coordinates image decodes, paint worklets and raster tasks.
+<ul>
+<li><em>Compositor thread helpers</em> coordinate Viz raster tasks,
+and execute image decode tasks, paint worklets and fallback raster.</li>
+</ul></li>
+<li><em>Media, demuxer or audio output threads</em> decode,
+process and synchronize video and audio streams.
+(Remember that video executes in parallel with the main rendering pipeline.)</li>
+</ul>
+
+<p>Separating the main and compositor threads is critically important for
+<a href="/blog/renderingng#performance-isolation">performance isolation</a>
+of animation and scrolling from main thread work.</p>
+
+<p>There is only one main thread per render process,
+even though multiple tabs or frames from the same site may end up in the same process.
+However, there is performance isolation from work performed in various browser APIs.
+For example, generation of image bitmaps and blobs in the Canvas API run in a main thread helper thread.</p>
+
+<p>Likewise, there is only one compositor thread per render process.
+It is generally not a problem that there is only one,
+because all of the really expensive operations on the compositor thread
+are delegated to either compositor worker threads or the Viz process,
+and this work can be done in parallel with input routing, scrolling or animation.
+Compositor worker threads coordinate tasks run in the Viz process,
+but <a href="/blog/renderingng#gpu-acceleration-everywhere">GPU acceleration everywhere</a>
+can fail for reasons outside of Chromium&#39;s control,
+such as driver bugs.
+In these situations the worker thread will do the work in a fallback mode on the CPU.</p>
+
+<p>The number of compositor worker threads depends on the capabilities of the device.
+For example, desktops will generally use more threads,
+as they have more CPU cores and are less battery-constrained than mobile devices.
+This is an example of
+<a href="/blog/renderingng#scalable-performance">scaling up and scaling down</a>.</p>
+
+<p>It&#39;s also interesting to note that the render process threading architecture
+is an application of three different optimization patterns:</p>
+
+<ul>
+<li><em>Helper threads:</em> sending long-running subtasks off to additional threads,
+to keep the parent thread responsive to other requests happening simultaneously.
+The main thread helper and compositor helper threads are good examples of this technique.</li>
+<li><em><a href="https://en.wikipedia.org/wiki/Multiple_buffering">Multiple buffering</a>:</em>
+showing previously rendered content while rendering new content,
+to hide the latency of rendering. The compositor thread uses this technique.</li>
+<li><em>Pipeline parallelization:</em> running the rendering pipeline in multiple places simultaneously.
+This is how scrolling and animation can be fast,
+even if a main thread rendering update is happening,
+because scroll and animation can run in parallel.</li>
+</ul>
+
+<h3 id="browser_process" data-text="Browser process" tabindex="-1">Browser process</h3>
+
+<p><img src="/static/docs/chromium/renderingng-architecture/image/a-browser-process-diagram-ae424d8745494.jpeg" alt="A browser process diagram showing the relationship between the Render and compositing thread, and the render and compositing thread helper." width="800" height="426" srcset="https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-browser-process-diagram-ae424d8745494_36.jpeg 36w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-browser-process-diagram-ae424d8745494_48.jpeg 48w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-browser-process-diagram-ae424d8745494_72.jpeg 72w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-browser-process-diagram-ae424d8745494_96.jpeg 96w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-browser-process-diagram-ae424d8745494_480.jpeg 480w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-browser-process-diagram-ae424d8745494_720.jpeg 720w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-browser-process-diagram-ae424d8745494_856.jpeg 856w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-browser-process-diagram-ae424d8745494_960.jpeg 960w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-browser-process-diagram-ae424d8745494_1440.jpeg 1440w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-browser-process-diagram-ae424d8745494_1920.jpeg 1920w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-browser-process-diagram-ae424d8745494_2880.jpeg 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<ul>
+<li>The <em>render and compositing thread</em> responds to input in the browser UI,
+routes other input to the correct render process; lays out and paints browser UI.</li>
+<li>The <em>render and compositing thread helpers</em>
+execute image decode tasks and fallback raster or decode.</li>
+</ul>
+
+<p>The browser process render and compositing thread are similar
+to the code and functionality of a render process,
+except that the main thread and compositor thread are combined into one.
+There is only one thread needed in this case because there is no need for
+performance isolation from long main thread tasks,
+since there are none by design.</p>
+
+<h3 id="viz_process" data-text="Viz process" tabindex="-1">Viz process</h3>
+
+<p><img src="/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-the-vi-eb3cdfd619bac.jpeg" alt="A diagram showing that the Viz process includes the GPU main thread, and the display compositor thread." width="800" height="479" srcset="https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-the-vi-eb3cdfd619bac_36.jpeg 36w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-the-vi-eb3cdfd619bac_48.jpeg 48w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-the-vi-eb3cdfd619bac_72.jpeg 72w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-the-vi-eb3cdfd619bac_96.jpeg 96w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-the-vi-eb3cdfd619bac_480.jpeg 480w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-the-vi-eb3cdfd619bac_720.jpeg 720w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-the-vi-eb3cdfd619bac_856.jpeg 856w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-the-vi-eb3cdfd619bac_960.jpeg 960w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-the-vi-eb3cdfd619bac_1440.jpeg 1440w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-the-vi-eb3cdfd619bac_1920.jpeg 1920w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-the-vi-eb3cdfd619bac_2880.jpeg 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<ul>
+<li>The <em>GPU main thread</em> rasters display lists and video frames into GPU texture tiles,
+and draws compositor frames to the screen.</li>
+<li>The <em>display compositor thread</em> aggregates and optimizes compositing from each render process,
+plus the browser process, into a single compositor frame for presentation to the screen.</li>
+</ul>
+
+<p>Raster and draw generally happen on the same thread,
+because both of them rely on GPU resources,
+and it&#39;s hard to reliably make multi-threaded use of the GPU
+(easier multi-threaded access to the GPU is one motivation for developing the new
+<a href="https://www.vulkan.org/">Vulkan</a> standard).
+On Android WebView, there is a separate OS-level render thread for drawing
+because of how WebViews are embedded into a native app.
+Other platforms will likely have such a thread in the future.</p>
+
+<p>The display compositor is on a different thread because it needs to be responsive at all times,
+and not block on any possible source of slowdown on the GPU main thread.
+One cause of slowdown on the GPU main thread is calls into non-Chromium code,
+such as vendor-specific GPU drivers, that may be slow in hard-to-predict ways.</p>
+
+<h2 id="component_structure" data-text="Component structure" tabindex="-1">Component structure</h2>
+
+<p>Within each render process main or compositor thread,
+there are logical software components that interact with each other in structured ways.</p>
+
+<h3 id="render_process_main_thread_components" data-text="Render process main thread components" tabindex="-1">Render process main thread components</h3>
+
+<p><img src="/static/docs/chromium/renderingng-architecture/image/a-diagram-the-blink-rend-ea303440ea932.jpeg" alt="A diagram of the Blink renderer." width="800" height="464" srcset="https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-blink-rend-ea303440ea932_36.jpeg 36w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-blink-rend-ea303440ea932_48.jpeg 48w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-blink-rend-ea303440ea932_72.jpeg 72w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-blink-rend-ea303440ea932_96.jpeg 96w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-blink-rend-ea303440ea932_480.jpeg 480w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-blink-rend-ea303440ea932_720.jpeg 720w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-blink-rend-ea303440ea932_856.jpeg 856w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-blink-rend-ea303440ea932_960.jpeg 960w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-blink-rend-ea303440ea932_1440.jpeg 1440w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-blink-rend-ea303440ea932_1920.jpeg 1920w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-blink-rend-ea303440ea932_2880.jpeg 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<ul>
+<li><em>Blink renderer:</em>
+<ul>
+<li>The <em>local frame tree fragment</em> represents the tree of local frames and the DOM within frames.</li>
+<li>The <em>DOM and Canvas APIs</em> component contains implementations of all of these APIs.</li>
+<li>The <em>document lifecycle runner</em> executes the rendering pipeline steps up to and including the commit step.</li>
+<li>The <em>input event hit testing and dispatching</em> component executes hit tests to find out which
+DOM element is targeted by an event,
+and runs the input event dispatching algorithms and default behaviors.</li>
+</ul></li>
+<li>The <em>rendering event loop scheduler and runner</em> decides what to run on the event loop and when.
+It schedules rendering to happen at a cadence matching the device display.</li>
+</ul>
+
+<p><img src="/static/docs/chromium/renderingng-architecture/image/a-diagram-the-frame-tree-4ee02c4053ae6.jpeg" alt="A diagram of the frame tree." width="800" height="629" srcset="https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-frame-tree-4ee02c4053ae6_36.jpeg 36w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-frame-tree-4ee02c4053ae6_48.jpeg 48w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-frame-tree-4ee02c4053ae6_72.jpeg 72w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-frame-tree-4ee02c4053ae6_96.jpeg 96w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-frame-tree-4ee02c4053ae6_480.jpeg 480w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-frame-tree-4ee02c4053ae6_720.jpeg 720w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-frame-tree-4ee02c4053ae6_856.jpeg 856w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-frame-tree-4ee02c4053ae6_960.jpeg 960w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-frame-tree-4ee02c4053ae6_1440.jpeg 1440w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-frame-tree-4ee02c4053ae6_1920.jpeg 1920w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-the-frame-tree-4ee02c4053ae6_2880.jpeg 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<p><em>Local frame tree fragments</em> are a bit complicated to think about.
+Recall that a frame tree is the main page and its child iframes, recursively.
+A frame is <em>local</em> to a render process if it is rendered in that process,
+and otherwise it is <em>remote</em>.</p>
+
+<p>You can imagine coloring frames according to their render process.
+In the preceding image, the green circles are all frames in one render process;
+the orange ones are in a second, and the blue one is in a third.</p>
+
+<p>A local frame tree fragment is a connected component of the same color in a frame tree.
+There are four local frame trees in the image: two for site A, one for site B, and one for site C.
+Each local frame tree gets its own Blink renderer component.
+A local frame tree&#39;s Blink renderer may or may not be in the same render process as other local frame trees
+(it&#39;s determined by the way render processes are selected, as described earlier).</p>
+
+<h3 id="render_process_compositor_thread_structure" data-text="Render process compositor thread structure" tabindex="-1">Render process compositor thread structure</h3>
+
+<p><img src="/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-render-9879ee55fdebe.jpeg" alt="A diagram showing the render process compositor components." width="800" height="559" srcset="https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-render-9879ee55fdebe_36.jpeg 36w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-render-9879ee55fdebe_48.jpeg 48w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-render-9879ee55fdebe_72.jpeg 72w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-render-9879ee55fdebe_96.jpeg 96w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-render-9879ee55fdebe_480.jpeg 480w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-render-9879ee55fdebe_720.jpeg 720w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-render-9879ee55fdebe_856.jpeg 856w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-render-9879ee55fdebe_960.jpeg 960w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-render-9879ee55fdebe_1440.jpeg 1440w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-render-9879ee55fdebe_1920.jpeg 1920w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/a-diagram-showing-render-9879ee55fdebe_2880.jpeg 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<p>The render process compositor components include:</p>
+
+<ul>
+<li>A <em>data handler</em> that maintains a composited layer list, display lists and property trees.</li>
+<li>A <em>lifecycle runner</em> that runs the animate, scroll, composite, raster,
+and decode and activate steps of the rendering pipeline.
+(Remember that animate and scroll can occur in both the main thread and the compositor.)</li>
+<li>An <em>input and hit test handler</em> performs input processing and hit testing at the resolution of composited layers,
+to determine if scrolling gestures can be run on the compositor thread,
+and which render process hit tests should target.</li>
+</ul>
+
+<h2 id="an_example_in_practice" data-text="An example in practice" tabindex="-1">An example in practice</h2>
+
+<p>Let&#39;s now make the architecture concrete with an example.
+In this example there are three tabs:</p>
+
+<p><strong>Tab 1: foo.com</strong></p>
+<pre class="prettyprint lang-html" translate="no" dir="ltr"><code translate="no" dir="ltr">&lt;html&gt;
+  &lt;iframe id=one src=&#34;foo.com/other-url&#34;&gt;&lt;/iframe&gt;
+  &lt;iframe  id=two src=&#34;bar.com&#34;&gt;&lt;/iframe&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong>Tab 2: bar.com</strong></p>
+<pre class="prettyprint lang-html" translate="no" dir="ltr"><code translate="no" dir="ltr">&lt;html&gt;
+ …
+&lt;/html&gt;
+</code></pre>
+<p><strong>Tab 3: baz.com</strong>
+<code translate="no" dir="ltr">html
+&lt;html&gt;
+ …
+&lt;/html&gt;</code></p>
+
+<p>The process, thread and component structure for these tabs will look like this:</p>
+
+<p><img src="/static/docs/chromium/renderingng-architecture/image/diagram-the-process-the-292fd2a35839b.jpeg" alt="Diagram of the process for the tabs." width="800" height="432" srcset="https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-process-the-292fd2a35839b_36.jpeg 36w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-process-the-292fd2a35839b_48.jpeg 48w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-process-the-292fd2a35839b_72.jpeg 72w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-process-the-292fd2a35839b_96.jpeg 96w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-process-the-292fd2a35839b_480.jpeg 480w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-process-the-292fd2a35839b_720.jpeg 720w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-process-the-292fd2a35839b_856.jpeg 856w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-process-the-292fd2a35839b_960.jpeg 960w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-process-the-292fd2a35839b_1440.jpeg 1440w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-process-the-292fd2a35839b_1920.jpeg 1920w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/diagram-the-process-the-292fd2a35839b_2880.jpeg 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<p>Now let&#39;s walk through one example each of the four main tasks of rendering,
+which as you may recall are:</p>
+
+<ol>
+<li><em>Render</em> contents into pixels on the screen.</li>
+<li><em>Animate</em> visual effects on the contents from one state to another.</li>
+<li><em>Scroll</em> in response to input.</li>
+<li><em>Route</em> input efficiently to the right places so that developer scripts and other subsystems can respond.</li>
+</ol>
+
+<p>To <em>render</em> the changed DOM for tab one:</p>
+
+<p><img src="/static/docs/chromium/renderingng-architecture/image/PeiVVctKuse0JAwHrui2.jpeg" alt width="800" height="488" srcset="https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/PeiVVctKuse0JAwHrui2_36.jpeg 36w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/PeiVVctKuse0JAwHrui2_48.jpeg 48w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/PeiVVctKuse0JAwHrui2_72.jpeg 72w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/PeiVVctKuse0JAwHrui2_96.jpeg 96w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/PeiVVctKuse0JAwHrui2_480.jpeg 480w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/PeiVVctKuse0JAwHrui2_720.jpeg 720w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/PeiVVctKuse0JAwHrui2_856.jpeg 856w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/PeiVVctKuse0JAwHrui2_960.jpeg 960w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/PeiVVctKuse0JAwHrui2_1440.jpeg 1440w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/PeiVVctKuse0JAwHrui2_1920.jpeg 1920w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/PeiVVctKuse0JAwHrui2_2880.jpeg 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<ol>
+<li>A developer script changes the DOM in the render process for foo.com.</li>
+<li>The Blink renderer tells the compositor that it needs a render to occur.</li>
+<li>The compositor tells Viz it needs a render to occur.</li>
+<li>Viz signals the start of the render back to the compositor.</li>
+<li>The compositor forwards the start signal on to the Blink renderer.</li>
+<li>The main thread event loop runner runs the document lifecycle.</li>
+<li>The main thread sends the result to the compositor thread.</li>
+<li>The compositor event loop runner runs the compositing lifecycle.</li>
+<li>Any raster tasks are sent to Viz for raster (there are often more than one of these tasks).</li>
+<li>Viz rasters content on the GPU.</li>
+<li>Viz acknowledges completion of the raster task.
+Note: Chromium often doesn&#39;t wait for the raster to complete,
+and instead uses something called a
+<a href="https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/gpu/sync_token_internals.md">sync token</a>
+that has to be resolved
+by raster tasks before step 15 executes.</li>
+<li>A compositor frame is sent to Viz.</li>
+<li>Viz aggregates the compositor frames for the foo.com render process,
+the bar.com iframe render process, and the browser UI.</li>
+<li>Viz schedules a draw.</li>
+<li>Viz draws the aggregated compositor frame to the screen.</li>
+</ol>
+
+<p>To <em>animate</em> a CSS transform transition on tab two:</p>
+
+<p><img src="/static/docs/chromium/renderingng-architecture/image/JBZ4Fo0wpEznvZIaz2wS.jpeg" alt width="800" height="488" srcset="https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/JBZ4Fo0wpEznvZIaz2wS_36.jpeg 36w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/JBZ4Fo0wpEznvZIaz2wS_48.jpeg 48w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/JBZ4Fo0wpEznvZIaz2wS_72.jpeg 72w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/JBZ4Fo0wpEznvZIaz2wS_96.jpeg 96w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/JBZ4Fo0wpEznvZIaz2wS_480.jpeg 480w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/JBZ4Fo0wpEznvZIaz2wS_720.jpeg 720w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/JBZ4Fo0wpEznvZIaz2wS_856.jpeg 856w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/JBZ4Fo0wpEznvZIaz2wS_960.jpeg 960w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/JBZ4Fo0wpEznvZIaz2wS_1440.jpeg 1440w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/JBZ4Fo0wpEznvZIaz2wS_1920.jpeg 1920w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/JBZ4Fo0wpEznvZIaz2wS_2880.jpeg 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<ol>
+<li>The compositor thread for the bar.com render process ticks an animation
+in its compositor event loop by mutating the existing property trees.
+This then re-runs the compositor lifecycle. (Raster and decode tasks may occur, but are not depicted here.)</li>
+<li>A compositor frame is sent to Viz.</li>
+<li>Viz aggregates the compositor frames for the foo.com render process, the bar.com render process, and the browser UI.</li>
+<li>Viz schedules a draw.</li>
+<li>Viz draws the aggregated compositor frame to the screen.</li>
+</ol>
+
+<p>To <em>scroll</em> the web page on tab three:</p>
+
+<p><img src="/static/docs/chromium/renderingng-architecture/image/BTQMujxRdySU0rsgydwB.jpeg" alt width="800" height="456" srcset="https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/BTQMujxRdySU0rsgydwB_36.jpeg 36w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/BTQMujxRdySU0rsgydwB_48.jpeg 48w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/BTQMujxRdySU0rsgydwB_72.jpeg 72w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/BTQMujxRdySU0rsgydwB_96.jpeg 96w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/BTQMujxRdySU0rsgydwB_480.jpeg 480w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/BTQMujxRdySU0rsgydwB_720.jpeg 720w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/BTQMujxRdySU0rsgydwB_856.jpeg 856w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/BTQMujxRdySU0rsgydwB_960.jpeg 960w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/BTQMujxRdySU0rsgydwB_1440.jpeg 1440w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/BTQMujxRdySU0rsgydwB_1920.jpeg 1920w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/BTQMujxRdySU0rsgydwB_2880.jpeg 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<ol>
+<li>A sequence of <code translate="no" dir="ltr">input</code> events (mouse, touch or keyboard) come to the browser process.</li>
+<li>Each event is routed to baz.com&#39;s render process compositor thread.</li>
+<li>The compositor determines if the main thread needs to know about the event.</li>
+<li>The event is sent, if necessary, to the main thread.</li>
+<li>The main thread fires <code translate="no" dir="ltr">input</code> event listeners
+(<code translate="no" dir="ltr">pointerdown</code>, <code translate="no" dir="ltr">touchstar</code>, <code translate="no" dir="ltr">pointermove</code>, <code translate="no" dir="ltr">touchmove</code> or <code translate="no" dir="ltr">wheel</code>)
+to see if listeners will call <code translate="no" dir="ltr">preventDefault</code> on the event.</li>
+<li>The main thread returns whether <code translate="no" dir="ltr">preventDefault</code> was called to the compositor.</li>
+<li>If not, the input event is sent back to the browser process.</li>
+<li>The browser process converts it to a scroll gesture by combining it with other recent events.</li>
+<li>The scroll gesture is sent once again to baz.com&#39;s render process compositor thread,</li>
+<li>The scroll is applied there, and the compositor thread for the bar.com
+render process ticks an animation in its compositor event loop.
+This then mutates scroll offset in the property trees and re-runs the compositor lifecycle.
+It also tells the main thread to fire a <code translate="no" dir="ltr">scroll</code> event (not depicted here).</li>
+<li>A compositor frame is sent to Viz.</li>
+<li>Viz aggregates the compositor frames for the foo.com render process,
+the bar.com render process, and the browser UI.</li>
+<li>Viz schedules a draw.</li>
+<li>Viz draws the aggregated compositor frame to the screen.</li>
+</ol>
+
+<aside class="note"><b>Note:</b> Note that each input event after the first can skip steps three and four,
+because the scroll has already begun and at that point scripts can observe it via the <code translate="no" dir="ltr">scroll</code> event,
+but no longer interrupt.</aside>
+
+<p>To <em>route</em> a <code translate="no" dir="ltr">click</code> event on a hyperlink in iframe #two on tab one:</p>
+
+<p><img src="/static/docs/chromium/renderingng-architecture/image/GnXCsuXJkNegGDMQAhnx.jpeg" alt width="800" height="488" srcset="https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/GnXCsuXJkNegGDMQAhnx_36.jpeg 36w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/GnXCsuXJkNegGDMQAhnx_48.jpeg 48w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/GnXCsuXJkNegGDMQAhnx_72.jpeg 72w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/GnXCsuXJkNegGDMQAhnx_96.jpeg 96w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/GnXCsuXJkNegGDMQAhnx_480.jpeg 480w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/GnXCsuXJkNegGDMQAhnx_720.jpeg 720w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/GnXCsuXJkNegGDMQAhnx_856.jpeg 856w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/GnXCsuXJkNegGDMQAhnx_960.jpeg 960w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/GnXCsuXJkNegGDMQAhnx_1440.jpeg 1440w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/GnXCsuXJkNegGDMQAhnx_1920.jpeg 1920w,https://developer.chrome.com/static/docs/chromium/renderingng-architecture/image/GnXCsuXJkNegGDMQAhnx_2880.jpeg 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<ol>
+<li>An <code translate="no" dir="ltr">input</code> event (mouse, touch or keyboard) comes to the browser process.
+It performs an approximate hit test
+to determine that the bar.com iframe render process should receive the click, and sends it there.</li>
+<li>The compositor thread for bar.com routes the <code translate="no" dir="ltr">click</code> event to the main thread
+for bar.com and schedules a rendering event loop task to process it.</li>
+<li>The input event processor for bar.com&#39;s main thread hit tests to determine which
+DOM element in the iframe was clicked, and fires a <code translate="no" dir="ltr">click</code> event for scripts to observe.
+Hearing no <code translate="no" dir="ltr">preventDefault</code>, it navigates to the hyperlink.</li>
+<li>Upon load of destination page of the hyperlink, the new state is rendered,
+with steps similar to the &quot;render changed DOM&quot; example above.
+(These subsequent changes are not depicted here.)</li>
+</ol>
+
+<h2 id="conclusion" data-text="Conclusion" tabindex="-1">Conclusion</h2>
+
+<p>Phew, that was a lot of detail.
+As you can see, rendering in Chromium is quite complicated!
+It can take a lot of time to remember and internalize all the pieces,
+so don&#39;t be worried if it seems overwhelming.</p>
+
+<p>The most important takeaway is that there is a conceptually simple rendering pipeline,
+which through careful modularization and attention to detail,
+has been split into a number of self-contained components.
+These components have then been split across parallel processes and threads to maximize
+<a href="/blog/renderingng#scalable-performance">scalable performance</a>
+and <a href="/blog/renderingng#extensibility-the-right-tools-for-the-job">extensibility</a> opportunities.</p>
+
+<p>Each of those components plays a critical role in enabling
+all of the performance and features modern web apps need.
+Soon we&#39;ll publish deep-dives into each of them,
+and the important roles they play.</p>
+
+<p>But before that, I&#39;ll also explain how the key data structures mentioned in this post
+(the ones indicated in blue at the sides of the rendering pipeline diagram)
+are just as important to RenderingNG as code components.</p>
+
+<p>Thanks for reading, and stay tuned!</p>
+
+<p><em>Illustrations by Una Kravets.</em></p>
+
+  
+
+  
+</div>
+
+  
+
+  
+    
+    
+      
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+  
+       
+    
+    
+  
+
+  
+  
+</article>
+
+
+<devsite-content-footer class="nocontent">
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  <p>Last updated 2021-07-26 UTC.</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  <template class="devsite-thumb-rating-down-categories">
+  [{
+      "type": "thumb-down",
+      "id": "missingTheInformationINeed",
+      "label":"Missing the information I need"
+    },{
+      "type": "thumb-down",
+      "id": "tooComplicatedTooManySteps",
+      "label":"Too complicated / too many steps"
+    },{
+      "type": "thumb-down",
+      "id": "outOfDate",
+      "label":"Out of date"
+    },{
+      "type": "thumb-down",
+      "id": "samplesCodeIssue",
+      "label":"Samples / code issue"
+    },{
+      "type": "thumb-down",
+      "id": "otherDown",
+      "label":"Other"
+    }]
+  </template>
+  <template class="devsite-thumb-rating-up-categories">
+  [{
+      "type": "thumb-up",
+      "id": "easyToUnderstand",
+      "label":"Easy to understand"
+    },{
+      "type": "thumb-up",
+      "id": "solvedMyProblem",
+      "label":"Solved my problem"
+    },{
+      "type": "thumb-up",
+      "id": "otherUp",
+      "label":"Other"
+    }]
+  </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent" aria-label="Footer links">
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Contribute</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://issuetracker.google.com/issues/new?component=1400036&amp;template=1897236"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            File a bug
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://issuetracker.google.com/issues?q=status:open%20componentid:1400036&amp;s=created_time:desc"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+              
+              
+            
+          
+            See open issues
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Related content</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://blog.chromium.org/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Chromium updates
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/case-studies"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Case studies
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/deprecated"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Archive
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://web.dev/shows"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+              
+              
+            
+          
+            Podcasts &amp; shows
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Connect</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://twitter.com/ChromiumDev"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            @ChromiumDev on X
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.youtube.com/user/ChromeDevelopers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            YouTube
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.linkedin.com/showcase/chrome-for-developers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+              
+              
+            
+          
+            Chrome for Developers on LinkedIn
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent">
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Utility links">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          Terms
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privacy
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="nl"
+        >Nederlands</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel></devsite-panel>
+        
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar
+    
+    >
+</devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics analytics-iframe enable-cb>
+      
+        <script type="application/json" analytics>[]</script>
+<script type="application/json" tag-management>{&#34;ga4&#34;: [], &#34;ga4p&#34;: [], &#34;gtm&#34;: [{&#34;id&#34;: &#34;GTM-5QF3RT2&#34;, &#34;purpose&#34;: 0}], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;False&#34;, &#34;requested&#34;: &#34;en&#34;, &#34;served&#34;: &#34;en&#34;}, &#34;pageType&#34;: &#34;article&#34;, &#34;projectName&#34;: &#34;Chromium&#34;, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;chrome&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    <script nonce="F4nRvFkjuxYgPSRjX+ZN2jj7nQ+uvh">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/js/app_loader.js', '[53,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome","https://chrome-dot-devsite-v2-prod-3p.appspot.com",1,null,["/_pwa/chrome/manifest.json","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/favicon.png","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup.svg","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,112,113,116,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,147,148,149,151,152,156,157,158,159,161,163,164,168,169,170,179,180,182,183,186,191,193,196],"AIzaSyCNm9YxQumEXwGJgTDjxoxXK6m1F-9720Q","AIzaSyCc76DZePGtoyUjqKrLdsMGk_ry7sljLbY","developer.chrome.com","AIzaSyB9bqgQ2t11WJsOX8qNsCQ6U-w91mmqF-I","AIzaSyAdYnStPdzjcJJtQ0mvIaeaMKj7_t6J_Fg",null,null,null,["Search__enable_dynamic_content_confidential_banner","Cloud__enable_cloud_facet_chat","OnSwitch__enable","Search__enable_faceted_search","Profiles__enable_profile_collections","Cloud__enable_free_trial_server_call","Profiles__enable_release_notes_notifications","Analytics__enable_cookie_bar","TpcFeatures__enable_mirror_tenant_redirects","MiscFeatureFlags__enable_new_sitemap","MiscFeatureFlags__developers_footer_dark_image","Search__enable_page_map","Profiles__require_profile_eligibility_for_signin","MiscFeatureFlags__emergency_css","BookNav__enable_tenant_cache_key","Profiles__enable_developer_profiles_callout","MiscFeatureFlags__developers_footer_image","Cloud__enable_cloudx_experiment_ids","MiscFeatureFlags__enable_firebase_utm","MiscFeatureFlags__enable_project_variables","Search__enable_ai_eligibility_checks","CloudShell__cloud_code_overflow_menu","Cloud__enable_cloud_shell_fte_user_flow","Concierge__enable_pushui","Profiles__enable_public_developer_profiles","Cloud__enable_cloud_dlp_service","CloudShell__cloud_shell_button","EngEduTelemetry__enable_engedu_telemetry","MiscFeatureFlags__enable_variable_operator","Cloud__enable_cloudx_ping","Profiles__enable_page_saving","Search__enable_suggestions_from_borg","MiscFeatureFlags__enable_explain_this_code","Cloud__enable_cloud_shell","Profiles__enable_awarding_url","Experiments__reqs_query_experiments"],null,null,"AIzaSyA58TaKli1DculwmAmbpzLVGuWc8eCQgQc","https://developerscontentserving-pa.googleapis.com","AIzaSyDWBU60w0P9hEkr29kkksYs8Z7gvZ8u_wc","https://developerscontentsearch-pa.googleapis.com",2,4]')
+  
+</script>
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>

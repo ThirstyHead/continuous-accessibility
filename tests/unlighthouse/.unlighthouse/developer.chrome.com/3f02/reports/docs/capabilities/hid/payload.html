@@ -1,0 +1,3744 @@
+<!doctype html>
+<html 
+      lang="en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="157101835696-ooapojlodmuabs2do2vuhhnf90bccmoi.apps.googleusercontent.com">
+    <meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award">
+    <meta property="og:site_name" content="Chrome for Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#1a73e8"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/chrome/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//apis.google.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/css/app.css">
+      
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/touchicon-180.png"><link rel="canonical" href="https://developer.chrome.com/docs/capabilities/hid"><link rel="search" type="application/opensearchdescription+xml"
+            title="Chrome for Developers" href="https://developer.chrome.com/s/opensearch.xml">
+      <link rel="alternate" hreflang="en"
+          href="https://developer.chrome.com/docs/capabilities/hid" /><link rel="alternate" hreflang="x-default" href="https://developer.chrome.com/docs/capabilities/hid" /><link rel="alternate" hreflang="ar"
+          href="https://developer.chrome.com/docs/capabilities/hid?hl=ar" /><link rel="alternate" hreflang="bn"
+          href="https://developer.chrome.com/docs/capabilities/hid?hl=bn" /><link rel="alternate" hreflang="zh-Hans"
+          href="https://developer.chrome.com/docs/capabilities/hid?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant"
+          href="https://developer.chrome.com/docs/capabilities/hid?hl=zh-tw" /><link rel="alternate" hreflang="nl"
+          href="https://developer.chrome.com/docs/capabilities/hid?hl=nl" /><link rel="alternate" hreflang="fa"
+          href="https://developer.chrome.com/docs/capabilities/hid?hl=fa" /><link rel="alternate" hreflang="fr"
+          href="https://developer.chrome.com/docs/capabilities/hid?hl=fr" /><link rel="alternate" hreflang="de"
+          href="https://developer.chrome.com/docs/capabilities/hid?hl=de" /><link rel="alternate" hreflang="he"
+          href="https://developer.chrome.com/docs/capabilities/hid?hl=he" /><link rel="alternate" hreflang="hi"
+          href="https://developer.chrome.com/docs/capabilities/hid?hl=hi" /><link rel="alternate" hreflang="id"
+          href="https://developer.chrome.com/docs/capabilities/hid?hl=id" /><link rel="alternate" hreflang="it"
+          href="https://developer.chrome.com/docs/capabilities/hid?hl=it" /><link rel="alternate" hreflang="ja"
+          href="https://developer.chrome.com/docs/capabilities/hid?hl=ja" /><link rel="alternate" hreflang="ko"
+          href="https://developer.chrome.com/docs/capabilities/hid?hl=ko" /><link rel="alternate" hreflang="pl"
+          href="https://developer.chrome.com/docs/capabilities/hid?hl=pl" /><link rel="alternate" hreflang="pt-BR"
+          href="https://developer.chrome.com/docs/capabilities/hid?hl=pt-br" /><link rel="alternate" hreflang="ru"
+          href="https://developer.chrome.com/docs/capabilities/hid?hl=ru" /><link rel="alternate" hreflang="es-419"
+          href="https://developer.chrome.com/docs/capabilities/hid?hl=es-419" /><link rel="alternate" hreflang="th"
+          href="https://developer.chrome.com/docs/capabilities/hid?hl=th" /><link rel="alternate" hreflang="tr"
+          href="https://developer.chrome.com/docs/capabilities/hid?hl=tr" /><link rel="alternate" hreflang="vi"
+          href="https://developer.chrome.com/docs/capabilities/hid?hl=vi" /><link rel="alternate" hreflang="en-cn"
+          href="https://developer.chrome.google.cn/docs/capabilities/hid" /><link rel="alternate" hreflang="x-default" href="https://developer.chrome.google.cn/docs/capabilities/hid" /><link rel="alternate" hreflang="ar-cn"
+          href="https://developer.chrome.google.cn/docs/capabilities/hid?hl=ar" /><link rel="alternate" hreflang="bn-cn"
+          href="https://developer.chrome.google.cn/docs/capabilities/hid?hl=bn" /><link rel="alternate" hreflang="zh-Hans-cn"
+          href="https://developer.chrome.google.cn/docs/capabilities/hid?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant-cn"
+          href="https://developer.chrome.google.cn/docs/capabilities/hid?hl=zh-tw" /><link rel="alternate" hreflang="nl-cn"
+          href="https://developer.chrome.google.cn/docs/capabilities/hid?hl=nl" /><link rel="alternate" hreflang="fa-cn"
+          href="https://developer.chrome.google.cn/docs/capabilities/hid?hl=fa" /><link rel="alternate" hreflang="fr-cn"
+          href="https://developer.chrome.google.cn/docs/capabilities/hid?hl=fr" /><link rel="alternate" hreflang="de-cn"
+          href="https://developer.chrome.google.cn/docs/capabilities/hid?hl=de" /><link rel="alternate" hreflang="he-cn"
+          href="https://developer.chrome.google.cn/docs/capabilities/hid?hl=he" /><link rel="alternate" hreflang="hi-cn"
+          href="https://developer.chrome.google.cn/docs/capabilities/hid?hl=hi" /><link rel="alternate" hreflang="id-cn"
+          href="https://developer.chrome.google.cn/docs/capabilities/hid?hl=id" /><link rel="alternate" hreflang="it-cn"
+          href="https://developer.chrome.google.cn/docs/capabilities/hid?hl=it" /><link rel="alternate" hreflang="ja-cn"
+          href="https://developer.chrome.google.cn/docs/capabilities/hid?hl=ja" /><link rel="alternate" hreflang="ko-cn"
+          href="https://developer.chrome.google.cn/docs/capabilities/hid?hl=ko" /><link rel="alternate" hreflang="pl-cn"
+          href="https://developer.chrome.google.cn/docs/capabilities/hid?hl=pl" /><link rel="alternate" hreflang="pt-BR-cn"
+          href="https://developer.chrome.google.cn/docs/capabilities/hid?hl=pt-br" /><link rel="alternate" hreflang="ru-cn"
+          href="https://developer.chrome.google.cn/docs/capabilities/hid?hl=ru" /><link rel="alternate" hreflang="es-419-cn"
+          href="https://developer.chrome.google.cn/docs/capabilities/hid?hl=es-419" /><link rel="alternate" hreflang="th-cn"
+          href="https://developer.chrome.google.cn/docs/capabilities/hid?hl=th" /><link rel="alternate" hreflang="tr-cn"
+          href="https://developer.chrome.google.cn/docs/capabilities/hid?hl=tr" /><link rel="alternate" hreflang="vi-cn"
+          href="https://developer.chrome.google.cn/docs/capabilities/hid?hl=vi" /><title>Connecting to uncommon HID devices &nbsp;|&nbsp; Capabilities &nbsp;|&nbsp; Chrome for Developers</title>
+
+<meta property="og:title" content="Connecting to uncommon HID devices &nbsp;|&nbsp; Capabilities &nbsp;|&nbsp; Chrome for Developers"><meta name="description" content="The WebHID API allows websites to access alternative auxiliary keyboards and exotic gamepads.">
+  <meta property="og:description" content="The WebHID API allows websites to access alternative auxiliary keyboards and exotic gamepads."><meta property="og:url" content="https://developer.chrome.com/docs/capabilities/hid"><meta property="og:image" content="https://developer.chrome.com/static/docs/capabilities/hid/image/thumbnail.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675"><meta property="og:locale" content="en"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "dateModified": "2020-09-15",
+    "headline": "Connecting to uncommon HID devices"
+  }
+</script><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Docs",
+      "item": "https://developer.chrome.com/docs"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Capabilities",
+      "item": "https://developer.chrome.com/docs/capabilities"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Connecting to uncommon HID devices",
+      "item": "https://developer.chrome.com/docs/capabilities/hid"
+    }]
+  }
+  </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+    
+      <link rel="stylesheet" href="/extras.css"></head>
+  <body class=""
+        template="page"
+        theme="chrome-theme"
+        type="article"
+        
+        
+        appearance
+        layout="docs"
+        
+        
+        
+        
+        display-toc
+        pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+    <section class="devsite-wrapper">
+      
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar>
+      <devsite-header role="banner">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner nocontent">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="chromeForDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme"
+            alt="Chrome for Developers">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup.svg" class="devsite-site-logo" alt="Chrome for Developers">
+  </picture>
+  
+</a>
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+              
+              
+  <devsite-tabs class="upper-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Upper tabs">
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/case-studies"
+      track-metadata-eventdetail="https://developer.chrome.com/case-studies"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - get inspired"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Get inspired"
+         
+           track-name="get inspired"
+         
+       >
+    Get inspired
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/blog"
+      track-metadata-eventdetail="https://developer.chrome.com/blog"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - blog"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Blog"
+         
+           track-name="blog"
+         
+       >
+    Blog
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab class="devsite-dropdown
+    devsite-dropdown-full
+    devsite-active
+    
+    ">
+  
+    <a href="https://developer.chrome.com/docs"
+      track-metadata-eventdetail="https://developer.chrome.com/docs"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - docs"
+       track-metadata-module="primary nav"
+       aria-label="Docs, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Docs"
+         
+           track-name="docs"
+         
+       >
+    Docs
+  
+    </a>
+  
+  
+    <a href="#"
+       role="button"
+       aria-haspopup="true"
+       aria-expanded="false"
+       aria-label="Dropdown menu for Docs"
+       track-type="nav"
+       track-metadata-eventdetail="https://developer.chrome.com/docs"
+       track-metadata-position="nav - docs"
+       track-metadata-module="primary nav"
+       
+        
+          data-category="Site-Wide Custom Events"
+        
+          data-label="Tab: Docs"
+        
+          track-name="docs"
+        
+      
+       class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+  
+  <div class="devsite-tabs-dropdown" aria-label="submenu" hidden>
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       build-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Build with Chrome</li>
+              
+              
+                <li class="devsite-nav-description">Learn how Chrome works, participate in origin trials, and build with Chrome everywhere.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/web-platform"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/web-platform"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Web Platform
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/capabilities"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/capabilities"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Capabilities
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/extensions"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/extensions"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Extensions
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/webstore"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/webstore"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chrome Web Store
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/chromium"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/chromium"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chromium
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/aurora"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/aurora"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Aurora
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/android"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/android"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Web on Android
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/origintrials/"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/origintrials/"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Origin trials
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/release-notes"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/release-notes"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Release notes
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       productivity-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Productivity</li>
+              
+              
+                <li class="devsite-nav-description">Create the best experience for your users with the web&#39;s best tools.</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/devtools"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/devtools"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      DevTools
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/lighthouse"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/lighthouse"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Lighthouse
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/crux"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/crux"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chrome UX Report
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/accessibility"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/accessibility"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Accessibility
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       dcc-subnav second-column-list">
+              
+              
+                <li class="devsite-nav-description">Get things done quicker and neater, with our ready-made libraries.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/workbox"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/workbox"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Workbox
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/puppeteer"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/puppeteer"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Puppeteer
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       experience-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Experience</li>
+              
+              
+                <li class="devsite-nav-description">Design a beautiful and performant web with Chrome.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/performance"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/performance"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Performance
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/css-ui"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/css-ui"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      CSS and UI
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/identity"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/identity"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Identity
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/payments"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/payments"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Payments
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/privacy-security"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/privacy-security"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Privacy and security
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       resources-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Resources</li>
+              
+              
+                <li class="devsite-nav-description">More from the Chrome team.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="resources"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      All documentation
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/baseline"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/baseline"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="resources"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Baseline
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="resources"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      web.dev
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    
+    project-name="Capabilities"
+    tenant-name="Chrome for Developers"
+    
+    
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://developer.chrome.com/s/results" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Open search"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Search"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Search"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Close search"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+        
+
+        <devsite-appearance-selector></devsite-appearance-selector>
+
+        
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="nl"
+        >Nederlands</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+        
+
+        
+          
+          
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>Sign in</span>
+            
+        </devsite-user>
+           
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+      
+        
+          <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+              
+                
+                  
+                  
+                  <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs/capabilities"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Lower Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Capabilities"
+      
+    >
+    
+        Capabilities
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+                
+              
+              
+            </div>
+            
+          </div>
+          
+        
+      
+      
+        <div class="devsite-doc-set-nav-row">
+          
+          
+            
+            
+  <devsite-tabs class="lower-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Lower tabs">
+      
+        
+          <tab  class="devsite-active">
+            
+    <a href="https://developer.chrome.com/docs/capabilities"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/capabilities"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - capabilities"
+       track-metadata-module="primary nav"
+       aria-label="Capabilities, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Capabilities"
+         
+           track-name="capabilities"
+         
+       >
+    Capabilities
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/docs/capabilities/fugu-showcase"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/capabilities/fugu-showcase"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - fugu showcase"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Fugu showcase"
+         
+           track-name="fugu showcase"
+         
+       >
+    Fugu showcase
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+          
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+
+  
+</devsite-header>
+      <devsite-book-nav scrollbars >
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     hidden>
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="Filter"
+         
+         aria-label="Type to filter"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="Clear filter"
+        aria-label="Clear filter"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent"
+     aria-label="Side menu">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="chromeForDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme"
+            alt="Chrome for Developers">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup.svg" class="devsite-site-logo" alt="Chrome for Developers">
+  </picture>
+  
+</a>
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/case-studies"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Get inspired"
+      
+        track-name="get inspired"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Get inspired"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Get inspired
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/blog"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Blog"
+      
+        track-name="blog"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Blog"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Blog
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Docs"
+      
+        track-name="docs"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Docs"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Docs
+   </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Docs"
+      
+        track-name="docs"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Docs">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Docs">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+                <ul class="devsite-nav-responsive-tabs">
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/capabilities"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Capabilities"
+      
+        track-name="capabilities"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Capabilities"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip menu="_book">
+      Capabilities
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/capabilities/fugu-showcase"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Fugu showcase"
+      
+        track-name="fugu showcase"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Fugu showcase"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Fugu showcase
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item"><a href="/docs/capabilities/status"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/capabilities/status"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/capabilities/status"
+      ><span class="devsite-nav-text" tooltip>Latest updates</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/capabilities/fugu-showcase"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/capabilities/fugu-showcase"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/capabilities/fugu-showcase"
+      ><span class="devsite-nav-text" tooltip>Showcase</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Hardware APIs</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/docs/capabilities/hid"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/capabilities/hid"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/capabilities/hid"
+      ><span class="devsite-nav-text" tooltip>Connect to uncommon HID devices</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/capabilities/bluetooth"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/capabilities/bluetooth"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/capabilities/bluetooth"
+      ><span class="devsite-nav-text" tooltip>Communicate with Bluetooth devices over JavaScript</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/capabilities/serial"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/capabilities/serial"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/capabilities/serial"
+      ><span class="devsite-nav-text" tooltip>Read from and write to a serial port</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/capabilities/usb"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/capabilities/usb"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/capabilities/usb"
+      ><span class="devsite-nav-text" tooltip>Access USB Devices on the Web</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/capabilities/build-for-webusb"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/capabilities/build-for-webusb"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/capabilities/build-for-webusb"
+      ><span class="devsite-nav-text" tooltip>Building a device for WebUSB</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/capabilities/nfc"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/capabilities/nfc"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/capabilities/nfc"
+      ><span class="devsite-nav-text" tooltip>Interact with NFC devices on Chrome for Android</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Web APIs</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/docs/capabilities/web-apis/file-system-access"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/capabilities/web-apis/file-system-access"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/capabilities/web-apis/file-system-access"
+      ><span class="devsite-nav-text" tooltip>File System Access API</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/capabilities/web-apis/badging-api"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/capabilities/web-apis/badging-api"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/capabilities/web-apis/badging-api"
+      ><span class="devsite-nav-text" tooltip>Badging for app icons</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/capabilities/web-apis/local-fonts"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/capabilities/web-apis/local-fonts"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/capabilities/web-apis/local-fonts"
+      ><span class="devsite-nav-text" tooltip>Advanced typography with local fonts</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/capabilities/web-apis/window-management"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/capabilities/web-apis/window-management"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/capabilities/web-apis/window-management"
+      ><span class="devsite-nav-text" tooltip>Manage several displays with the Multi-Screen Window Placement API</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/blog/web-custom-formats-for-the-async-clipboard-api"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /blog/web-custom-formats-for-the-async-clipboard-api"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/blog/web-custom-formats-for-the-async-clipboard-api"
+      ><span class="devsite-nav-text" tooltip>Web custom formats for the Async Clipboard API</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Resources</span>
+      </div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="//www.chromium.org/teams/web-capabilities-fugu"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: //www.chromium.org/teams/web-capabilities-fugu"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="//www.chromium.org/teams/web-capabilities-fugu"
+      ><span class="devsite-nav-text" tooltip>Project Fugu on Chromium</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="//web.dev/learn/pwa/capabilities"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: //web.dev/learn/pwa/capabilities"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="//web.dev/learn/pwa/capabilities"
+      ><span class="devsite-nav-text" tooltip>Learn PWA: Capabilities</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-external"><a href="//developer.mozilla.org/docs/Web/API"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: //developer.mozilla.org/docs/Web/API"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="//developer.mozilla.org/docs/Web/API"
+      ><span class="devsite-nav-text" tooltip>MDN Web APIs</span><span class="devsite-nav-icon material-icons"
+        data-icon="external"
+        data-title="External"
+        aria-hidden="true"></span></a></li>
+          </ul>
+        
+        
+          
+    
+  
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="Docs"
+          aria-label="Side menu" hidden>
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Build with Chrome
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/web-platform"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Web Platform"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Web Platform
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/capabilities"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Capabilities"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Capabilities
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/extensions"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Extensions"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Extensions
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/webstore"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chrome Web Store"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chrome Web Store
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/chromium"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chromium"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chromium
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/aurora"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Aurora"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Aurora
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/android"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Web on Android"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Web on Android
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developer.chrome.com/origintrials/"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Origin trials"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Origin trials
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/release-notes"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Release notes"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Release notes
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Productivity
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/devtools"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: DevTools"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      DevTools
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/lighthouse"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Lighthouse"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Lighthouse
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/crux"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chrome UX Report"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chrome UX Report
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/accessibility"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Accessibility"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Accessibility
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/workbox"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Workbox"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Workbox
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/puppeteer"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Puppeteer"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Puppeteer
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Experience
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/performance"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Performance"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Performance
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/css-ui"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: CSS and UI"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      CSS and UI
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/identity"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Identity"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Identity
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/payments"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Payments"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Payments
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/privacy-security"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Privacy and security"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Privacy and security
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Resources
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: All documentation"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      All documentation
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://web.dev/baseline"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Baseline"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Baseline
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://web.dev"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: web.dev"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      web.dev
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+        
+        
+          
+    
+  
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+        
+      </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+            
+              has-book-nav
+              has-sidebar
+            >
+          
+          
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="On this page"
+                            depth="2"
+                            scrollbars
+                  ></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav">
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article">
+  
+  
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation">
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        Home
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail="Docs"
+      
+    >
+    
+        Docs
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs/capabilities"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail="Capabilities"
+      
+    >
+    
+        Capabilities
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+  
+    
+  </div>
+  
+      <h1 class="devsite-page-title" tabindex="-1">Connecting to uncommon HID devices</h1>
+  <devsite-feature-tooltip
+          ack-key="AckCollectionsBookmarkTooltipDismiss"
+          analytics-category="Site-Wide Custom Events"
+          analytics-action-show="Callout Profile displayed"
+          analytics-action-close="Callout Profile dismissed"
+          analytics-label="Create Collection Callout"
+          class="devsite-page-bookmark-tooltip nocontent"
+          dismiss-button="true"
+          id="devsite-collections-dropdown"
+
+          
+          dismiss-button-text="Dismiss"
+
+          
+          close-button-text="Got it">
+
+        
+        <devsite-bookmark></devsite-bookmark>
+
+        <span slot="popout-heading">
+          
+          Stay organized with collections
+        </span>
+        <span slot="popout-contents">
+          
+          Save and categorize content based on your preferences.
+        </span>
+      </devsite-feature-tooltip>
+  <div class="devsite-page-title-meta"><devsite-view-release-notes></devsite-view-release-notes></div>
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    >
+  </devsite-toc>
+  
+    
+  
+
+  
+
+
+
+
+
+
+<div class="devsite-article-body clearfix
+  ">
+
+  
+    
+
+
+
+
+<p>The WebHID API allows websites to access alternative auxiliary keyboards and exotic gamepads.</p>
+
+<p><style>
+.wd-authors {
+  --avatar-size: 65px;
+  display: flex;
+  gap: 2em;
+}
+
+.wd-author {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  line-height: calc(var(--avatar-size) / 2);
+}
+
+.wd-author img {
+  border-radius: 50%;
+  height: var(--avatar-size, 65px);
+  width: var(--avatar-size, 65px);
+}
+
+.dcc-authors {
+  --avatar-size: 65px;
+  display: flex;
+  gap: 2em;
+}
+
+.dcc-author {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  line-height: calc(var(--avatar-size) / 2);
+}
+
+.dcc-author img {
+  border-radius: 50%;
+  height: var(--avatar-size, 65px);
+  width: var(--avatar-size, 65px);
+}
+
+.dcc-author__links a {
+  margin-inline-end: 6px;
+}
+
+.dcc-author__links a:last-of-type {
+  margin-inline-end: 0;
+}
+</style>
+
+<div class="dcc-authors" translate="no">
+  
+    
+    
+      <div class="dcc-author">
+        
+          <img class="devsite-landing-row-item-icon" alt="François Beaufort" 
+            src="https://web.dev/images/authors/beaufortfrancois.jpg" 
+            decoding="async" height="64" loading="lazy" width="64"> 
+        
+        <div>
+          <span> 
+            François Beaufort
+          </span>
+          <div class="dcc-author__links">
+            
+            
+              <a href="https://github.com/beaufortfrancois" aria-label="François Beaufort on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 32.6 31.8">
+                  <title>GitHub</title>
+                  <path d="M16.3 0C7.3 0 0 7.3 0 16.3c0 7.2 4.7 13.3 11.1 15.5.8.1 1.1-.4 1.1-.8v-2.8c-4.5 1-5.5-2.2-5.5-2.2-.7-1.9-1.8-2.4-1.8-2.4-1.5-1 .1-1 .1-1 1.6.1 2.5 1.7 2.5 1.7 1.5 2.5 3.8 1.8 4.7 1.4.1-1.1.6-1.8 1-2.2-3.6-.4-7.4-1.8-7.4-8.1 0-1.8.6-3.2 1.7-4.4-.1-.3-.7-2 .2-4.2 0 0 1.4-.4 4.5 1.7 1.3-.4 2.7-.5 4.1-.5 1.4 0 2.8.2 4.1.5 3.1-2.1 4.5-1.7 4.5-1.7.9 2.2.3 3.9.2 4.3 1 1.1 1.7 2.6 1.7 4.4 0 6.3-3.8 7.6-7.4 8 .6.5 1.1 1.5 1.1 3V31c0 .4.3.9 1.1.8 6.5-2.2 11.1-8.3 11.1-15.5C32.6 7.3 25.3 0 16.3 0z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" />
+                </svg></a>
+            
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+    
+  
+</div></p>
+
+<aside class="success"><b>Success:</b> The WebHID API, part of the <a href="/docs/capabilities/status">capabilities project</a>, launched in
+Chrome 89.</aside>
+
+<p>There is a long tail of human interface devices (HIDs), such as alternative
+keyboards or exotic gamepads, that are too new, too old, or too uncommon to be
+accessible by systems&#39; device drivers. The WebHID API solves this by providing a
+way to implement device-specific logic in JavaScript.</p>
+
+<h2 id="use-cases" data-text="Suggested use cases" tabindex="-1">Suggested use cases</h2>
+
+<p>An HID device takes input from or provides output to humans. Examples of devices
+include keyboards, pointing devices (mice, touchscreens, etc.), and gamepads.
+The <a href="https://www.usb.org/hid">HID protocol</a> makes it possible to access these devices on desktop
+computers using operating system drivers. The web platform supports HID devices
+by relying on these drivers.</p>
+
+<p>The inability to access uncommon HID devices is particularly painful when it
+comes to alternative auxiliary keyboards (e.g. <a href="https://www.elgato.com/en/gaming/stream-deck">Elgato Stream Deck</a>, <a href="https://www.jabra.com/business/office-headsets">Jabra
+headsets</a>, <a href="https://xkeys.com/xkeys.html">X-keys</a>) and exotic gamepad support. Gamepads designed for desktop
+often use HID for gamepad inputs (buttons, joysticks, triggers) and outputs
+(LEDs, rumble). Unfortunately, gamepad inputs and outputs are not well
+standardized and web browsers often require custom logic for specific devices.
+This is unsustainable and results in poor support for the long tail of older and
+uncommon devices. It also causes the browser to depend on quirks in the behavior
+of specific devices.</p>
+
+<h2 id="terminology" data-text="Terminology" tabindex="-1">Terminology</h2>
+
+<p>HID consists of two fundamental concepts: reports and report descriptors.
+Reports are the data that is exchanged between a device and a software client.
+The report descriptor describes the format and meaning of data that the device
+supports.</p>
+
+<p>An HID (Human Interface Device) is a type of device that takes input from or
+provides output to humans. It also refers to the HID protocol, a standard for
+bi-directional communication between a host and a device that is designed to
+simplify the installation procedure. The HID protocol was originally developed
+for USB devices, but has since been implemented over many other protocols,
+including Bluetooth.</p>
+
+<p>Applications and HID devices exchange binary data through three report types:</p>
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Report type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Input&nbsp;report</td>
+        <td>Data that is sent from the device to the application (e.g. a button is pressed.)</td>
+      </tr>
+      <tr>
+        <td>Output&nbsp;report</td>
+        <td>Data that is sent from the application to the device (e.g. a request to turn on the keyboard backlight.)</td>
+      </tr>
+      <tr>
+        <td>Feature&nbsp;report</td>
+        <td>Data that may be sent in either direction. The format is device-specific.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>A report descriptor describes the binary format of reports supported by the
+device. Its structure is hierarchical and can group reports together as distinct
+collections within the top-level collection. The <a href="https://gist.github.com/beaufortfrancois/583424dfef66be1ade86231fd1a260c7">format</a> of the descriptor is
+defined by the HID specification.</p>
+
+<p>An HID usage is a numeric value referring to a standardized input or output.
+Usage values allow a device to describe the intended use of the device and the
+purpose of each field in its reports. For example, one is defined for the left
+button of a mouse. Usages are also organized into usage pages, which provide an
+indication of the high-level category of the device or report.</p>
+
+<h2 id="use" data-text="Using the WebHID API" tabindex="-1">Using the WebHID API</h2>
+
+<h3 id="feature-detection" data-text="Feature detection" tabindex="-1">Feature detection</h3>
+
+<p>To check if the WebHID API is supported, use:</p>
+<pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">if (&#34;hid&#34; in navigator) {
+  // The WebHID API is supported.
+}
+</code></pre>
+<h3 id="open" data-text="Open an HID connection" tabindex="-1">Open an HID connection</h3>
+
+<p>The WebHID API is asynchronous by design to prevent the website UI from
+blocking when awaiting input. This is important because HID data can be received
+at any time, requiring a way to listen to it.</p>
+
+<p>To open an HID connection, first access a <code translate="no" dir="ltr">HIDDevice</code> object. For this, you can
+either prompt the user to select a device by calling
+<code translate="no" dir="ltr">navigator.hid.requestDevice()</code>, or pick one from <code translate="no" dir="ltr">navigator.hid.getDevices()</code>
+which returns a list of devices the website has been granted access to
+previously.</p>
+
+<p>The <code translate="no" dir="ltr">navigator.hid.requestDevice()</code> function takes a mandatory object that
+defines filters. Those are used to match any device connected with a USB vendor
+identifier (<code translate="no" dir="ltr">vendorId</code>), a USB product identifier (<code translate="no" dir="ltr">productId</code>), a usage page
+value (<code translate="no" dir="ltr">usagePage</code>), and a usage value (<code translate="no" dir="ltr">usage</code>). You can get those from <a href="http://www.linux-usb.org/usb-ids.html">the
+USB ID Repository</a> and the <a href="https://usb.org/document-library/hid-usage-tables-12">HID usage tables document</a>.</p>
+
+<p>The multiple <code translate="no" dir="ltr">HIDDevice</code> objects returned by this function represent multiple
+HID interfaces on the same physical device.</p>
+<pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">// Filter on devices with the Nintendo Switch Joy-Con USB Vendor/Product IDs.
+const filters = [
+  {
+    vendorId: 0x057e, // Nintendo Co., Ltd
+    productId: 0x2006 // Joy-Con Left
+  },
+  {
+    vendorId: 0x057e, // Nintendo Co., Ltd
+    productId: 0x2007 // Joy-Con Right
+  }
+];
+
+// Prompt user to select a Joy-Con device.
+const [device] = await navigator.hid.requestDevice({ filters });
+</code></pre><pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">// Get all devices the user has previously granted the website access to.
+const devices = await navigator.hid.getDevices();
+</code></pre>
+<figure>
+  <img src="/static/docs/capabilities/hid/image/screenshot-an-hid-device-e26b194feb58a.jpg" alt="Screenshot of an HID device prompt on a website." width="800" height="513" srcset="https://developer.chrome.com/static/docs/capabilities/hid/image/screenshot-an-hid-device-e26b194feb58a_36.jpg 36w,https://developer.chrome.com/static/docs/capabilities/hid/image/screenshot-an-hid-device-e26b194feb58a_48.jpg 48w,https://developer.chrome.com/static/docs/capabilities/hid/image/screenshot-an-hid-device-e26b194feb58a_72.jpg 72w,https://developer.chrome.com/static/docs/capabilities/hid/image/screenshot-an-hid-device-e26b194feb58a_96.jpg 96w,https://developer.chrome.com/static/docs/capabilities/hid/image/screenshot-an-hid-device-e26b194feb58a_480.jpg 480w,https://developer.chrome.com/static/docs/capabilities/hid/image/screenshot-an-hid-device-e26b194feb58a_720.jpg 720w,https://developer.chrome.com/static/docs/capabilities/hid/image/screenshot-an-hid-device-e26b194feb58a_856.jpg 856w,https://developer.chrome.com/static/docs/capabilities/hid/image/screenshot-an-hid-device-e26b194feb58a_960.jpg 960w,https://developer.chrome.com/static/docs/capabilities/hid/image/screenshot-an-hid-device-e26b194feb58a_1440.jpg 1440w,https://developer.chrome.com/static/docs/capabilities/hid/image/screenshot-an-hid-device-e26b194feb58a_1920.jpg 1920w,https://developer.chrome.com/static/docs/capabilities/hid/image/screenshot-an-hid-device-e26b194feb58a_2880.jpg 2880w" sizes="(max-width: 840px) 100vw, 856px">
+  <figcaption class="dcc-caption">User prompt for selecting a Nintendo Switch Joy-Con.</figcaption>
+</figure>
+
+<p>You can also use the optional <code translate="no" dir="ltr">exclusionFilters</code> key in
+<code translate="no" dir="ltr">navigator.hid.requestDevice()</code> to exclude some devices from the browser picker
+that are known to be malfunctioning for instance.</p>
+<pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">// Request access to a device with vendor ID 0xABCD. The device must also have
+// a collection with usage page Consumer (0x000C) and usage ID Consumer
+// Control (0x0001). The device with product ID 0x1234 is malfunctioning.
+const [device] = await navigator.hid.requestDevice({
+  filters: [{ vendorId: 0xabcd, usagePage: 0x000c, usage: 0x0001 }],
+  exclusionFilters: [{ vendorId: 0xabcd, productId: 0x1234 }],
+});
+</code></pre>
+<p>A <code translate="no" dir="ltr">HIDDevice</code> object contains USB vendor and product identifiers for device
+identification. Its <code translate="no" dir="ltr">collections</code> attribute is initialized with a hierarchical
+description of the device&#39;s report formats.</p>
+<pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">for (let collection of device.collections) {
+  // An HID collection includes usage, usage page, reports, and subcollections.
+  console.log(`Usage: ${collection.usage}`);
+  console.log(`Usage page: ${collection.usagePage}`);
+
+  for (let inputReport of collection.inputReports) {
+    console.log(`Input report: ${inputReport.reportId}`);
+    // Loop through inputReport.items
+  }
+
+  for (let outputReport of collection.outputReports) {
+    console.log(`Output report: ${outputReport.reportId}`);
+    // Loop through outputReport.items
+  }
+
+  for (let featureReport of collection.featureReports) {
+    console.log(`Feature report: ${featureReport.reportId}`);
+    // Loop through featureReport.items
+  }
+
+  // Loop through subcollections with collection.children
+}
+</code></pre>
+<p>The <code translate="no" dir="ltr">HIDDevice</code> devices are by default returned in a &quot;closed&quot; state and must be
+opened by calling <code translate="no" dir="ltr">open()</code> before data can be sent or received.</p>
+<pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">// Wait for the HID connection to open before sending/receiving data.
+await device.open();
+</code></pre>
+<h3 id="receive-input-reports" data-text="Receive input reports" tabindex="-1">Receive input reports</h3>
+
+<p>Once the HID connection has been established, you can handle incoming input
+reports by listening to the <code translate="no" dir="ltr">&quot;inputreport&quot;</code> events from the device. Those events
+contain the HID data as a <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/DataView"><code translate="no" dir="ltr">DataView</code></a> object (<code translate="no" dir="ltr">data</code>), the HID device it belongs
+to (<code translate="no" dir="ltr">device</code>), and the 8-bit report ID associated with the input report
+(<code translate="no" dir="ltr">reportId</code>).</p>
+
+<figure>
+  <img src="/static/docs/capabilities/hid/image/red-blue-nintendo-switch-9754d1c61bf3.jpg" alt="Red and blue nintendo switch photo." width="800" height="575" srcset="https://developer.chrome.com/static/docs/capabilities/hid/image/red-blue-nintendo-switch-9754d1c61bf3_36.jpg 36w,https://developer.chrome.com/static/docs/capabilities/hid/image/red-blue-nintendo-switch-9754d1c61bf3_48.jpg 48w,https://developer.chrome.com/static/docs/capabilities/hid/image/red-blue-nintendo-switch-9754d1c61bf3_72.jpg 72w,https://developer.chrome.com/static/docs/capabilities/hid/image/red-blue-nintendo-switch-9754d1c61bf3_96.jpg 96w,https://developer.chrome.com/static/docs/capabilities/hid/image/red-blue-nintendo-switch-9754d1c61bf3_480.jpg 480w,https://developer.chrome.com/static/docs/capabilities/hid/image/red-blue-nintendo-switch-9754d1c61bf3_720.jpg 720w,https://developer.chrome.com/static/docs/capabilities/hid/image/red-blue-nintendo-switch-9754d1c61bf3_856.jpg 856w,https://developer.chrome.com/static/docs/capabilities/hid/image/red-blue-nintendo-switch-9754d1c61bf3_960.jpg 960w,https://developer.chrome.com/static/docs/capabilities/hid/image/red-blue-nintendo-switch-9754d1c61bf3_1440.jpg 1440w,https://developer.chrome.com/static/docs/capabilities/hid/image/red-blue-nintendo-switch-9754d1c61bf3_1920.jpg 1920w,https://developer.chrome.com/static/docs/capabilities/hid/image/red-blue-nintendo-switch-9754d1c61bf3_2880.jpg 2880w" sizes="(max-width: 840px) 100vw, 856px">
+  <figcaption class="dcc-caption">Nintendo Switch Joy-Con devices.</figcaption>
+</figure>
+
+<p>Continuing with the previous example, the code below shows you how to detect
+which button the user has pressed on a Joy-Con Right device so that you can
+hopefully try it at home.</p>
+<pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">device.addEventListener(&#34;inputreport&#34;, event =&gt; {
+  const { data, device, reportId } = event;
+
+  // Handle only the Joy-Con Right device and a specific report ID.
+  if (device.productId !== 0x2007 &amp;&amp; reportId !== 0x3f) return;
+
+  const value = data.getUint8(0);
+  if (value === 0) return;
+
+  const someButtons = { 1: &#34;A&#34;, 2: &#34;X&#34;, 4: &#34;B&#34;, 8: &#34;Y&#34; };
+  console.log(`User pressed button ${someButtons[value]}.`);
+});
+</code></pre>
+<div class="dcc-embed" style="height: 480px;">
+  <iframe style="height: 100%; width: 100%; border: 0;" title="webhid-joycon-button on Glitch" src="https://glitch.com/embed/#!/embed/webhid-joycon-button?attributionHidden=true&sidebarCollapsed=true&path=script.js&previewSize=100" allow="camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi; hid" loading="lazy"></iframe>
+</div>
+
+<h3 id="send-output-reports" data-text="Send output reports" tabindex="-1">Send output reports</h3>
+
+<p>To send an output report to an HID device, pass the 8-bit report ID associated
+with the output report (<code translate="no" dir="ltr">reportId</code>) and bytes as a <a href="https://developer.mozilla.org/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static#buffersource"><code translate="no" dir="ltr">BufferSource</code></a>&nbsp;(<code translate="no" dir="ltr">data</code>) to
+<code translate="no" dir="ltr">device.sendReport()</code>. The returned promise resolves once the report has been
+sent. If the HID device does not use report IDs, set <code translate="no" dir="ltr">reportId</code> to 0.</p>
+
+<p>The example below applies to a Joy-Con device and shows you how to make it
+rumble with output reports.</p>
+<pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">// First, send a command to enable vibration.
+// Magical bytes come from https://github.com/mzyy94/joycon-toolweb
+const enableVibrationData = [1, 0, 1, 64, 64, 0, 1, 64, 64, 0x48, 0x01];
+await device.sendReport(0x01, new Uint8Array(enableVibrationData));
+
+// Then, send a command to make the Joy-Con device rumble.
+// Actual bytes are available in the sample below.
+const rumbleData = [ /* ... */ ];
+await device.sendReport(0x10, new Uint8Array(rumbleData));
+</code></pre>
+<div class="dcc-embed" style="height: 480px;">
+  <iframe style="height: 100%; width: 100%; border: 0;" title="webhid-joycon-rumble on Glitch" src="https://glitch.com/embed/#!/embed/webhid-joycon-rumble?attributionHidden=true&sidebarCollapsed=true&path=script.js&previewSize=100" allow="camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi; hid" loading="lazy"></iframe>
+</div>
+
+<h3 id="feature-reports" data-text="Send and receive feature reports" tabindex="-1">Send and receive feature reports</h3>
+
+<p>Feature reports are the only type of HID data reports that can travel in both
+directions. They allow HID devices and applications to exchange non standardized
+HID data. Unlike input and output reports, feature reports are not received or
+sent by the application on a regular basis.</p>
+
+<figure>
+  <img src="/static/docs/capabilities/hid/image/black-silver-laptop-comp-91a25010b2b48.jpg" alt="Black and silver laptop computer photo." width="800" height="575" srcset="https://developer.chrome.com/static/docs/capabilities/hid/image/black-silver-laptop-comp-91a25010b2b48_36.jpg 36w,https://developer.chrome.com/static/docs/capabilities/hid/image/black-silver-laptop-comp-91a25010b2b48_48.jpg 48w,https://developer.chrome.com/static/docs/capabilities/hid/image/black-silver-laptop-comp-91a25010b2b48_72.jpg 72w,https://developer.chrome.com/static/docs/capabilities/hid/image/black-silver-laptop-comp-91a25010b2b48_96.jpg 96w,https://developer.chrome.com/static/docs/capabilities/hid/image/black-silver-laptop-comp-91a25010b2b48_480.jpg 480w,https://developer.chrome.com/static/docs/capabilities/hid/image/black-silver-laptop-comp-91a25010b2b48_720.jpg 720w,https://developer.chrome.com/static/docs/capabilities/hid/image/black-silver-laptop-comp-91a25010b2b48_856.jpg 856w,https://developer.chrome.com/static/docs/capabilities/hid/image/black-silver-laptop-comp-91a25010b2b48_960.jpg 960w,https://developer.chrome.com/static/docs/capabilities/hid/image/black-silver-laptop-comp-91a25010b2b48_1440.jpg 1440w,https://developer.chrome.com/static/docs/capabilities/hid/image/black-silver-laptop-comp-91a25010b2b48_1920.jpg 1920w,https://developer.chrome.com/static/docs/capabilities/hid/image/black-silver-laptop-comp-91a25010b2b48_2880.jpg 2880w" sizes="(max-width: 840px) 100vw, 856px">
+  <figcaption class="dcc-caption">Laptop keyboard</figcaption>
+</figure>
+
+<p>To send a feature report to an HID device, pass the 8-bit report ID associated
+with the feature report (<code translate="no" dir="ltr">reportId</code>) and bytes as a <a href="https://developer.mozilla.org/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static#buffersource"><code translate="no" dir="ltr">BufferSource</code></a>&nbsp;(<code translate="no" dir="ltr">data</code>) to
+<code translate="no" dir="ltr">device.sendFeatureReport()</code>. The returned promise resolves once the report has
+been sent. If the HID device does not use report IDs, set <code translate="no" dir="ltr">reportId</code> to 0.</p>
+
+<p>The example below illustrates the use of feature reports by showing you how to
+request an Apple keyboard backlight device, open it, and make it blink.</p>
+<pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">const waitFor = duration =&gt; new Promise(r =&gt; setTimeout(r, duration));
+
+// Prompt user to select an Apple Keyboard Backlight device.
+const [device] = await navigator.hid.requestDevice({
+  filters: [{ vendorId: 0x05ac, usage: 0x0f, usagePage: 0xff00 }]
+});
+
+// Wait for the HID connection to open.
+await device.open();
+
+// Blink!
+const reportId = 1;
+for (let i = 0; i &lt; 10; i++) {
+  // Turn off
+  await device.sendFeatureReport(reportId, Uint32Array.from([0, 0]));
+  await waitFor(100);
+  // Turn on
+  await device.sendFeatureReport(reportId, Uint32Array.from([512, 0]));
+  await waitFor(100);
+}
+</code></pre>
+<div class="dcc-embed" style="height: 480px;">
+  <iframe style="height: 100%; width: 100%; border: 0;" title="webhid-apple-keyboard-backlight on Glitch" src="https://glitch.com/embed/#!/embed/webhid-apple-keyboard-backlight?attributionHidden=true&sidebarCollapsed=true&path=script.js&previewSize=100" allow="camera; clipboard-read; clipboard-write; encrypted-media; geolocation; microphone; midi; hid" loading="lazy"></iframe>
+</div>
+
+<p>To receive a feature report from an HID device, pass the 8-bit report ID
+associated with the feature report (<code translate="no" dir="ltr">reportId</code>)  to
+<code translate="no" dir="ltr">device.receiveFeatureReport()</code>. The returned promise resolves with a
+<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/DataView"><code translate="no" dir="ltr">DataView</code></a> object that contains the contents of the feature report. If the HID
+device does not use report IDs, set <code translate="no" dir="ltr">reportId</code> to 0.</p>
+<pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">// Request feature report.
+const dataView = await device.receiveFeatureReport(/* reportId= */ 1);
+
+// Read feature report contents with dataView.getInt8(), getUint8(), etc...
+</code></pre>
+<h3 id="connection-disconnection" data-text="Listen to connection and disconnection" tabindex="-1">Listen to connection and disconnection</h3>
+
+<p>When the website has been granted permission to access an HID device, it can
+actively receive connection and disconnection events by listening to <code translate="no" dir="ltr">&quot;connect&quot;</code>
+and <code translate="no" dir="ltr">&quot;disconnect&quot;</code> events.</p>
+<pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">navigator.hid.addEventListener(&#34;connect&#34;, event =&gt; {
+  // Automatically open event.device or warn user a device is available.
+});
+
+navigator.hid.addEventListener(&#34;disconnect&#34;, event =&gt; {
+  // Remove |event.device| from the UI.
+});
+</code></pre>
+<h3 id="revoke-access" data-text="Revoke access to an HID device" tabindex="-1">Revoke access to an HID device</h3>
+
+<p>The website can clean up permissions to access an HID device it is no longer
+interested in retaining by calling <code translate="no" dir="ltr">forget()</code> on the <code translate="no" dir="ltr">HIDDevice</code> instance. For
+example, for an educational web application used on a shared computer with many
+devices, a large number of accumulated user-generated permissions creates a poor
+user experience.</p>
+
+<p>Calling <code translate="no" dir="ltr">forget()</code> on a single <code translate="no" dir="ltr">HIDDevice</code> instance will revoke access to all
+the HID interfaces on the same physical device.</p>
+<pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">// Voluntarily revoke access to this HID device.
+await device.forget();
+</code></pre>
+<p>As <code translate="no" dir="ltr">forget()</code> is available in Chrome 100 or later, check if this feature is
+supported with the following:</p>
+<pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">if (&#34;hid&#34; in navigator &amp;&amp; &#34;forget&#34; in HIDDevice.prototype) {
+  // forget() is supported.
+}
+</code></pre>
+<h2 id="dev-tips" data-text="Dev Tips" tabindex="-1">Dev Tips</h2>
+
+<p>Debugging HID in Chrome is easy with the internal page, <code translate="no" dir="ltr">about://device-log</code>
+where you can see all HID and USB device related events in one single place.</p>
+
+<figure>
+  <img src="/static/docs/capabilities/hid/image/screenshot-the-internal-958992d62d73e.jpg" alt="Screenshot of the internal page to debug HID." width="800" height="575" srcset="https://developer.chrome.com/static/docs/capabilities/hid/image/screenshot-the-internal-958992d62d73e_36.jpg 36w,https://developer.chrome.com/static/docs/capabilities/hid/image/screenshot-the-internal-958992d62d73e_48.jpg 48w,https://developer.chrome.com/static/docs/capabilities/hid/image/screenshot-the-internal-958992d62d73e_72.jpg 72w,https://developer.chrome.com/static/docs/capabilities/hid/image/screenshot-the-internal-958992d62d73e_96.jpg 96w,https://developer.chrome.com/static/docs/capabilities/hid/image/screenshot-the-internal-958992d62d73e_480.jpg 480w,https://developer.chrome.com/static/docs/capabilities/hid/image/screenshot-the-internal-958992d62d73e_720.jpg 720w,https://developer.chrome.com/static/docs/capabilities/hid/image/screenshot-the-internal-958992d62d73e_856.jpg 856w,https://developer.chrome.com/static/docs/capabilities/hid/image/screenshot-the-internal-958992d62d73e_960.jpg 960w,https://developer.chrome.com/static/docs/capabilities/hid/image/screenshot-the-internal-958992d62d73e_1440.jpg 1440w,https://developer.chrome.com/static/docs/capabilities/hid/image/screenshot-the-internal-958992d62d73e_1920.jpg 1920w,https://developer.chrome.com/static/docs/capabilities/hid/image/screenshot-the-internal-958992d62d73e_2880.jpg 2880w" sizes="(max-width: 840px) 100vw, 856px">
+  <figcaption class="dcc-caption">Internal page in Chrome to debug HID.</figcaption>
+</figure>
+
+<p>Check out the <a href="https://nondebug.github.io/webhid-explorer/">HID explorer</a> for dumping HID device
+info into a human-readable format. It maps from usage values to names for each
+HID usage.</p>
+
+<p>On most Linux systems, HID devices are mapped with read-only permissions by
+default. To allow Chrome to open an HID device, you will need to add a new <a href="https://www.freedesktop.org/software/systemd/man/udev.html">udev
+rule</a>. Create a file at <code translate="no" dir="ltr">/etc/udev/rules.d/50-yourdevicename.rules</code> with the
+following content:</p>
+<pre class="prettyprint lang-vim" translate="no" dir="ltr"><code translate="no" dir="ltr">KERNEL==&#34;hidraw*&#34;, ATTRS{idVendor}==&#34;[yourdevicevendor]&#34;, MODE=&#34;0664&#34;, GROUP=&#34;plugdev&#34;
+</code></pre>
+<p>In the line above, <code translate="no" dir="ltr">[yourdevicevendor]</code> is <code translate="no" dir="ltr">057e</code> if your device is a Nintendo Switch
+Joy-Con for instance. <code translate="no" dir="ltr">ATTRS{idProduct}</code> can also be added for a more specific
+rule. Make sure your <code translate="no" dir="ltr">user</code> is a <a href="https://wiki.debian.org/SystemGroups">member</a> of the <code translate="no" dir="ltr">plugdev</code> group. Then, just
+reconnect your device.</p>
+
+<h2 id="browser-support" data-text="Browser support" tabindex="-1">Browser support</h2>
+
+<p>The WebHID API is available on all desktop platforms (ChromeOS, Linux, macOS,
+and Windows) in Chrome 89.</p>
+
+<h2 id="demos" data-text="Demos" tabindex="-1">Demos</h2>
+
+<p>Some WebHID demos are listed at <a href="/docs/capabilities/web-apis/hid-examples">web.dev/hid-examples</a>. Go have a look!</p>
+
+<h2 id="security-privacy" data-text="Security and privacy" tabindex="-1">Security and privacy</h2>
+
+<p>The spec authors have designed and implemented the WebHID API using the core
+principles defined in <a href="https://chromium.googlesource.com/chromium/src/+/lkgr/docs/security/permissions-for-powerful-web-platform-features.md">Controlling Access to Powerful Web Platform Features</a>,
+including user control, transparency, and ergonomics. The ability to use this
+API is primarily gated by a permission model that grants access to only a single
+HID device at a time. In response to a user prompt, the user must take active
+steps to select a particular HID device.</p>
+
+<p>To understand the security tradeoffs, check out the <a href="https://wicg.github.io/webhid/#security-and-privacy">Security and Privacy
+Considerations</a> section of the WebHID spec.</p>
+
+<p>On top of this, Chrome inspects the usage of each top-level collection and if a
+top-level collection has a protected usage (e.g. generic keyboard, mouse), then
+a website won&#39;t be able to send and receive any reports defined in that
+collection. The full list of protected usages is <a href="https://source.chromium.org/chromium/chromium/src/+/main:services/device/public/cpp/hid/hid_usage_and_page.cc">publicly available</a>.</p>
+
+<p>Note that security-sensitive HID devices (such as FIDO HID devices used for
+stronger authentication) are also blocked in Chrome. See the <a href="https://source.chromium.org/chromium/chromium/src/+/main:chrome/browser/usb/usb_blocklist.cc">USB blocklist</a> and
+<a href="https://source.chromium.org/chromium/chromium/src/+/main:services/device/public/cpp/hid/hid_blocklist.cc">HID blocklist</a> files.</p>
+
+<h2 id="feedback" data-text="Feedback" tabindex="-1">Feedback</h2>
+
+<p>The Chrome team would love to hear about your thoughts and experiences with the
+WebHID API.</p>
+
+<h3 id="tell_us_about_the_api_design" data-text="Tell us about the API design" tabindex="-1">Tell us about the API design</h3>
+
+<p>Is there something about the API that doesn&#39;t work as expected? Or are there
+missing methods or properties that you need to implement your idea?</p>
+
+<p>File a spec issue on the <a href="https://github.com/wicg/webhid/issues">WebHID API GitHub repo</a> or add your thoughts
+to an existing issue.</p>
+
+<h3 id="report_a_problem_with_the_implementation" data-text="Report a problem with the implementation" tabindex="-1">Report a problem with the implementation</h3>
+
+<p>Did you find a bug with Chrome&#39;s implementation? Or is the implementation
+different from the spec?</p>
+
+<p>Check out <a href="https://www.chromium.org/developers/how-tos/file-web-hid-bugs/">How to file WebHID bugs</a>. Be sure to include as much
+detail as you can, provide simple instructions for reproducing the bug, and have
+<em>Components</em> set to <code translate="no" dir="ltr">Blink&gt;HID</code>. <a href="https://glitch.com">Glitch</a> works great for
+sharing quick and easy repros.</p>
+
+<h3 id="show_support" data-text="Show support" tabindex="-1">Show support</h3>
+
+<p>Are you planning to use the WebHID API? Your public support helps the Chrome
+team prioritize features and shows other browser vendors how critical it is to
+support them.</p>
+
+<p>Send a tweet to <a href="https://twitter.com/chromiumdev">@ChromiumDev</a> using the hashtag
+<a href="https://twitter.com/search?q=%23WebHID&amp;src=typed_query&amp;f=live"><code translate="no" dir="ltr">#WebHID</code></a> and let us know
+where and how you&#39;re using it.</p>
+
+<h2 id="helpful" data-text="Helpful links" tabindex="-1">Helpful links</h2>
+
+<ul>
+<li><a href="https://wicg.github.io/webhid/">Specification</a></li>
+<li><a href="https://crbug.com/890096">Tracking bug</a></li>
+<li><a href="https://chromestatus.com/feature/5172464636133376">ChromeStatus.com entry</a></li>
+<li>Blink Component: <a href="https://chromestatus.com/features#component%3ABlink%3EHID"><code translate="no" dir="ltr">Blink&gt;HID</code></a></li>
+</ul>
+
+<h2 id="acknowledgements" data-text="Acknowledgements" tabindex="-1">Acknowledgements</h2>
+
+<p>Thanks to <a href="https://github.com/nondebug">Matt Reynolds</a> and <a href="https://github.com/jpmedley">Joe Medley</a> for their reviews of this article.
+Red and blue Nintendo Switch photo by <a href="https://unsplash.com/photos/jqpRECmiNEU">Sara Kurfeß</a>, and black and silver laptop
+computer photo by <a href="https://unsplash.com/photos/ndokCrfQWrI">Athul Cyriac Ajay</a> on Unsplash.</p>
+
+  
+
+  
+</div>
+
+  
+
+  
+    
+    
+      
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+  
+       
+    
+    
+  
+
+  
+  
+</article>
+
+
+<devsite-content-footer class="nocontent">
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  <p>Last updated 2020-09-15 UTC.</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  <template class="devsite-thumb-rating-down-categories">
+  [{
+      "type": "thumb-down",
+      "id": "missingTheInformationINeed",
+      "label":"Missing the information I need"
+    },{
+      "type": "thumb-down",
+      "id": "tooComplicatedTooManySteps",
+      "label":"Too complicated / too many steps"
+    },{
+      "type": "thumb-down",
+      "id": "outOfDate",
+      "label":"Out of date"
+    },{
+      "type": "thumb-down",
+      "id": "samplesCodeIssue",
+      "label":"Samples / code issue"
+    },{
+      "type": "thumb-down",
+      "id": "otherDown",
+      "label":"Other"
+    }]
+  </template>
+  <template class="devsite-thumb-rating-up-categories">
+  [{
+      "type": "thumb-up",
+      "id": "easyToUnderstand",
+      "label":"Easy to understand"
+    },{
+      "type": "thumb-up",
+      "id": "solvedMyProblem",
+      "label":"Solved my problem"
+    },{
+      "type": "thumb-up",
+      "id": "otherUp",
+      "label":"Other"
+    }]
+  </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent" aria-label="Footer links">
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Contribute</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://issuetracker.google.com/issues/new?component=1400036&amp;template=1897236"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            File a bug
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://issuetracker.google.com/issues?q=status:open%20componentid:1400036&amp;s=created_time:desc"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+              
+              
+            
+          
+            See open issues
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Related content</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://blog.chromium.org/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Chromium updates
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/case-studies"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Case studies
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/deprecated"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Archive
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://web.dev/shows"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+              
+              
+            
+          
+            Podcasts &amp; shows
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Connect</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://twitter.com/ChromiumDev"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            @ChromiumDev on X
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.youtube.com/user/ChromeDevelopers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            YouTube
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.linkedin.com/showcase/chrome-for-developers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+              
+              
+            
+          
+            Chrome for Developers on LinkedIn
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent">
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Utility links">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          Terms
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privacy
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="nl"
+        >Nederlands</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel></devsite-panel>
+        
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar
+    
+    >
+</devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics analytics-iframe enable-cb>
+      
+        <script type="application/json" analytics>[]</script>
+<script type="application/json" tag-management>{&#34;ga4&#34;: [], &#34;ga4p&#34;: [], &#34;gtm&#34;: [{&#34;id&#34;: &#34;GTM-5QF3RT2&#34;, &#34;purpose&#34;: 0}], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;False&#34;, &#34;requested&#34;: &#34;en&#34;, &#34;served&#34;: &#34;en&#34;}, &#34;pageType&#34;: &#34;article&#34;, &#34;projectName&#34;: &#34;Capabilities&#34;, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;chrome&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    <script nonce="HNspMhByNcQNliRRu7H6Ynt4g/+57w">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/js/app_loader.js', '[53,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome","https://chrome-dot-devsite-v2-prod-3p.appspot.com",1,null,["/_pwa/chrome/manifest.json","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/favicon.png","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup.svg","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,112,113,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,147,148,149,151,152,156,157,158,159,161,163,164,168,169,170,179,180,182,183,186,191,193,196],"AIzaSyCNm9YxQumEXwGJgTDjxoxXK6m1F-9720Q","AIzaSyCc76DZePGtoyUjqKrLdsMGk_ry7sljLbY","developer.chrome.com","AIzaSyB9bqgQ2t11WJsOX8qNsCQ6U-w91mmqF-I","AIzaSyAdYnStPdzjcJJtQ0mvIaeaMKj7_t6J_Fg",null,null,null,["Profiles__enable_page_saving","Search__enable_dynamic_content_confidential_banner","Cloud__enable_cloudx_experiment_ids","Analytics__enable_cookie_bar","TpcFeatures__enable_mirror_tenant_redirects","Experiments__reqs_query_experiments","MiscFeatureFlags__enable_project_variables","Search__enable_page_map","OnSwitch__enable","Profiles__enable_developer_profiles_callout","Cloud__enable_free_trial_server_call","Cloud__enable_cloud_shell","Profiles__enable_profile_collections","MiscFeatureFlags__developers_footer_image","MiscFeatureFlags__enable_firebase_utm","MiscFeatureFlags__enable_variable_operator","Profiles__require_profile_eligibility_for_signin","Cloud__enable_cloud_shell_fte_user_flow","Search__enable_suggestions_from_borg","Search__enable_faceted_search","Profiles__enable_public_developer_profiles","BookNav__enable_tenant_cache_key","Concierge__enable_pushui","MiscFeatureFlags__developers_footer_dark_image","CloudShell__cloud_code_overflow_menu","Cloud__enable_cloud_dlp_service","MiscFeatureFlags__enable_explain_this_code","Profiles__enable_release_notes_notifications","CloudShell__cloud_shell_button","Profiles__enable_awarding_url","MiscFeatureFlags__enable_new_sitemap","EngEduTelemetry__enable_engedu_telemetry","MiscFeatureFlags__emergency_css","Cloud__enable_cloud_facet_chat","Cloud__enable_cloudx_ping","Search__enable_ai_eligibility_checks"],null,null,"AIzaSyA58TaKli1DculwmAmbpzLVGuWc8eCQgQc","https://developerscontentserving-pa.googleapis.com","AIzaSyDWBU60w0P9hEkr29kkksYs8Z7gvZ8u_wc","https://developerscontentsearch-pa.googleapis.com",2,4]')
+  
+</script>
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>

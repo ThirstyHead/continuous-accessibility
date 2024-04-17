@@ -1,0 +1,3859 @@
+<!doctype html>
+<html 
+      lang="en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="157101835696-ooapojlodmuabs2do2vuhhnf90bccmoi.apps.googleusercontent.com">
+    <meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award">
+    <meta property="og:site_name" content="Chrome for Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#1a73e8"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/chrome/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//apis.google.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/css/app.css">
+      
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/touchicon-180.png"><link rel="canonical" href="https://developer.chrome.com/docs/apps/angular_framework"><link rel="search" type="application/opensearchdescription+xml"
+            title="Chrome for Developers" href="https://developer.chrome.com/s/opensearch.xml">
+      <link rel="alternate" hreflang="en"
+          href="https://developer.chrome.com/docs/apps/angular_framework" /><link rel="alternate" hreflang="x-default" href="https://developer.chrome.com/docs/apps/angular_framework" /><link rel="alternate" hreflang="ar"
+          href="https://developer.chrome.com/docs/apps/angular_framework?hl=ar" /><link rel="alternate" hreflang="bn"
+          href="https://developer.chrome.com/docs/apps/angular_framework?hl=bn" /><link rel="alternate" hreflang="zh-Hans"
+          href="https://developer.chrome.com/docs/apps/angular_framework?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant"
+          href="https://developer.chrome.com/docs/apps/angular_framework?hl=zh-tw" /><link rel="alternate" hreflang="nl"
+          href="https://developer.chrome.com/docs/apps/angular_framework?hl=nl" /><link rel="alternate" hreflang="fa"
+          href="https://developer.chrome.com/docs/apps/angular_framework?hl=fa" /><link rel="alternate" hreflang="fr"
+          href="https://developer.chrome.com/docs/apps/angular_framework?hl=fr" /><link rel="alternate" hreflang="de"
+          href="https://developer.chrome.com/docs/apps/angular_framework?hl=de" /><link rel="alternate" hreflang="he"
+          href="https://developer.chrome.com/docs/apps/angular_framework?hl=he" /><link rel="alternate" hreflang="hi"
+          href="https://developer.chrome.com/docs/apps/angular_framework?hl=hi" /><link rel="alternate" hreflang="id"
+          href="https://developer.chrome.com/docs/apps/angular_framework?hl=id" /><link rel="alternate" hreflang="it"
+          href="https://developer.chrome.com/docs/apps/angular_framework?hl=it" /><link rel="alternate" hreflang="ja"
+          href="https://developer.chrome.com/docs/apps/angular_framework?hl=ja" /><link rel="alternate" hreflang="ko"
+          href="https://developer.chrome.com/docs/apps/angular_framework?hl=ko" /><link rel="alternate" hreflang="pl"
+          href="https://developer.chrome.com/docs/apps/angular_framework?hl=pl" /><link rel="alternate" hreflang="pt-BR"
+          href="https://developer.chrome.com/docs/apps/angular_framework?hl=pt-br" /><link rel="alternate" hreflang="ru"
+          href="https://developer.chrome.com/docs/apps/angular_framework?hl=ru" /><link rel="alternate" hreflang="es-419"
+          href="https://developer.chrome.com/docs/apps/angular_framework?hl=es-419" /><link rel="alternate" hreflang="th"
+          href="https://developer.chrome.com/docs/apps/angular_framework?hl=th" /><link rel="alternate" hreflang="tr"
+          href="https://developer.chrome.com/docs/apps/angular_framework?hl=tr" /><link rel="alternate" hreflang="vi"
+          href="https://developer.chrome.com/docs/apps/angular_framework?hl=vi" /><link rel="alternate" hreflang="en-cn"
+          href="https://developer.chrome.google.cn/docs/apps/angular_framework" /><link rel="alternate" hreflang="x-default" href="https://developer.chrome.google.cn/docs/apps/angular_framework" /><link rel="alternate" hreflang="ar-cn"
+          href="https://developer.chrome.google.cn/docs/apps/angular_framework?hl=ar" /><link rel="alternate" hreflang="bn-cn"
+          href="https://developer.chrome.google.cn/docs/apps/angular_framework?hl=bn" /><link rel="alternate" hreflang="zh-Hans-cn"
+          href="https://developer.chrome.google.cn/docs/apps/angular_framework?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant-cn"
+          href="https://developer.chrome.google.cn/docs/apps/angular_framework?hl=zh-tw" /><link rel="alternate" hreflang="nl-cn"
+          href="https://developer.chrome.google.cn/docs/apps/angular_framework?hl=nl" /><link rel="alternate" hreflang="fa-cn"
+          href="https://developer.chrome.google.cn/docs/apps/angular_framework?hl=fa" /><link rel="alternate" hreflang="fr-cn"
+          href="https://developer.chrome.google.cn/docs/apps/angular_framework?hl=fr" /><link rel="alternate" hreflang="de-cn"
+          href="https://developer.chrome.google.cn/docs/apps/angular_framework?hl=de" /><link rel="alternate" hreflang="he-cn"
+          href="https://developer.chrome.google.cn/docs/apps/angular_framework?hl=he" /><link rel="alternate" hreflang="hi-cn"
+          href="https://developer.chrome.google.cn/docs/apps/angular_framework?hl=hi" /><link rel="alternate" hreflang="id-cn"
+          href="https://developer.chrome.google.cn/docs/apps/angular_framework?hl=id" /><link rel="alternate" hreflang="it-cn"
+          href="https://developer.chrome.google.cn/docs/apps/angular_framework?hl=it" /><link rel="alternate" hreflang="ja-cn"
+          href="https://developer.chrome.google.cn/docs/apps/angular_framework?hl=ja" /><link rel="alternate" hreflang="ko-cn"
+          href="https://developer.chrome.google.cn/docs/apps/angular_framework?hl=ko" /><link rel="alternate" hreflang="pl-cn"
+          href="https://developer.chrome.google.cn/docs/apps/angular_framework?hl=pl" /><link rel="alternate" hreflang="pt-BR-cn"
+          href="https://developer.chrome.google.cn/docs/apps/angular_framework?hl=pt-br" /><link rel="alternate" hreflang="ru-cn"
+          href="https://developer.chrome.google.cn/docs/apps/angular_framework?hl=ru" /><link rel="alternate" hreflang="es-419-cn"
+          href="https://developer.chrome.google.cn/docs/apps/angular_framework?hl=es-419" /><link rel="alternate" hreflang="th-cn"
+          href="https://developer.chrome.google.cn/docs/apps/angular_framework?hl=th" /><link rel="alternate" hreflang="tr-cn"
+          href="https://developer.chrome.google.cn/docs/apps/angular_framework?hl=tr" /><link rel="alternate" hreflang="vi-cn"
+          href="https://developer.chrome.google.cn/docs/apps/angular_framework?hl=vi" /><title>Build Apps with AngularJS &nbsp;|&nbsp; Chrome for Developers</title>
+
+<meta property="og:title" content="Build Apps with AngularJS &nbsp;|&nbsp; Chrome for Developers"><meta name="description" content="A guide on building Chrome Apps with AngularJS.">
+  <meta property="og:description" content="A guide on building Chrome Apps with AngularJS."><meta property="og:url" content="https://developer.chrome.com/docs/apps/angular_framework"><meta property="og:locale" content="en"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "dateModified": "2012-11-16",
+    "headline": "Build Apps with AngularJS"
+  }
+</script><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Docs",
+      "item": "https://developer.chrome.com/docs"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Apps",
+      "item": "https://developer.chrome.com/docs/apps"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Build Apps with AngularJS",
+      "item": "https://developer.chrome.com/docs/apps/angular_framework"
+    }]
+  }
+  </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+    
+      <link rel="stylesheet" href="/extras.css"></head>
+  <body class=""
+        template="page"
+        theme="chrome-theme"
+        type="article"
+        
+        
+        appearance
+        layout="docs"
+        
+        
+        
+        
+        display-toc
+        pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+    <section class="devsite-wrapper">
+      
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar>
+      <devsite-header role="banner">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner nocontent">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="chromeForDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme"
+            alt="Chrome for Developers">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup.svg" class="devsite-site-logo" alt="Chrome for Developers">
+  </picture>
+  
+</a>
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+              
+              
+  <devsite-tabs class="upper-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Upper tabs">
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/case-studies"
+      track-metadata-eventdetail="https://developer.chrome.com/case-studies"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - get inspired"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Get inspired"
+         
+           track-name="get inspired"
+         
+       >
+    Get inspired
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/blog"
+      track-metadata-eventdetail="https://developer.chrome.com/blog"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - blog"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Blog"
+         
+           track-name="blog"
+         
+       >
+    Blog
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab class="devsite-dropdown
+    devsite-dropdown-full
+    devsite-active
+    
+    ">
+  
+    <a href="https://developer.chrome.com/docs"
+      track-metadata-eventdetail="https://developer.chrome.com/docs"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - docs"
+       track-metadata-module="primary nav"
+       aria-label="Docs, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Docs"
+         
+           track-name="docs"
+         
+       >
+    Docs
+  
+    </a>
+  
+  
+    <a href="#"
+       role="button"
+       aria-haspopup="true"
+       aria-expanded="false"
+       aria-label="Dropdown menu for Docs"
+       track-type="nav"
+       track-metadata-eventdetail="https://developer.chrome.com/docs"
+       track-metadata-position="nav - docs"
+       track-metadata-module="primary nav"
+       
+        
+          data-category="Site-Wide Custom Events"
+        
+          data-label="Tab: Docs"
+        
+          track-name="docs"
+        
+      
+       class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+  
+  <div class="devsite-tabs-dropdown" aria-label="submenu" hidden>
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       build-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Build with Chrome</li>
+              
+              
+                <li class="devsite-nav-description">Learn how Chrome works, participate in origin trials, and build with Chrome everywhere.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/web-platform"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/web-platform"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Web Platform
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/capabilities"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/capabilities"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Capabilities
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/extensions"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/extensions"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Extensions
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/webstore"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/webstore"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chrome Web Store
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/chromium"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/chromium"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chromium
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/aurora"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/aurora"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Aurora
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/android"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/android"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Web on Android
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/origintrials/"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/origintrials/"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Origin trials
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/release-notes"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/release-notes"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Release notes
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       productivity-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Productivity</li>
+              
+              
+                <li class="devsite-nav-description">Create the best experience for your users with the web&#39;s best tools.</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/devtools"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/devtools"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      DevTools
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/lighthouse"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/lighthouse"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Lighthouse
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/crux"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/crux"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chrome UX Report
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/accessibility"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/accessibility"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Accessibility
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       dcc-subnav second-column-list">
+              
+              
+                <li class="devsite-nav-description">Get things done quicker and neater, with our ready-made libraries.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/workbox"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/workbox"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Workbox
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/puppeteer"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/puppeteer"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Puppeteer
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       experience-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Experience</li>
+              
+              
+                <li class="devsite-nav-description">Design a beautiful and performant web with Chrome.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/performance"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/performance"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Performance
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/css-ui"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/css-ui"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      CSS and UI
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/identity"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/identity"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Identity
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/payments"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/payments"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Payments
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/privacy-security"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/privacy-security"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Privacy and security
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       resources-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Resources</li>
+              
+              
+                <li class="devsite-nav-description">More from the Chrome team.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="resources"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      All documentation
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/baseline"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/baseline"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="resources"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Baseline
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="resources"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      web.dev
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    
+    project-name="Apps"
+    tenant-name="Chrome for Developers"
+    
+    
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://developer.chrome.com/s/results" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Open search"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Search"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Search"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Close search"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+        
+
+        <devsite-appearance-selector></devsite-appearance-selector>
+
+        
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="nl"
+        >Nederlands</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+        
+
+        
+          
+          
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>Sign in</span>
+            
+        </devsite-user>
+           
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+      
+        
+          <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+              
+                
+                  
+                  
+                  <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs/apps"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Lower Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Apps"
+      
+    >
+    
+        Apps
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+                
+              
+              
+            </div>
+            
+          </div>
+          
+        
+      
+      
+        <div class="devsite-doc-set-nav-row">
+          
+          
+            
+            
+  <devsite-tabs class="lower-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Lower tabs">
+      
+        
+          <tab  class="devsite-active">
+            
+    <a href="https://developer.chrome.com/docs/apps"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/apps"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - overview"
+       track-metadata-module="primary nav"
+       aria-label="Overview, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Overview"
+         
+           track-name="overview"
+         
+       >
+    Overview
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/docs/apps/reference"
+      track-metadata-eventdetail="https://developer.chrome.com/docs/apps/reference"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - reference"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Reference"
+         
+           track-name="reference"
+         
+       >
+    Reference
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+          
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+
+  
+</devsite-header>
+      <devsite-book-nav scrollbars >
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     hidden>
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="Filter"
+         
+         aria-label="Type to filter"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="Clear filter"
+        aria-label="Clear filter"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent"
+     aria-label="Side menu">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="chromeForDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme"
+            alt="Chrome for Developers">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup.svg" class="devsite-site-logo" alt="Chrome for Developers">
+  </picture>
+  
+</a>
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/case-studies"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Get inspired"
+      
+        track-name="get inspired"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Get inspired"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Get inspired
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/blog"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Blog"
+      
+        track-name="blog"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Blog"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Blog
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Docs"
+      
+        track-name="docs"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Docs"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Docs
+   </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Docs"
+      
+        track-name="docs"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Docs">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Docs">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+                <ul class="devsite-nav-responsive-tabs">
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/apps"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Overview"
+      
+        track-name="overview"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Overview"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip menu="_book">
+      Overview
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="/docs/apps/reference"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Reference"
+      
+        track-name="reference"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Reference"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Reference
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item"><a href="/docs/apps/migration"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/migration"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/migration"
+      ><span class="devsite-nav-text" tooltip>Transitioning from Chrome Apps</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Concepts</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/docs/apps/overview"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/overview"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/overview"
+      ><span class="devsite-nav-text" tooltip>What Are Chrome Apps?</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/apps/app_architecture"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/app_architecture"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/app_architecture"
+      ><span class="devsite-nav-text" tooltip>Chrome Apps Architecture</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/apps/app_lifecycle"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/app_lifecycle"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/app_lifecycle"
+      ><span class="devsite-nav-text" tooltip>Chrome App Lifecycle</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/apps/first_app"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/first_app"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/first_app"
+      ><span class="devsite-nav-text" tooltip>Create Your First App</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Codelab</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/apps/app_codelab_basics"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/app_codelab_basics"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/app_codelab_basics"
+      ><span class="devsite-nav-text" tooltip>Step 1: Create and Run a Chrome App</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/app_codelab_import_todomvc"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/app_codelab_import_todomvc"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/app_codelab_import_todomvc"
+      ><span class="devsite-nav-text" tooltip>Step 2: Import an Existing Web App</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/app_codelab_alarms"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/app_codelab_alarms"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/app_codelab_alarms"
+      ><span class="devsite-nav-text" tooltip>Step 3: Add Alarms and Notifications</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/app_codelab_webview"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/app_codelab_webview"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/app_codelab_webview"
+      ><span class="devsite-nav-text" tooltip>Step 4: Open External Links With a Webview</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/app_codelab_images"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/app_codelab_images"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/app_codelab_images"
+      ><span class="devsite-nav-text" tooltip>Step 5: Add Images From the Web</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/app_codelab_filesystem"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/app_codelab_filesystem"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/app_codelab_filesystem"
+      ><span class="devsite-nav-text" tooltip>Step 6: Export Todos to the Filesystem</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/app_codelab_publish"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/app_codelab_publish"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/app_codelab_publish"
+      ><span class="devsite-nav-text" tooltip>Step 7: Publish Your App</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Development Guides</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/docs/apps/analytics"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/analytics"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/analytics"
+      ><span class="devsite-nav-text" tooltip>Analytics</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/app_bluetooth"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/app_bluetooth"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/app_bluetooth"
+      ><span class="devsite-nav-text" tooltip>Bluetooth</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/app_network"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/app_network"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/app_network"
+      ><span class="devsite-nav-text" tooltip>Network Communications</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/app_serial"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/app_serial"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/app_serial"
+      ><span class="devsite-nav-text" tooltip>Serial Devices</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/autoupdate"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/autoupdate"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/autoupdate"
+      ><span class="devsite-nav-text" tooltip>Autoupdating</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/app_storage"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/app_storage"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/app_storage"
+      ><span class="devsite-nav-text" tooltip>Storage APIs</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/app_external"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/app_external"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/app_external"
+      ><span class="devsite-nav-text" tooltip>External Content</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/offline_apps"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/offline_apps"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/offline_apps"
+      ><span class="devsite-nav-text" tooltip>Offline First</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/manifestVersion"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/manifestVersion"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/manifestVersion"
+      ><span class="devsite-nav-text" tooltip>Manifest Version</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/offline_storage"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/offline_storage"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/offline_storage"
+      ><span class="devsite-nav-text" tooltip>Managing HTML5 Offline Storage</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/publish_app"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/publish_app"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/publish_app"
+      ><span class="devsite-nav-text" tooltip>Publish Your App</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/app_usb"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/app_usb"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/app_usb"
+      ><span class="devsite-nav-text" tooltip>USB Devices</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/nativeMessaging"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/nativeMessaging"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/nativeMessaging"
+      ><span class="devsite-nav-text" tooltip>Native Messaging</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/contentSecurityPolicy"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/contentSecurityPolicy"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/contentSecurityPolicy"
+      ><span class="devsite-nav-text" tooltip>Content Security Policy</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/sencha_framework"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/sencha_framework"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/sencha_framework"
+      ><span class="devsite-nav-text" tooltip>Build Apps with Sencha Ext JS</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/event_pages"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/event_pages"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/event_pages"
+      ><span class="devsite-nav-text" tooltip>Update: Event Pages and Background Pages</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/manifest"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/manifest"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/manifest"
+      ><span class="devsite-nav-text" tooltip>Manifest File Format</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/app_codelab_intro"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/app_codelab_intro"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/app_codelab_intro"
+      ><span class="devsite-nav-text" tooltip>Build a Todo Chrome App</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/chrome_apps_on_mobile"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/chrome_apps_on_mobile"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/chrome_apps_on_mobile"
+      ><span class="devsite-nav-text" tooltip>Run Chrome Apps on Mobile Using Apache Cordova</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/app_identity"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/app_identity"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/app_identity"
+      ><span class="devsite-nav-text" tooltip>User Authentication</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/game_engines"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/game_engines"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/game_engines"
+      ><span class="devsite-nav-text" tooltip>Game Engines</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/app_frameworks"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/app_frameworks"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/app_frameworks"
+      ><span class="devsite-nav-text" tooltip>MVC Architecture</span></a></li><li class="devsite-nav-item"><a href="/docs/apps/angular_framework"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/angular_framework"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/angular_framework"
+      ><span class="devsite-nav-text" tooltip>Build Apps with AngularJS</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Reference</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/docs/apps/app_deprecated"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/app_deprecated"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/app_deprecated"
+      ><span class="devsite-nav-text" tooltip>Disabled Web Features</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/apps/api_other"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/apps/api_other"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/apps/api_other"
+      ><span class="devsite-nav-text" tooltip>Web APIs</span></a></li>
+          </ul>
+        
+        
+          
+    
+  
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="Docs"
+          aria-label="Side menu" hidden>
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Build with Chrome
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/web-platform"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Web Platform"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Web Platform
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/capabilities"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Capabilities"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Capabilities
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/extensions"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Extensions"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Extensions
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/webstore"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chrome Web Store"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chrome Web Store
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/chromium"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chromium"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chromium
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/aurora"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Aurora"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Aurora
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/android"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Web on Android"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Web on Android
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developer.chrome.com/origintrials/"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Origin trials"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Origin trials
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/release-notes"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Release notes"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Release notes
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Productivity
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/devtools"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: DevTools"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      DevTools
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/lighthouse"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Lighthouse"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Lighthouse
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/crux"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chrome UX Report"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chrome UX Report
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/accessibility"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Accessibility"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Accessibility
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/workbox"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Workbox"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Workbox
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/puppeteer"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Puppeteer"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Puppeteer
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Experience
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/performance"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Performance"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Performance
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/css-ui"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: CSS and UI"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      CSS and UI
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/identity"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Identity"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Identity
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/payments"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Payments"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Payments
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/privacy-security"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Privacy and security"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Privacy and security
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Resources
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: All documentation"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      All documentation
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://web.dev/baseline"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Baseline"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Baseline
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://web.dev"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: web.dev"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      web.dev
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+        
+        
+          
+    
+  
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+        
+      </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+            
+              has-book-nav
+              has-sidebar
+            >
+          
+          
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="On this page"
+                            depth="2"
+                            scrollbars
+                  ></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav">
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article">
+  
+  
+  
+    <div class="devsite-banner devsite-banner-announcement nocontent"
+      
+        
+    background="google-yellow"
+  
+      >
+      <div class="devsite-banner-message">
+        <div class="devsite-banner-message-text">
+          This page is part of the documentation for the Chrome Apps platform, which was deprecated in 2020. It remains supported for Enterprise and Education customers on ChromeOS until at least Jan 2025. Learn more about <a href="/docs/apps/migration">migrating your app</a>.
+        </div>
+      </div>
+    </div>
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation">
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        Home
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail="Docs"
+      
+    >
+    
+        Docs
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs/apps"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail="Apps"
+      
+    >
+    
+        Apps
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+  
+    
+  </div>
+  
+      <h1 class="devsite-page-title" tabindex="-1">Build Apps with AngularJS</h1>
+  <devsite-feature-tooltip
+          ack-key="AckCollectionsBookmarkTooltipDismiss"
+          analytics-category="Site-Wide Custom Events"
+          analytics-action-show="Callout Profile displayed"
+          analytics-action-close="Callout Profile dismissed"
+          analytics-label="Create Collection Callout"
+          class="devsite-page-bookmark-tooltip nocontent"
+          dismiss-button="true"
+          id="devsite-collections-dropdown"
+
+          
+          dismiss-button-text="Dismiss"
+
+          
+          close-button-text="Got it">
+
+        
+        <devsite-bookmark></devsite-bookmark>
+
+        <span slot="popout-heading">
+          
+          Stay organized with collections
+        </span>
+        <span slot="popout-contents">
+          
+          Save and categorize content based on your preferences.
+        </span>
+      </devsite-feature-tooltip>
+  <div class="devsite-page-title-meta"><devsite-view-release-notes></devsite-view-release-notes></div>
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    >
+  </devsite-toc>
+  
+    
+  
+
+  
+
+
+
+
+
+
+<div class="devsite-article-body clearfix
+  ">
+
+  
+    
+
+
+
+
+<aside class="caution"><b>Important:</b> Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
+the Chrome Web Store will continue to support extensions. <a href="https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html"><strong>Read the announcement</strong></a> and learn
+more about <a href="/apps/migration"><strong>migrating your app</strong></a>.</aside>
+
+<p>This guide gets you started building Chrome Apps with the <a href="https://angularjs.org/">AngularJS</a> MVC framework. To
+illustrate Angular in action, we&#39;ll be referencing an actual app built using the framework, the
+Google Drive Uploader. The <a href="https://github.com/GoogleChrome/chrome-app-samples/tree/master/samples/gdrive">source code</a> is available on GitHub.</p>
+
+<h2 id="first" data-text="About the app" tabindex="-1">About the app</h2>
+
+<p><img src="/static/docs/apps/angular_framework/image/google-drive-uploader-4a880da6dd833.png" alt="Google Drive Uploader" width="580" height="680" srcset="https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-4a880da6dd833_36.png 36w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-4a880da6dd833_48.png 48w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-4a880da6dd833_72.png 72w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-4a880da6dd833_96.png 96w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-4a880da6dd833_480.png 480w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-4a880da6dd833_720.png 720w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-4a880da6dd833_856.png 856w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-4a880da6dd833_960.png 960w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-4a880da6dd833_1440.png 1440w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-4a880da6dd833_1920.png 1920w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-4a880da6dd833_2880.png 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<p>The Google Drive Uploader allows users to quickly view and interact with files stored in their
+Google Drive account as well as upload new files using the <a href="https://www.html5rocks.com/en/tutorials/dnd/basics/">HTML Drag and Drop APIs</a>. It&#39;s a
+great example of building an app which talks to one of <a href="https://developers.google.com/apis-explorer/#p/">Google&#39;s APIs</a>; in this case, the Google
+Drive API.</p>
+
+<aside class="note"><b>Note:</b> You can also build apps which talk to 3rd party APIs/services that are OAuth2-enabled. See
+<a href="/docs/extensions/reference/app_identity#non">non-Google Account authentication</a>.</aside>
+
+<p>The Uploader uses OAuth2 to access the user&#39;s data. The <a href="/docs/extensions/reference/identity">chrome.identity API</a> handles fetching an
+OAuth token for the logged-in user, so the hard work is done for us! Once we have a long-lived
+access token, the apps uses the <a href="https://developers.google.com/drive/get-started">Google Drive API</a> to access the user&#39;s data.</p>
+
+<p>Key features this app uses:</p>
+
+<ul>
+<li>AngularJS&#39;s autodetection for <a href="/docs/extensions/reference/contentSecurityPolicy">CSP</a></li>
+<li>Render a list of files fetched from the <a href="https://developers.google.com/drive/get-started">Google Drive API</a></li>
+<li><a href="http://www.html5rocks.com/en/tutorials/file/filesystem/">HTML5 Filesystem API</a> to store file icons offline</li>
+<li><a href="http://www.html5rocks.com/en/tutorials/dnd/basics/">HTML5 Drag and Drop</a> for importing/uploading new files from the desktop</li>
+<li>XHR2 to load images, cross-domain</li>
+<li><a href="/docs/extensions/reference/app_identity">chrome.identity API</a> for OAuth authorization</li>
+<li>Chromeless frames to define the app&#39;s own navbar look and feel</li>
+</ul>
+
+<h2 id="second" data-text="Creating the manifest" tabindex="-1">Creating the manifest</h2>
+
+<p>All Chrome Apps require a <code translate="no" dir="ltr">manifest.json</code> file which contains the information Chrome needs to launch
+the app. The manifest contains relevant metadata and lists any special permissions the app needs to
+run.</p>
+
+<p>A stripped down version of the Uploader&#39;s manifest looks like this:</p>
+<pre class="prettyprint lang-json" translate="no" dir="ltr"><code translate="no" dir="ltr">{
+  &#34;name&#34;: &#34;Google Drive Uploader&#34;,
+  &#34;version&#34;: &#34;0.0.1&#34;,
+  &#34;manifest_version&#34;: 2,
+  &#34;oauth2&#34;: {
+    &#34;client_id&#34;: &#34;665859454684.apps.googleusercontent.com&#34;,
+    &#34;scopes&#34;: [
+      &#34;https://www.googleapis.com/auth/drive&#34;
+    ]
+  },
+ ...
+  &#34;permissions&#34;: [
+    &#34;https://docs.google.com/feeds/&#34;,
+    &#34;https://docs.googleusercontent.com/&#34;,
+    &#34;https://spreadsheets.google.com/feeds/&#34;,
+    &#34;https://ssl.gstatic.com/&#34;,
+    &#34;https://www.googleapis.com/&#34;
+  ]
+}
+</code></pre>
+<p>The most important parts of this manifest are the &quot;oauth2&quot; and &quot;permissions&quot; sections.</p>
+
+<p>The &quot;oauth2&quot; section defines the required parameters by OAuth2 to do its magic. To create a
+&quot;client_id&quot;, follow the instructions in <a href="/docs/extensions/reference/app_identity#client_id">Get your client id</a>. The &quot;scopes&quot; list the
+authorization scopes that the OAuth token will be valid for (for example, the APIs the app wants to
+access).</p>
+
+<p>The &quot;permissions&quot; section includes URLs that the app will access via XHR2. The URL prefixes are
+required in order for Chrome to know which cross-domain requests to allow.</p>
+
+<h2 id="three" data-text="Creating the event page" tabindex="-1">Creating the event page</h2>
+
+<p>All Chrome Apps require a background script/page to launch the app and respond to system events.</p>
+
+<p>In its <a href="https://github.com/GoogleChrome/chrome-app-samples/blob/master/samples/gdrive/js/background.js">background.js</a> script, Drive Uploader opens a 500x600px window to the main page. It also
+specifies a minimum height and width for the window so the content doesn&#39;t become too crunched:</p>
+<pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">chrome.app.runtime.onLaunched.addListener(function(launchData) {
+  chrome.app.window.create(&#39;../main.html&#39;, {
+    id: &#34;GDriveExample&#34;,
+    bounds: {
+      width: 500,
+      height: 600
+    },
+    minWidth: 500,
+    minHeight: 600,
+    frame: &#39;none&#39;
+  });
+});
+</code></pre>
+<p>The window is created as a chromeless window (frame: &#39;none&#39;). By default, windows render with the
+OS&#39;s default close/expand/minimize bar:</p>
+
+<p><img src="/static/docs/apps/angular_framework/image/google-drive-uploader-no-b48ce07ad3f4e.png" alt="Google Drive Uploader with no frame" width="508" height="75" srcset="https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-no-b48ce07ad3f4e_36.png 36w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-no-b48ce07ad3f4e_48.png 48w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-no-b48ce07ad3f4e_72.png 72w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-no-b48ce07ad3f4e_96.png 96w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-no-b48ce07ad3f4e_480.png 480w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-no-b48ce07ad3f4e_720.png 720w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-no-b48ce07ad3f4e_856.png 856w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-no-b48ce07ad3f4e_960.png 960w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-no-b48ce07ad3f4e_1440.png 1440w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-no-b48ce07ad3f4e_1920.png 1920w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-no-b48ce07ad3f4e_2880.png 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<p>The Uploader uses <code translate="no" dir="ltr">frame: &#39;none&#39;</code> to render the window as a &quot;blank slate&quot; and creates a custom close
+button in <code translate="no" dir="ltr">main.html</code>:</p>
+
+<p><img src="/static/docs/apps/angular_framework/image/google-drive-uploader-cu-361c9ff140866.png" alt="Google Drive Uploader with custom frame" width="504" height="50" srcset="https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-cu-361c9ff140866_36.png 36w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-cu-361c9ff140866_48.png 48w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-cu-361c9ff140866_72.png 72w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-cu-361c9ff140866_96.png 96w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-cu-361c9ff140866_480.png 480w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-cu-361c9ff140866_720.png 720w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-cu-361c9ff140866_856.png 856w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-cu-361c9ff140866_960.png 960w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-cu-361c9ff140866_1440.png 1440w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-cu-361c9ff140866_1920.png 1920w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-cu-361c9ff140866_2880.png 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<p>The entire navigational area is wrapped in a <nav> (see next section). To declutter the app a bit,
+the custom close button is hidden until the user interacts with this the area:</p>
+<pre class="prettyprint lang-html" translate="no" dir="ltr"><code translate="no" dir="ltr">&lt;style&gt;
+nav:hover #close-button {
+  opacity: 1;
+}
+
+#close-button {
+  float: right;
+  padding: 0 5px 2px 5px;
+  font-weight: bold;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+&lt;/style&gt;
+</code></pre><pre class="prettyprint lang-html" translate="no" dir="ltr"><code translate="no" dir="ltr">&lt;button class=&#34;btn&#34; id=&#34;close-button&#34; title=&#34;Close&#34;&gt;x&lt;/button&gt;
+</code></pre>
+<p>In <a href="https://github.com/GoogleChrome/chrome-app-samples/blob/master/samples/gdrive/js/app.js">app.js</a>, this button is hooked up to <code translate="no" dir="ltr">window.close()</code>.</p>
+
+<h2 id="four" data-text="Designing the app the Angular way" tabindex="-1">Designing the app the Angular way</h2>
+
+<p>Angular is an MVC framework, so we need to define the app in such a way that a model, view, and
+controller logically fall out of it. Luckily, this is trivial when using Angular.</p>
+
+<p>The View is the easiest, so let&#39;s start there.</p>
+
+<h3 id="view" data-text="Creating the view" tabindex="-1">Creating the view</h3>
+
+<p><a href="https://github.com/GoogleChrome/chrome-app-samples/blob/master/samples/gdrive/main.html">main.html</a> is the &quot;V&quot; in MVC; where we define HTML templates to render data into. In Angular,
+templates are simple blocks of HTML with some special sauce.</p>
+
+<p>Ultimately we want to display the user&#39;s list of files. For that, a simple <ul> list makes sense.
+The Angular bits are highlighted in bold:</p>
+<pre class="prettyprint lang-html" translate="no" dir="ltr"><code translate="no" dir="ltr">&lt;ul&gt;
+  &lt;li data-ng-repeat=&#34;doc in docs&#34;&gt;
+    &lt;img data-ng-src=&#34;&#34;&gt; &lt;a href=&#34;&#34;&gt;&lt;/a&gt;
+
+    &lt;span class=&#34;date&#34;&gt;&lt;/span&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>This reads exactly as it looks: stamp out an <li> for every doc in our data model &quot;docs&quot;. Each item
+contains a file icon, link to open the file on the web, and last updatedDate.</p>
+
+<aside class="note"><b>Note:</b> To make the template valid HTML, we're using <code translate="no" dir="ltr">data-*</code> attributes for Angular's
+<a href="https://docs.angularjs.org/api/ng.directive:ngRepeat">ngRepeat</a> iterator, but you don't have to. You could easily write the repeater as
+<code translate="no" dir="ltr">&lt;li ng-repeat=&quot;doc in docs&quot;&gt;</code>.</aside>
+
+<p>Next, we need to tell Angular which controller will oversee this template&#39;s rendering. For that, we
+use the <a href="https://docs.angularjs.org/api/ng.directive:ngController">ngController</a> directive to tell the <code translate="no" dir="ltr">DocsController</code> to have reign over the template
+<body>:</p>
+<pre class="prettyprint lang-html" translate="no" dir="ltr"><code translate="no" dir="ltr">&lt;body data-ng-controller=&#34;DocsController&#34;&gt;
+&lt;section id=&#34;main&#34;&gt;
+  &lt;ul&gt;
+    &lt;li data-ng-repeat=&#34;doc in docs&#34;&gt;
+      &lt;img data-ng-src=&#34;&#34;&gt; &lt;a href=&#34;&#34;&gt;&lt;/a&gt; 
+      &lt;span class=&#34;date&#34;&gt;&lt;/span&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;
+&lt;/body&gt;
+</code></pre>
+<p>Keep in mind, what you don&#39;t see here is us hooking up event listeners or properties for data
+binding. Angular is doing that heavy lifting for us!</p>
+
+<p>The last step is to make Angular light up our templates. The typical way to do that is include the
+<a href="https://docs.angularjs.org/api/ng.directive:ngApp">ngApp</a> directive all the way up on <html>:</p>
+<pre class="prettyprint lang-html" translate="no" dir="ltr"><code translate="no" dir="ltr">&lt;html data-ng-app=&#34;gDriveApp&#34;&gt;
+</code></pre>
+<p>You could also scope the app down to a smaller portion of the page if you wanted to. We only have
+one controller in this app, but if we were to add more later, putting <a href="https://docs.angularjs.org/api/ng.directive:ngApp">ngApp</a> on the topmost
+element makes the entire page Angular-ready.</p>
+
+<p>The final product for <code translate="no" dir="ltr">main.html</code> looks something like this:</p>
+<pre class="prettyprint lang-html" translate="no" dir="ltr"><code translate="no" dir="ltr">&lt;html data-ng-app=&#34;gDriveApp&#34;&gt;
+&lt;head&gt;
+  …
+
+  &lt;base target=&#34;_blank&#34;&gt;
+&lt;/head&gt;
+&lt;body data-ng-controller=&#34;DocsController&#34;&gt;
+&lt;section id=&#34;main&#34;&gt;
+  &lt;nav&gt;
+    &lt;h2&gt;Google Drive Uploader&lt;/h2&gt;
+    &lt;button class=&#34;btn&#34; data-ng-click=&#34;fetchDocs()&#34;&gt;Refresh&lt;/button&gt;
+    &lt;button class=&#34;btn&#34; id=&#34;close-button&#34; title=&#34;Close&#34;&gt;&lt;/button&gt;
+  &lt;/nav&gt;
+  &lt;ul&gt;
+    &lt;li data-ng-repeat=&#34;doc in docs&#34;&gt;
+      &lt;img data-ng-src=&#34;&#34;&gt; &lt;a href=&#34;&#34;&gt;&lt;/a&gt;  
+      &lt;span class=&#34;date&#34;&gt;&lt;/span&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;
+</code></pre>
+<h3 id="csp" data-text="A word on Content Security Policy" tabindex="-1">A word on Content Security Policy</h3>
+
+<p>Unlike many other JS MVC frameworks, Angular v1.1.0+ requires no tweaks to work within a strict
+<a href="/docs/extensions/reference/contentSecurityPolicy">CSP</a>. It just works, out of the box!</p>
+
+<p>However, if you&#39;re using an older version of Angular between v1.0.1 and v1.1.0, you&#39;ll need tell
+Angular to run in a &quot;content security mode&quot;. This is done by including the <a href="http://docs.angularjs.org/api/ng.directive:ngCsp">ngCsp</a> directive
+alongside <a href="http://docs.angularjs.org/api/ng.directive:ngApp">ngApp</a>:</p>
+<pre class="prettyprint lang-html" translate="no" dir="ltr"><code translate="no" dir="ltr">&lt;html data-ng-app data-ng-csp&gt;
+</code></pre>
+<h3 id="authorization" data-text="Handling authorization" tabindex="-1">Handling authorization</h3>
+
+<p>The data model isn&#39;t generated by the app itself. Instead, it&#39;s populated from an external API (the
+Google Drive API). Thus, there&#39;s a bit of work necessary in order to populate the app&#39;s data.</p>
+
+<p>Before we can make an API request, we need to fetch an OAuth token for the user&#39;s Google Account.
+For that, we&#39;ve created a method to wrap the call to <code translate="no" dir="ltr">chrome.identity.getAuthToken()</code> and store the
+<code translate="no" dir="ltr">accessToken</code>, which we can reuse for future calls to the Drive API.</p>
+<pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">GDocs.prototype.auth = function(opt_callback) {
+  try {
+    chrome.identity.getAuthToken({interactive: false}, function(token) {
+      if (token) {
+        this.accessToken = token;
+        opt_callback &amp;&amp; opt_callback();
+      }
+    }.bind(this));
+  } catch(e) {
+    console.log(e);
+  }
+};
+</code></pre>
+<aside class="note"><b>Note:</b> Passing the optional callback gives us the flexibility of knowing when the OAuth token is
+ready.</aside>
+
+<aside class="note"><b>Note:</b> To simplify things a bit, we've created a library, <a href="https://github.com/GoogleChrome/chrome-app-samples/blob/master/samples/gdrive/js/gdocs.js">gdocs.js</a> to handle API tasks.</aside>
+
+<p>Once we have the token, it&#39;s time to make requests against the Drive API and populate the model.</p>
+
+<h3 id="skeleton" data-text="Skeleton controller" tabindex="-1">Skeleton controller</h3>
+
+<p>The &quot;model&quot; for the Uploader is a simple array (called docs) of objects that will get rendered as
+those <li>s in the template:</p>
+<pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">var gDriveApp = angular.module(&#39;gDriveApp&#39;, []);
+
+gDriveApp.factory(&#39;gdocs&#39;, function() {
+  var gdocs = new GDocs();
+  return gdocs;
+});
+
+function DocsController($scope, $http, gdocs) {
+  $scope.docs = [];
+
+  $scope.fetchDocs = function() {
+     ...
+  };
+
+  // Invoke on ctor call. Fetch docs after we have the oauth token.
+  gdocs.auth(function() {
+    $scope.fetchDocs();
+  });
+
+}
+</code></pre>
+<p>Notice that <code translate="no" dir="ltr">gdocs.auth()</code> is called as part of the DocsController constructor. When Angular&#39;s
+internals create the controller, we&#39;re insured to have a fresh OAuth token waiting for the user.</p>
+
+<h2 id="five" data-text="Fetching data" tabindex="-1">Fetching data</h2>
+
+<p>Template laid out. Controller scaffolded. OAuth token in hand. Now what?</p>
+
+<p>It&#39;s time to define the main controller method, <code translate="no" dir="ltr">fetchDocs()</code>. It&#39;s the workhorse of the controller,
+responsible for requesting the user&#39;s files and filing the docs array with data from API responses.</p>
+<pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">$scope.fetchDocs = function() {
+  $scope.docs = []; // First, clear out any old results
+
+  // Response handler that doesn&#39;t cache file icons.
+  var successCallback = function(resp, status, headers, config) {
+    var docs = [];
+    var totalEntries = resp.feed.entry.length;
+
+    resp.feed.entry.forEach(function(entry, i) {
+      var doc = {
+        title: entry.title.$t,
+        updatedDate: Util.formatDate(entry.updated.$t),
+        updatedDateFull: entry.updated.$t,
+        icon: gdocs.getLink(entry.link,
+                            &#39;http://schemas.google.com/docs/2007#icon&#39;).href,
+        alternateLink: gdocs.getLink(entry.link, &#39;alternate&#39;).href,
+        size: entry.docs$size ? &#39;( &#39; + entry.docs$size.$t + &#39; bytes)&#39; : null
+      };
+
+      $scope.docs.push(doc);
+
+      // Only sort when last entry is seen.
+      if (totalEntries - 1 == i) {
+        $scope.docs.sort(Util.sortByDate);
+      }
+    });
+  };
+
+  var config = {
+    params: {&#39;alt&#39;: &#39;json&#39;},
+    headers: {
+      &#39;Authorization&#39;: &#39;Bearer &#39; + gdocs.accessToken,
+      &#39;GData-Version&#39;: &#39;3.0&#39;
+    }
+  };
+
+  $http.get(gdocs.DOCLIST_FEED, config).success(successCallback);
+};
+</code></pre>
+<p><code translate="no" dir="ltr">fetchDocs()</code> uses Angular&#39;s <code translate="no" dir="ltr">$http</code> service to retrieve the main feed over XHR. The oauth access
+token is included in the <code translate="no" dir="ltr">Authorization</code> header along with other custom headers and parameters.</p>
+
+<p>The <code translate="no" dir="ltr">successCallback</code> processes the API response and creates a new doc object for each entry in the
+feed.</p>
+
+<p>If you run <code translate="no" dir="ltr">fetchDocs()</code> right now, everything works and the list of files shows up:</p>
+
+<p><img src="/static/docs/apps/angular_framework/image/fetched-list-files-goog-25e168b8d229.png" alt="Fetched list of files in Google Drive Uploader" width="580" height="680" srcset="https://developer.chrome.com/static/docs/apps/angular_framework/image/fetched-list-files-goog-25e168b8d229_36.png 36w,https://developer.chrome.com/static/docs/apps/angular_framework/image/fetched-list-files-goog-25e168b8d229_48.png 48w,https://developer.chrome.com/static/docs/apps/angular_framework/image/fetched-list-files-goog-25e168b8d229_72.png 72w,https://developer.chrome.com/static/docs/apps/angular_framework/image/fetched-list-files-goog-25e168b8d229_96.png 96w,https://developer.chrome.com/static/docs/apps/angular_framework/image/fetched-list-files-goog-25e168b8d229_480.png 480w,https://developer.chrome.com/static/docs/apps/angular_framework/image/fetched-list-files-goog-25e168b8d229_720.png 720w,https://developer.chrome.com/static/docs/apps/angular_framework/image/fetched-list-files-goog-25e168b8d229_856.png 856w,https://developer.chrome.com/static/docs/apps/angular_framework/image/fetched-list-files-goog-25e168b8d229_960.png 960w,https://developer.chrome.com/static/docs/apps/angular_framework/image/fetched-list-files-goog-25e168b8d229_1440.png 1440w,https://developer.chrome.com/static/docs/apps/angular_framework/image/fetched-list-files-goog-25e168b8d229_1920.png 1920w,https://developer.chrome.com/static/docs/apps/angular_framework/image/fetched-list-files-goog-25e168b8d229_2880.png 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<p>Woot!</p>
+
+<p>Wait,...we&#39;re missing those neat file icons. What gives? A quick check of the console shows a bunch
+of CSP-related errors:</p>
+
+<p><img src="/static/docs/apps/angular_framework/image/csp-errors-developer-con-ccb3206c16431.png" alt="CSP errors in developer console" width="800" height="71" srcset="https://developer.chrome.com/static/docs/apps/angular_framework/image/csp-errors-developer-con-ccb3206c16431_36.png 36w,https://developer.chrome.com/static/docs/apps/angular_framework/image/csp-errors-developer-con-ccb3206c16431_48.png 48w,https://developer.chrome.com/static/docs/apps/angular_framework/image/csp-errors-developer-con-ccb3206c16431_72.png 72w,https://developer.chrome.com/static/docs/apps/angular_framework/image/csp-errors-developer-con-ccb3206c16431_96.png 96w,https://developer.chrome.com/static/docs/apps/angular_framework/image/csp-errors-developer-con-ccb3206c16431_480.png 480w,https://developer.chrome.com/static/docs/apps/angular_framework/image/csp-errors-developer-con-ccb3206c16431_720.png 720w,https://developer.chrome.com/static/docs/apps/angular_framework/image/csp-errors-developer-con-ccb3206c16431_856.png 856w,https://developer.chrome.com/static/docs/apps/angular_framework/image/csp-errors-developer-con-ccb3206c16431_960.png 960w,https://developer.chrome.com/static/docs/apps/angular_framework/image/csp-errors-developer-con-ccb3206c16431_1440.png 1440w,https://developer.chrome.com/static/docs/apps/angular_framework/image/csp-errors-developer-con-ccb3206c16431_1920.png 1920w,https://developer.chrome.com/static/docs/apps/angular_framework/image/csp-errors-developer-con-ccb3206c16431_2880.png 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<p>The reason is that we&#39;re trying to set the icons <code translate="no" dir="ltr">img.src</code> to external URLs. This violates CSP. For
+example: <code translate="no" dir="ltr">https://ssl.gstatic.com/docs/doclist/images/icon_10_document_list.png</code>. To fix this, we
+need to pull in these remote assets locally to the app.</p>
+
+<h3 id="import" data-text="Importing remote image assets" tabindex="-1">Importing remote image assets</h3>
+
+<p>For CSP to stop yelling at us, we use XHR2 to &quot;import&quot; the file icons as Blobs, then set the
+<code translate="no" dir="ltr">img.src</code> to a <code translate="no" dir="ltr">blob: URL</code> created by the app.</p>
+
+<p>Here&#39;s the updated <code translate="no" dir="ltr">successCallback</code> with the added XHR code:</p>
+<pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">var successCallback = function(resp, status, headers, config) {
+  var docs = [];
+  var totalEntries = resp.feed.entry.length;
+
+  resp.feed.entry.forEach(function(entry, i) {
+    var doc = {
+      ...
+    };
+
+    $http.get(doc.icon, {responseType: &#39;blob&#39;}).success(function(blob) {
+      console.log(&#39;Fetched icon via XHR&#39;);
+
+      blob.name = doc.iconFilename; // Add icon filename to blob.
+
+      writeFile(blob); // Write is async, but that&#39;s ok.
+
+      doc.icon = window.URL.createObjectURL(blob);
+
+      $scope.docs.push(doc);
+
+      // Only sort when last entry is seen.
+      if (totalEntries - 1 == i) {
+        $scope.docs.sort(Util.sortByDate);
+      }
+    });
+  });
+};
+</code></pre>
+<p>Now that CSP is happy with us again, we get nice file icons:</p>
+
+<p><img src="/static/docs/apps/angular_framework/image/google-drive-uploader-fi-53d87d2ef23d1.png" alt="Google Drive Uploader with file icons" width="580" height="680" srcset="https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-fi-53d87d2ef23d1_36.png 36w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-fi-53d87d2ef23d1_48.png 48w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-fi-53d87d2ef23d1_72.png 72w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-fi-53d87d2ef23d1_96.png 96w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-fi-53d87d2ef23d1_480.png 480w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-fi-53d87d2ef23d1_720.png 720w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-fi-53d87d2ef23d1_856.png 856w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-fi-53d87d2ef23d1_960.png 960w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-fi-53d87d2ef23d1_1440.png 1440w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-fi-53d87d2ef23d1_1920.png 1920w,https://developer.chrome.com/static/docs/apps/angular_framework/image/google-drive-uploader-fi-53d87d2ef23d1_2880.png 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<h2 id="six" data-text="Going offline: caching external resources" tabindex="-1">Going offline: caching external resources</h2>
+
+<p>The obvious optimization that needs to be made: not make 100s of XHR requests for each file icon on
+every call to <code translate="no" dir="ltr">fetchDocs()</code>. Verify this in the Developer Tools console by pressing the &quot;Refresh&quot;
+button several times. Every time, n images are fetched:</p>
+
+<p><img src="/static/docs/apps/angular_framework/image/console-log-65-fetched-i-d4b9a39a1606.png" alt="Console log 65: Fetched icon via XHR" width="180" height="19" srcset="https://developer.chrome.com/static/docs/apps/angular_framework/image/console-log-65-fetched-i-d4b9a39a1606_36.png 36w,https://developer.chrome.com/static/docs/apps/angular_framework/image/console-log-65-fetched-i-d4b9a39a1606_48.png 48w,https://developer.chrome.com/static/docs/apps/angular_framework/image/console-log-65-fetched-i-d4b9a39a1606_72.png 72w,https://developer.chrome.com/static/docs/apps/angular_framework/image/console-log-65-fetched-i-d4b9a39a1606_96.png 96w,https://developer.chrome.com/static/docs/apps/angular_framework/image/console-log-65-fetched-i-d4b9a39a1606_480.png 480w,https://developer.chrome.com/static/docs/apps/angular_framework/image/console-log-65-fetched-i-d4b9a39a1606_720.png 720w,https://developer.chrome.com/static/docs/apps/angular_framework/image/console-log-65-fetched-i-d4b9a39a1606_856.png 856w,https://developer.chrome.com/static/docs/apps/angular_framework/image/console-log-65-fetched-i-d4b9a39a1606_960.png 960w,https://developer.chrome.com/static/docs/apps/angular_framework/image/console-log-65-fetched-i-d4b9a39a1606_1440.png 1440w,https://developer.chrome.com/static/docs/apps/angular_framework/image/console-log-65-fetched-i-d4b9a39a1606_1920.png 1920w,https://developer.chrome.com/static/docs/apps/angular_framework/image/console-log-65-fetched-i-d4b9a39a1606_2880.png 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<p>Let&#39;s modify <code translate="no" dir="ltr">successCallback</code> to add a caching layer. The additions are highlighted in bold:</p>
+<pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">$scope.fetchDocs = function() {
+  ...
+
+  // Response handler that caches file icons in the filesystem API.
+  var successCallbackWithFsCaching = function(resp, status, headers, config) {
+    var docs = [];
+    var totalEntries = resp.feed.entry.length;
+
+    resp.feed.entry.forEach(function(entry, i) {
+      var doc = {
+        ...
+      };
+
+      // &#39;https://ssl.gstatic.com/doc_icon_128.png&#39; -&gt; &#39;doc_icon_128.png&#39;
+      doc.iconFilename = doc.icon.substring(doc.icon.lastIndexOf(&#39;/&#39;) + 1);
+
+      // If file exists, it we&#39;ll get back a FileEntry for the filesystem URL.
+      // Otherwise, the error callback will fire and we need to XHR it in and
+      // write it to the FS.
+      var fsURL = fs.root.toURL() + FOLDERNAME + &#39;/&#39; + doc.iconFilename;
+      window.webkitResolveLocalFileSystemURL(fsURL, function(entry) {
+        doc.icon = entry.toURL(); // should be === to fsURL, but whatevs.
+
+        $scope.docs.push(doc); // add doc to model.
+
+        // Only want to sort and call $apply() when we have all entries.
+        if (totalEntries - 1 == i) {
+          $scope.docs.sort(Util.sortByDate);
+          $scope.$apply(function($scope) {}); // Inform angular that we made changes.
+        }
+
+      }, function(e) {
+        // Error: file doesn&#39;t exist yet. XHR it in and write it to the FS.
+
+        $http.get(doc.icon, {responseType: &#39;blob&#39;}).success(function(blob) {
+          console.log(&#39;Fetched icon via XHR&#39;);
+
+          blob.name = doc.iconFilename; // Add icon filename to blob.
+
+          writeFile(blob); // Write is async, but that&#39;s ok.
+
+          doc.icon = window.URL.createObjectURL(blob);
+
+          $scope.docs.push(doc);
+
+          // Only sort when last entry is seen.
+          if (totalEntries - 1 == i) {
+            $scope.docs.sort(Util.sortByDate);
+          }
+        });
+
+      });
+    });
+  };
+
+  var config = {
+    ...
+  };
+
+  $http.get(gdocs.DOCLIST_FEED, config).success(successCallbackWithFsCaching);
+};
+</code></pre>
+<p>Notice that in the <code translate="no" dir="ltr">webkitResolveLocalFileSystemURL()</code> callback we&#39;re calling <code translate="no" dir="ltr">$scope.$apply()</code> when
+the last entry is seen. Normally calling <code translate="no" dir="ltr">$apply()</code> isn&#39;t necessary. Angular detects changes to data
+models automagically. However in our case, we have an addition layer of asynchronous callback that
+Angular isn&#39;t aware of. We must explicitly tell Angular when our model has been updated.</p>
+
+<p>On first run, the icons won&#39;t be in the HTML5 Filesystem and the calls to
+<code translate="no" dir="ltr">window.webkitResolveLocalFileSystemURL()</code> will result in its error callback being invoked. For that
+case, we can reuse the technique from before and fetch the images. The only difference this time is
+that each blob is written to the filesystem (see <a href="https://github.com/GoogleChrome/chrome-app-samples/blob/master/samples/gdrive/js/app.js#L27">writeFile()</a>). The console verifies this
+behavior:</p>
+
+<p><img src="/static/docs/apps/angular_framework/image/console-log-100-write-co-c822043d97228.png" alt="Console log 100: Write completed" width="800" height="42" srcset="https://developer.chrome.com/static/docs/apps/angular_framework/image/console-log-100-write-co-c822043d97228_36.png 36w,https://developer.chrome.com/static/docs/apps/angular_framework/image/console-log-100-write-co-c822043d97228_48.png 48w,https://developer.chrome.com/static/docs/apps/angular_framework/image/console-log-100-write-co-c822043d97228_72.png 72w,https://developer.chrome.com/static/docs/apps/angular_framework/image/console-log-100-write-co-c822043d97228_96.png 96w,https://developer.chrome.com/static/docs/apps/angular_framework/image/console-log-100-write-co-c822043d97228_480.png 480w,https://developer.chrome.com/static/docs/apps/angular_framework/image/console-log-100-write-co-c822043d97228_720.png 720w,https://developer.chrome.com/static/docs/apps/angular_framework/image/console-log-100-write-co-c822043d97228_856.png 856w,https://developer.chrome.com/static/docs/apps/angular_framework/image/console-log-100-write-co-c822043d97228_960.png 960w,https://developer.chrome.com/static/docs/apps/angular_framework/image/console-log-100-write-co-c822043d97228_1440.png 1440w,https://developer.chrome.com/static/docs/apps/angular_framework/image/console-log-100-write-co-c822043d97228_1920.png 1920w,https://developer.chrome.com/static/docs/apps/angular_framework/image/console-log-100-write-co-c822043d97228_2880.png 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<p>Upon next run (or press of the &quot;Refresh&quot; button), the URL passed to
+<code translate="no" dir="ltr">webkitResolveLocalFileSystemURL()</code> exists because the file has been previously cached. The app sets
+the <code translate="no" dir="ltr">doc.icon</code> to the file&#39;s <code translate="no" dir="ltr">filesystem: URL</code> and avoids making the costly XHR for the icon.</p>
+
+<h2 id="seven" data-text="Drag and drop uploading" tabindex="-1">Drag and drop uploading</h2>
+
+<p>An uploader app is false advertising if it can&#39;t upload files!</p>
+
+<p><a href="https://github.com/GoogleChrome/chrome-app-samples/blob/master/samples/gdrive/js/app.js#L52">app.js</a> handles this feature by implementing a small library around HTML5 Drag and Drop called
+<code translate="no" dir="ltr">DnDFileController</code>. It gives the ability to drag in files from the desktop and have them uploaded
+to Google Drive.</p>
+
+<p>Simply adding this to the gdocs service does the job:</p>
+<pre class="prettyprint lang-js" translate="no" dir="ltr"><code translate="no" dir="ltr">gDriveApp.factory(&#39;gdocs&#39;, function() {
+  var gdocs = new GDocs();
+
+  var dnd = new DnDFileController(&#39;body&#39;, function(files) {
+    var $scope = angular.element(this).scope();
+    Util.toArray(files).forEach(function(file, i) {
+      gdocs.upload(file, function() {
+        $scope.fetchDocs();
+      });
+    });
+  });
+
+  return gdocs;
+});
+</code></pre>
+
+  
+
+  
+</div>
+
+  
+
+  
+    
+    
+      
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+  
+       
+    
+    
+  
+
+  
+  
+</article>
+
+
+<devsite-content-footer class="nocontent">
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  <p>Last updated 2012-11-16 UTC.</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  <template class="devsite-thumb-rating-down-categories">
+  [{
+      "type": "thumb-down",
+      "id": "missingTheInformationINeed",
+      "label":"Missing the information I need"
+    },{
+      "type": "thumb-down",
+      "id": "tooComplicatedTooManySteps",
+      "label":"Too complicated / too many steps"
+    },{
+      "type": "thumb-down",
+      "id": "outOfDate",
+      "label":"Out of date"
+    },{
+      "type": "thumb-down",
+      "id": "samplesCodeIssue",
+      "label":"Samples / code issue"
+    },{
+      "type": "thumb-down",
+      "id": "otherDown",
+      "label":"Other"
+    }]
+  </template>
+  <template class="devsite-thumb-rating-up-categories">
+  [{
+      "type": "thumb-up",
+      "id": "easyToUnderstand",
+      "label":"Easy to understand"
+    },{
+      "type": "thumb-up",
+      "id": "solvedMyProblem",
+      "label":"Solved my problem"
+    },{
+      "type": "thumb-up",
+      "id": "otherUp",
+      "label":"Other"
+    }]
+  </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent" aria-label="Footer links">
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Contribute</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://issuetracker.google.com/issues/new?component=1400036&amp;template=1897236"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            File a bug
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://issuetracker.google.com/issues?q=status:open%20componentid:1400036&amp;s=created_time:desc"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+              
+              
+            
+          
+            See open issues
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Related content</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://blog.chromium.org/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Chromium updates
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/case-studies"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Case studies
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/deprecated"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Archive
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://web.dev/shows"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+              
+              
+            
+          
+            Podcasts &amp; shows
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Connect</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://twitter.com/ChromiumDev"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            @ChromiumDev on X
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.youtube.com/user/ChromeDevelopers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            YouTube
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.linkedin.com/showcase/chrome-for-developers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+              
+              
+            
+          
+            Chrome for Developers on LinkedIn
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent">
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Utility links">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          Terms
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privacy
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="nl"
+        >Nederlands</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel></devsite-panel>
+        
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar
+    
+    >
+</devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics analytics-iframe enable-cb>
+      
+        <script type="application/json" analytics>[]</script>
+<script type="application/json" tag-management>{&#34;ga4&#34;: [], &#34;ga4p&#34;: [], &#34;gtm&#34;: [{&#34;id&#34;: &#34;GTM-5QF3RT2&#34;, &#34;purpose&#34;: 0}], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;False&#34;, &#34;requested&#34;: &#34;en&#34;, &#34;served&#34;: &#34;en&#34;}, &#34;pageType&#34;: &#34;article&#34;, &#34;projectName&#34;: &#34;Apps&#34;, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;chrome&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    <script nonce="BBca1m3vXEu76+/q7JMPvLUEuLMUFS">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/js/app_loader.js', '[53,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome","https://chrome-dot-devsite-v2-prod-3p.appspot.com",1,null,["/_pwa/chrome/manifest.json","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/favicon.png","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup.svg","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,112,113,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,147,148,149,151,152,156,157,158,159,161,163,164,168,169,170,179,180,182,183,186,191,193,196],"AIzaSyCNm9YxQumEXwGJgTDjxoxXK6m1F-9720Q","AIzaSyCc76DZePGtoyUjqKrLdsMGk_ry7sljLbY","developer.chrome.com","AIzaSyB9bqgQ2t11WJsOX8qNsCQ6U-w91mmqF-I","AIzaSyAdYnStPdzjcJJtQ0mvIaeaMKj7_t6J_Fg",null,null,null,["Search__enable_dynamic_content_confidential_banner","Cloud__enable_cloud_shell","BookNav__enable_tenant_cache_key","Profiles__enable_profile_collections","Profiles__require_profile_eligibility_for_signin","MiscFeatureFlags__enable_new_sitemap","Profiles__enable_awarding_url","Cloud__enable_cloudx_experiment_ids","Analytics__enable_cookie_bar","Experiments__reqs_query_experiments","Cloud__enable_cloud_facet_chat","Search__enable_suggestions_from_borg","CloudShell__cloud_code_overflow_menu","Cloud__enable_cloudx_ping","MiscFeatureFlags__enable_project_variables","MiscFeatureFlags__emergency_css","MiscFeatureFlags__enable_variable_operator","Search__enable_faceted_search","MiscFeatureFlags__enable_explain_this_code","Cloud__enable_cloud_dlp_service","MiscFeatureFlags__enable_firebase_utm","Concierge__enable_pushui","OnSwitch__enable","Search__enable_page_map","Cloud__enable_cloud_shell_fte_user_flow","Profiles__enable_page_saving","CloudShell__cloud_shell_button","EngEduTelemetry__enable_engedu_telemetry","TpcFeatures__enable_mirror_tenant_redirects","MiscFeatureFlags__developers_footer_image","MiscFeatureFlags__developers_footer_dark_image","Cloud__enable_free_trial_server_call","Search__enable_ai_eligibility_checks","Profiles__enable_release_notes_notifications","Profiles__enable_public_developer_profiles","Profiles__enable_developer_profiles_callout"],null,null,"AIzaSyA58TaKli1DculwmAmbpzLVGuWc8eCQgQc","https://developerscontentserving-pa.googleapis.com","AIzaSyDWBU60w0P9hEkr29kkksYs8Z7gvZ8u_wc","https://developerscontentsearch-pa.googleapis.com",2,4]')
+  
+</script>
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>

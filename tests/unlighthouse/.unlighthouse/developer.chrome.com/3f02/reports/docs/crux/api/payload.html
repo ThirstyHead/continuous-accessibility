@@ -1,0 +1,3816 @@
+<!doctype html>
+<html 
+      lang="en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="157101835696-ooapojlodmuabs2do2vuhhnf90bccmoi.apps.googleusercontent.com">
+    <meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award">
+    <meta property="og:site_name" content="Chrome for Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#1a73e8"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/chrome/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//apis.google.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/css/app.css">
+      
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/touchicon-180.png"><link rel="canonical" href="https://developer.chrome.com/docs/crux/api"><link rel="search" type="application/opensearchdescription+xml"
+            title="Chrome for Developers" href="https://developer.chrome.com/s/opensearch.xml">
+      <link rel="alternate" hreflang="en"
+          href="https://developer.chrome.com/docs/crux/api" /><link rel="alternate" hreflang="x-default" href="https://developer.chrome.com/docs/crux/api" /><link rel="alternate" hreflang="ar"
+          href="https://developer.chrome.com/docs/crux/api?hl=ar" /><link rel="alternate" hreflang="bn"
+          href="https://developer.chrome.com/docs/crux/api?hl=bn" /><link rel="alternate" hreflang="zh-Hans"
+          href="https://developer.chrome.com/docs/crux/api?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant"
+          href="https://developer.chrome.com/docs/crux/api?hl=zh-tw" /><link rel="alternate" hreflang="nl"
+          href="https://developer.chrome.com/docs/crux/api?hl=nl" /><link rel="alternate" hreflang="fa"
+          href="https://developer.chrome.com/docs/crux/api?hl=fa" /><link rel="alternate" hreflang="fr"
+          href="https://developer.chrome.com/docs/crux/api?hl=fr" /><link rel="alternate" hreflang="de"
+          href="https://developer.chrome.com/docs/crux/api?hl=de" /><link rel="alternate" hreflang="he"
+          href="https://developer.chrome.com/docs/crux/api?hl=he" /><link rel="alternate" hreflang="hi"
+          href="https://developer.chrome.com/docs/crux/api?hl=hi" /><link rel="alternate" hreflang="id"
+          href="https://developer.chrome.com/docs/crux/api?hl=id" /><link rel="alternate" hreflang="it"
+          href="https://developer.chrome.com/docs/crux/api?hl=it" /><link rel="alternate" hreflang="ja"
+          href="https://developer.chrome.com/docs/crux/api?hl=ja" /><link rel="alternate" hreflang="ko"
+          href="https://developer.chrome.com/docs/crux/api?hl=ko" /><link rel="alternate" hreflang="pl"
+          href="https://developer.chrome.com/docs/crux/api?hl=pl" /><link rel="alternate" hreflang="pt-BR"
+          href="https://developer.chrome.com/docs/crux/api?hl=pt-br" /><link rel="alternate" hreflang="ru"
+          href="https://developer.chrome.com/docs/crux/api?hl=ru" /><link rel="alternate" hreflang="es-419"
+          href="https://developer.chrome.com/docs/crux/api?hl=es-419" /><link rel="alternate" hreflang="th"
+          href="https://developer.chrome.com/docs/crux/api?hl=th" /><link rel="alternate" hreflang="tr"
+          href="https://developer.chrome.com/docs/crux/api?hl=tr" /><link rel="alternate" hreflang="vi"
+          href="https://developer.chrome.com/docs/crux/api?hl=vi" /><link rel="alternate" hreflang="en-cn"
+          href="https://developer.chrome.google.cn/docs/crux/api" /><link rel="alternate" hreflang="x-default" href="https://developer.chrome.google.cn/docs/crux/api" /><link rel="alternate" hreflang="ar-cn"
+          href="https://developer.chrome.google.cn/docs/crux/api?hl=ar" /><link rel="alternate" hreflang="bn-cn"
+          href="https://developer.chrome.google.cn/docs/crux/api?hl=bn" /><link rel="alternate" hreflang="zh-Hans-cn"
+          href="https://developer.chrome.google.cn/docs/crux/api?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant-cn"
+          href="https://developer.chrome.google.cn/docs/crux/api?hl=zh-tw" /><link rel="alternate" hreflang="nl-cn"
+          href="https://developer.chrome.google.cn/docs/crux/api?hl=nl" /><link rel="alternate" hreflang="fa-cn"
+          href="https://developer.chrome.google.cn/docs/crux/api?hl=fa" /><link rel="alternate" hreflang="fr-cn"
+          href="https://developer.chrome.google.cn/docs/crux/api?hl=fr" /><link rel="alternate" hreflang="de-cn"
+          href="https://developer.chrome.google.cn/docs/crux/api?hl=de" /><link rel="alternate" hreflang="he-cn"
+          href="https://developer.chrome.google.cn/docs/crux/api?hl=he" /><link rel="alternate" hreflang="hi-cn"
+          href="https://developer.chrome.google.cn/docs/crux/api?hl=hi" /><link rel="alternate" hreflang="id-cn"
+          href="https://developer.chrome.google.cn/docs/crux/api?hl=id" /><link rel="alternate" hreflang="it-cn"
+          href="https://developer.chrome.google.cn/docs/crux/api?hl=it" /><link rel="alternate" hreflang="ja-cn"
+          href="https://developer.chrome.google.cn/docs/crux/api?hl=ja" /><link rel="alternate" hreflang="ko-cn"
+          href="https://developer.chrome.google.cn/docs/crux/api?hl=ko" /><link rel="alternate" hreflang="pl-cn"
+          href="https://developer.chrome.google.cn/docs/crux/api?hl=pl" /><link rel="alternate" hreflang="pt-BR-cn"
+          href="https://developer.chrome.google.cn/docs/crux/api?hl=pt-br" /><link rel="alternate" hreflang="ru-cn"
+          href="https://developer.chrome.google.cn/docs/crux/api?hl=ru" /><link rel="alternate" hreflang="es-419-cn"
+          href="https://developer.chrome.google.cn/docs/crux/api?hl=es-419" /><link rel="alternate" hreflang="th-cn"
+          href="https://developer.chrome.google.cn/docs/crux/api?hl=th" /><link rel="alternate" hreflang="tr-cn"
+          href="https://developer.chrome.google.cn/docs/crux/api?hl=tr" /><link rel="alternate" hreflang="vi-cn"
+          href="https://developer.chrome.google.cn/docs/crux/api?hl=vi" /><title>CrUX API &nbsp;|&nbsp; Chrome UX Report &nbsp;|&nbsp; Chrome for Developers</title>
+
+<meta property="og:title" content="CrUX API &nbsp;|&nbsp; Chrome UX Report &nbsp;|&nbsp; Chrome for Developers"><meta name="description" content="Learn how to construct requests to and parse responses from the CrUX API.">
+  <meta property="og:description" content="Learn how to construct requests to and parse responses from the CrUX API."><meta property="og:url" content="https://developer.chrome.com/docs/crux/api"><meta property="og:locale" content="en"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "dateModified": "2024-04-09",
+    "headline": "CrUX API"
+  }
+</script><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Docs",
+      "item": "https://developer.chrome.com/docs"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Chrome UX Report",
+      "item": "https://developer.chrome.com/docs/crux"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "CrUX API",
+      "item": "https://developer.chrome.com/docs/crux/api"
+    }]
+  }
+  </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+    
+      <link rel="stylesheet" href="/extras.css"></head>
+  <body class=""
+        template="page"
+        theme="chrome-theme"
+        type="article"
+        
+        
+        appearance
+        layout="docs"
+        
+        
+        
+        
+        display-toc
+        pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+    <section class="devsite-wrapper">
+      
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar>
+      <devsite-header role="banner">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner nocontent">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="chromeForDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme"
+            alt="Chrome for Developers">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup.svg" class="devsite-site-logo" alt="Chrome for Developers">
+  </picture>
+  
+</a>
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+              
+              
+  <devsite-tabs class="upper-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Upper tabs">
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/case-studies"
+      track-metadata-eventdetail="https://developer.chrome.com/case-studies"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - get inspired"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Get inspired"
+         
+           track-name="get inspired"
+         
+       >
+    Get inspired
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developer.chrome.com/blog"
+      track-metadata-eventdetail="https://developer.chrome.com/blog"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - blog"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Blog"
+         
+           track-name="blog"
+         
+       >
+    Blog
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab class="devsite-dropdown
+    devsite-dropdown-full
+    devsite-active
+    
+    ">
+  
+    <a href="https://developer.chrome.com/docs"
+      track-metadata-eventdetail="https://developer.chrome.com/docs"
+    
+       class="devsite-tabs-content gc-analytics-event "
+       track-type="nav"
+       track-metadata-position="nav - docs"
+       track-metadata-module="primary nav"
+       aria-label="Docs, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Docs"
+         
+           track-name="docs"
+         
+       >
+    Docs
+  
+    </a>
+  
+  
+    <a href="#"
+       role="button"
+       aria-haspopup="true"
+       aria-expanded="false"
+       aria-label="Dropdown menu for Docs"
+       track-type="nav"
+       track-metadata-eventdetail="https://developer.chrome.com/docs"
+       track-metadata-position="nav - docs"
+       track-metadata-module="primary nav"
+       
+        
+          data-category="Site-Wide Custom Events"
+        
+          data-label="Tab: Docs"
+        
+          track-name="docs"
+        
+      
+       class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+  
+  <div class="devsite-tabs-dropdown" aria-label="submenu" hidden>
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       build-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Build with Chrome</li>
+              
+              
+                <li class="devsite-nav-description">Learn how Chrome works, participate in origin trials, and build with Chrome everywhere.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/web-platform"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/web-platform"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Web Platform
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/capabilities"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/capabilities"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Capabilities
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/extensions"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/extensions"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Extensions
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/webstore"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/webstore"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chrome Web Store
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/chromium"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/chromium"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chromium
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/aurora"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/aurora"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Aurora
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/android"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/android"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Web on Android
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/origintrials/"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/origintrials/"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Origin trials
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/release-notes"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/release-notes"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="build with chrome"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Release notes
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       productivity-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Productivity</li>
+              
+              
+                <li class="devsite-nav-description">Create the best experience for your users with the web&#39;s best tools.</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/devtools"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/devtools"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      DevTools
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/lighthouse"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/lighthouse"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Lighthouse
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/crux"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/crux"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Chrome UX Report
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/accessibility"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/accessibility"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Accessibility
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       dcc-subnav second-column-list">
+              
+              
+                <li class="devsite-nav-description">Get things done quicker and neater, with our ready-made libraries.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/workbox"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/workbox"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Workbox
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/puppeteer"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/puppeteer"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="productivity"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Puppeteer
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       experience-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Experience</li>
+              
+              
+                <li class="devsite-nav-description">Design a beautiful and performant web with Chrome.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/performance"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/performance"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Performance
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/css-ui"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/css-ui"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      CSS and UI
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/identity"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/identity"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Identity
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/payments"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/payments"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Payments
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs/privacy-security"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs/privacy-security"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="experience"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Privacy and security
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       resources-icon dcc-subnav">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>Resources</li>
+              
+              
+                <li class="devsite-nav-description">More from the Chrome team.
+</li>
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developer.chrome.com/docs"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://developer.chrome.com/docs"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="resources"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      All documentation
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev/baseline"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev/baseline"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="resources"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Baseline
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://web.dev"
+                     track-type="nav"
+                     track-metadata-eventdetail="https://web.dev"
+                     track-metadata-position="nav - docs"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="resources"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      web.dev
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    
+    project-name="Chrome UX Report"
+    tenant-name="Chrome for Developers"
+    
+    
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://developer.chrome.com/s/results" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Open search"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Search"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Search"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Close search"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+        
+
+        <devsite-appearance-selector></devsite-appearance-selector>
+
+        
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="nl"
+        >Nederlands</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+        
+
+        
+          
+          
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>Sign in</span>
+            
+        </devsite-user>
+           
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    
+      devsite-header-no-lower-tabs
+    ">
+    <div class="devsite-header-background">
+      
+        
+          <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+              
+                
+                  
+                  
+                  <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs/crux"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Lower Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Chrome UX Report"
+      
+    >
+    
+        Chrome UX Report
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+                
+              
+              
+            </div>
+            
+          </div>
+          
+        
+      
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+
+  
+</devsite-header>
+      <devsite-book-nav scrollbars >
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     >
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="Filter"
+         
+         aria-label="Type to filter"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="Clear filter"
+        aria-label="Clear filter"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent"
+     aria-label="Side menu">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="chromeForDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme"
+            alt="Chrome for Developers">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup.svg" class="devsite-site-logo" alt="Chrome for Developers">
+  </picture>
+  
+</a>
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/case-studies"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Get inspired"
+      
+        track-name="get inspired"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Get inspired"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Get inspired
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/blog"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Blog"
+      
+        track-name="blog"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Blog"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Blog
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Docs"
+      
+        track-name="docs"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Docs"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Docs
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Docs"
+      
+        track-name="docs"
+      
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="Docs">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="Docs">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+            </li>
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Get started</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/docs/crux"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/crux"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/crux"
+      ><span class="devsite-nav-text" tooltip>CrUX overview</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/crux/methodology"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/crux/methodology"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/crux/methodology"
+      ><span class="devsite-nav-text" tooltip>Methodology</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/crux/methodology/metrics"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/crux/methodology/metrics"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/crux/methodology/metrics"
+      ><span class="devsite-nav-text" tooltip>Metrics available in CrUX</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/crux/methodology/dimensions"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/crux/methodology/dimensions"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/crux/methodology/dimensions"
+      ><span class="devsite-nav-text" tooltip>Dimensions available in CrUX</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/crux/methodology/tools"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/crux/methodology/tools"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/crux/methodology/tools"
+      ><span class="devsite-nav-text" tooltip>Overview of CrUX tools</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/crux/release-notes"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/crux/release-notes"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/crux/release-notes"
+      ><span class="devsite-nav-text" tooltip>Release notes</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/crux/feedback"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/crux/feedback"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/crux/feedback"
+      ><span class="devsite-nav-text" tooltip>Feedback and support</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Tools</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/docs/crux/dashboard"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/crux/dashboard"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/crux/dashboard"
+      ><span class="devsite-nav-text" tooltip>CrUX Dashboard</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/crux/bigquery"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/crux/bigquery"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/crux/bigquery"
+      ><span class="devsite-nav-text" tooltip>CrUX on BigQuery</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/crux/api"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/crux/api"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/crux/api"
+      ><span class="devsite-nav-text" tooltip>CrUX API</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/crux/history-api"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/crux/history-api"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/crux/history-api"
+      ><span class="devsite-nav-text" tooltip>CrUX History API</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Guides</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/docs/crux/guides"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/crux/guides"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/crux/guides"
+      ><span class="devsite-nav-text" tooltip>Guides overview</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/crux/guides/pagespeed-insights"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/crux/guides/pagespeed-insights"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/crux/guides/pagespeed-insights"
+      ><span class="devsite-nav-text" tooltip>How to view CrUX data on PageSpeed Insights</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/crux/guides/crux-api"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/crux/guides/crux-api"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/crux/guides/crux-api"
+      ><span class="devsite-nav-text" tooltip>How to use the CrUX API</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/crux/guides/history-api"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/crux/guides/history-api"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/crux/guides/history-api"
+      ><span class="devsite-nav-text" tooltip>How to use the CrUX History API</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/crux/guides/bigquery"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/crux/guides/bigquery"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/crux/guides/bigquery"
+      ><span class="devsite-nav-text" tooltip>How to use the CrUX BigQuery dataset</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/docs/crux/guides/looker-studio-dashboard"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /docs/crux/guides/looker-studio-dashboard"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/docs/crux/guides/looker-studio-dashboard"
+      ><span class="devsite-nav-text" tooltip>How to build a CrUX Dashboard on Looker Studio</span></a></li>
+          </ul>
+        
+        
+          
+    
+  
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="Docs"
+          aria-label="Side menu" hidden>
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Build with Chrome
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/web-platform"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Web Platform"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Web Platform
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/capabilities"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Capabilities"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Capabilities
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/extensions"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Extensions"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Extensions
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/webstore"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chrome Web Store"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chrome Web Store
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/chromium"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chromium"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chromium
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/aurora"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Aurora"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Aurora
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/android"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Web on Android"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Web on Android
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developer.chrome.com/origintrials/"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Origin trials"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Origin trials
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/release-notes"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Release notes"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Release notes
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Productivity
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/devtools"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: DevTools"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      DevTools
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/lighthouse"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Lighthouse"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Lighthouse
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/crux"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Chrome UX Report"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Chrome UX Report
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/accessibility"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Accessibility"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Accessibility
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/workbox"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Workbox"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Workbox
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/puppeteer"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Puppeteer"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Puppeteer
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Experience
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/performance"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Performance"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Performance
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/css-ui"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: CSS and UI"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      CSS and UI
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/identity"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Identity"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Identity
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/payments"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Payments"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Payments
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs/privacy-security"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Privacy and security"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Privacy and security
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      Resources
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/docs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: All documentation"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      All documentation
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://web.dev/baseline"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Baseline"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Baseline
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="https://web.dev"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: web.dev"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      web.dev
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+        
+        
+          
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+        
+      </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+            
+              has-book-nav
+              has-sidebar
+            >
+          
+          
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="On this page"
+                            depth="2"
+                            scrollbars
+                  ></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav">
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article">
+  
+  
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation">
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        Home
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail="Docs"
+      
+    >
+    
+        Docs
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developer.chrome.com/docs/crux"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail="Chrome UX Report"
+      
+    >
+    
+        Chrome UX Report
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+  
+    
+  </div>
+  
+      <h1 class="devsite-page-title" tabindex="-1">CrUX API</h1>
+  <devsite-feature-tooltip
+          ack-key="AckCollectionsBookmarkTooltipDismiss"
+          analytics-category="Site-Wide Custom Events"
+          analytics-action-show="Callout Profile displayed"
+          analytics-action-close="Callout Profile dismissed"
+          analytics-label="Create Collection Callout"
+          class="devsite-page-bookmark-tooltip nocontent"
+          dismiss-button="true"
+          id="devsite-collections-dropdown"
+
+          
+          dismiss-button-text="Dismiss"
+
+          
+          close-button-text="Got it">
+
+        
+        <devsite-bookmark></devsite-bookmark>
+
+        <span slot="popout-heading">
+          
+          Stay organized with collections
+        </span>
+        <span slot="popout-contents">
+          
+          Save and categorize content based on your preferences.
+        </span>
+      </devsite-feature-tooltip>
+  <div class="devsite-page-title-meta"><devsite-view-release-notes></devsite-view-release-notes></div>
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    >
+  </devsite-toc>
+  
+    
+  
+
+  
+
+
+
+
+
+
+<div class="devsite-article-body clearfix
+  ">
+
+  
+    
+
+
+<p>The CrUX API gives low-latency access to aggregated real-user experience data at page and origin granularity.</p>
+
+<h2 id="common_use_case" data-text="Common use case" tabindex="-1">Common use case</h2>
+
+<p>The CrUX API allows for the querying of user experience metrics for a specific URI like &quot;Get metrics for the <code translate="no" dir="ltr">https://example.com</code> origin.&quot;</p>
+
+<h2 id="crux_api_key" data-text="CrUX API Key" tabindex="-1">CrUX API Key</h2>
+
+<p>Using the CrUX API requires a Google Cloud API key. You can create one in the <a href="https://console.developers.google.com/apis/credentials">Credentials</a> page and provision it for <code translate="no" dir="ltr">Chrome UX Report API</code> usage.</p>
+
+<p>After you have an API key, your application can append the query parameter <code translate="no" dir="ltr">key=[YOUR_API_KEY]</code> to all request URLs. See <a href="#example_queries">Example queries</a>.</p>
+
+<p>The API key is safe for embedding in URLs; it doesn&#39;t need any encoding.</p>
+
+<h2 id="data_model" data-text="Data model" tabindex="-1">Data model</h2>
+
+<p>This section details the structure of data in requests and responses.</p>
+
+<h3 id="record" data-text="Record" tabindex="-1">Record</h3>
+
+<p>A discrete piece of information about a page, or site. A record can have data that is specific for an identifier and for a specific combination of dimensions. A record can contain data for one or more metrics.</p>
+
+<h3 id="identifiers" data-text="Identifiers" tabindex="-1">Identifiers</h3>
+
+<p>Identifiers specify what records should be looked up. In CrUX these identifiers are webpages and websites.</p>
+
+<h3 id="origin" data-text="Origin" tabindex="-1">Origin</h3>
+
+<p>When the identifier is an origin all data present for all pages in that origin are aggregated together. For example, say the <code translate="no" dir="ltr">http://www.example.com</code> origin had pages as laid out by this sitemap:</p>
+<pre class="prettyprint lang-text" translate="no" dir="ltr"><code translate="no" dir="ltr">http://www.example.com/
+http://www.example.com/foo.html
+http://www.example.com/bar.html
+</code></pre>
+<p>This would mean that when querying the Chrome UX Report with the origin set to <code translate="no" dir="ltr">http://www.example.com</code>, data for <code translate="no" dir="ltr">http://www.example.com/</code>, <code translate="no" dir="ltr">http://www.example.com/foo.html</code>, and <code translate="no" dir="ltr">http://www.example.com/bar.html</code> would be returned, aggregated together, because those are all pages under that origin.</p>
+
+<h3 id="urls" data-text="URLs" tabindex="-1">URLs</h3>
+
+<p>When the identifier is a URL, only data for that specific URL will be returned. Looking again to the <code translate="no" dir="ltr">http://www.example.com</code> origin sitemap:</p>
+<pre class="prettyprint lang-text" translate="no" dir="ltr"><code translate="no" dir="ltr">http://www.example.com/
+http://www.example.com/foo.html
+http://www.example.com/bar.html
+</code></pre>
+<p>If the identifier is set to URL with the value of <code translate="no" dir="ltr">http://www.example.com/foo.html</code>, only data for that page will be returned.</p>
+
+<h3 id="dimensions" data-text="Dimensions" tabindex="-1">Dimensions</h3>
+
+<p>Dimensions identify a specific group of data that a record is being aggregated against, for example a form factor of <code translate="no" dir="ltr">PHONE</code> indicates that the record contains information about loads that took place on a mobile device. Each dimension will have a certain number of values, and implicitly the lack of specifying that dimension will mean that the dimension is aggregated over all values. For example, specifying no form factor indicates that record contains information about loads that took place on any form factor.</p>
+
+<h4 id="form_factor" data-text="Form Factor" tabindex="-1">Form Factor</h4>
+
+<p>The device class that the end-user used to navigate to the page. This is a general class of device split into <code translate="no" dir="ltr">PHONE</code>, <code translate="no" dir="ltr">TABLET</code>, and <code translate="no" dir="ltr">DESKTOP</code>.</p>
+
+<h4 id="effective_connection_type" data-text="Effective Connection Type" tabindex="-1">Effective Connection Type</h4>
+
+<p><a href="/docs/crux/methodology#ect-dimension">Effective Connection Type</a> is the estimated connection quality of the device when navigating to the page. This is a general class split into <code translate="no" dir="ltr">offline</code>, <code translate="no" dir="ltr">slow-2G</code>, <code translate="no" dir="ltr">2G</code>, <code translate="no" dir="ltr">3G</code> and <code translate="no" dir="ltr">4G</code>.</p>
+
+<h3 id="metric" data-text="Metric" tabindex="-1">Metric</h3>
+
+<p>We report metrics as statistical aggregations, in histograms, percentiles, and fractions.</p>
+
+<p>Floating point values are rounded to 4 decimal places (note that the <code translate="no" dir="ltr">cumulative_layout_shift</code> metrics are doubles encoded as a string, so are not consider floats and are reported to 2 decimal places within the string).</p>
+
+<h4 id="histogram" data-text="Histogram" tabindex="-1">Histogram</h4>
+
+<p>When metrics are expressed in a histogram, we show the percentages of page loads falling into
+particular ranges for that metric.</p>
+
+<p>A simple three bin histogram for an example metric looks like this:</p>
+<pre class="prettyprint lang-json" translate="no" dir="ltr"><code translate="no" dir="ltr">{
+  &#34;histogram&#34;: [
+    {
+      &#34;start&#34;: 0,
+      &#34;end&#34;: 1000,
+      &#34;density&#34;: 0.3818
+    },
+    {
+      &#34;start&#34;: 1000,
+      &#34;end&#34;: 3000,
+      &#34;density&#34;: 0.4991
+    },
+    {
+      &#34;start&#34;: 3000,
+      &#34;density&#34;: 0.1192
+    }
+  ]
+}
+</code></pre>
+<p>This data indicates that for 38.18% of page loads, the example metric was measured
+between 0ms and 1,000ms. The units of the metric are not contained in this histogram,
+in this case we will assume milliseconds.</p>
+
+<p>Additionally, 49.91% of page loads saw a metric value between 1,000ms and 3,000ms, and 11.92%
+saw a value greater than 3,000ms.</p>
+
+<h4 id="percentiles" data-text="Percentiles" tabindex="-1">Percentiles</h4>
+
+<p>Metrics may also contain percentiles that can be useful for additional analysis.
+We report specific metric values at the given percentile for that metric.
+They are based on the full set of available data and not the final binned data,
+so they don&#39;t necessarily match an interpolated percentile that is based on the
+final binned histogram.</p>
+<pre class="prettyprint lang-json" translate="no" dir="ltr"><code translate="no" dir="ltr">{
+  &#34;percentiles&#34;: {
+    &#34;p75&#34;: 2063
+  }
+}
+</code></pre>
+<p>In this example, at least 75% of page loads were measured with a metric value <code translate="no" dir="ltr">&lt;= 2063</code>.</p>
+
+<aside class="note"><b>Note:</b> The values for each percentile are synthetically derived, it does not imply that any user actually experienced the value indicated, only that some percentage of page loads experienced a metric value that was less than the value given.</aside>
+
+<h4 id="fractions" data-text="Fractions" tabindex="-1">Fractions</h4>
+
+<p>Fractions indicate the percentages of page loads that can be labeled in a particular way.
+In this case, the metric values are these labels.</p>
+
+<p><a name="form-factors-metric"></a></p>
+
+<p>For example, the <code translate="no" dir="ltr">form_factors</code> metric consists of a <code translate="no" dir="ltr">fractions</code> object listing the breakdown of form factors (or devices) that the given query covers:</p>
+<pre class="prettyprint lang-json" translate="no" dir="ltr"><code translate="no" dir="ltr">&#34;form_factors&#34;: {
+  &#34;fractions&#34;: {
+    &#34;desktop&#34;: 0.0377,
+    &#34;tablet&#34;: 0.0288,
+    &#34;phone&#34;: 0.9335
+  }
+}
+</code></pre>
+<p>In this case, 3.77% of page loads were measured on a desktop, 2.88% on a tablet, and 93.35% on a phone, giving 100% in total.</p>
+
+<h4 id="metric_value_types" data-text="Metric value types" tabindex="-1">Metric value types</h4>
+
+<table class="with-heading-tint width-full fixed-table">
+  <thead>
+    <tr>
+      <th>CrUX API Metric Name</th>
+      <th>Data Type</th>
+      <th>Metric Units</th>
+      <th>Statistical Aggregations</th>
+      <th>Documentation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code translate="no" dir="ltr">cumulative_layout_shift</code></td>
+      <td>2 decimal place double encoded as string</td>
+      <td>unitless</td>
+      <td>histogram with three bins, percentiles with p75</td>
+      <td><a href="https://web.dev/articles/cls">cls</a></td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">first_contentful_paint</code></td>
+      <td>int</td>
+      <td>milliseconds</td>
+      <td>histogram with three bins, percentiles with p75</td>
+      <td><a href="https://web.dev/articles/fcp">fcp</a></td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">first_input_delay</code><br><em>(deprecated)</em></td>
+      <td>int</td>
+      <td>milliseconds</td>
+      <td>histogram with three bins, percentiles with p75</td>
+      <td><a href="https://web.dev/articles/fid">fid</a></td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">interaction_to_next_paint</code></td>
+      <td>int</td>
+      <td>milliseconds</td>
+      <td>histogram with three bins, percentiles with p75</td>
+      <td><a href="https://web.dev/articles/inp">inp</a></td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">largest_contentful_paint</code></td>
+      <td>int</td>
+      <td>milliseconds</td>
+      <td>histogram with three bins, percentiles with p75</td>
+      <td><a href="https://web.dev/articles/lcp">lcp</a></td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">experimental_time_to_first_byte</code></td>
+      <td>int</td>
+      <td>milliseconds</td>
+      <td>histogram with three bins, percentiles with p75</td>
+      <td><a href="https://web.dev/articles/ttfb">ttfb</a></td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">form_factors</code></td>
+      <td>4-decimal place double</td>
+      <td>percent</td>
+      <td>mapping from form factor to fraction</td>
+      <td><a href="#form-factors-metric">form factors</a></td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">navigation_types</code></td>
+      <td>4-decimal place double</td>
+      <td>percent</td>
+      <td>mapping from navigation type to fraction</td>
+      <td><a href="/blog/crux-navigation-types">navigation types</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="bigquery_metric_name_mapping" data-text="BigQuery metric name mapping" tabindex="-1">BigQuery metric name mapping</h4>
+
+<table class="with-heading-tint width-full fixed-table">
+  <thead>
+    <tr>
+      <th>CrUX API Metric Name</th>
+      <th>BigQuery Metric Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code translate="no" dir="ltr">cumulative_layout_shift</code></td>
+      <td><code translate="no" dir="ltr">layout_instability.cumulative_layout_shift</code></td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">first_contentful_paint</code></td>
+      <td><code translate="no" dir="ltr">first_contentful_paint</code></td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">first_input_delay</code></td>
+      <td><code translate="no" dir="ltr">first_input.delay</code></td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">interaction_to_next_paint</code></td>
+      <td><code translate="no" dir="ltr">interaction_to_next_paint</code></td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">largest_contentful_paint</code></td>
+      <td><code translate="no" dir="ltr">largest_contentful_paint</code></td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">experimental_time_to_first_byte</code></td>
+      <td><code translate="no" dir="ltr">experimental.time_to_first_byte</code></td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">navigation_types</code></td>
+      <td><code translate="no" dir="ltr">navigation_types</code></td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">form_factors</code></td>
+      <td>n/a</td>
+    </tr>
+  </tbody>
+</table>
+
+<aside class="note"><b>Note:</b> In <a href="/docs/crux/bigquery">CrUX BigQuery</a>, the histogram densities
+add up to 100% per origin across form factors, so the <code translate="no" dir="ltr">form_factors</code>
+metric that we support in the API is instead expressed as the histogram
+densities for <code translate="no" dir="ltr">first_contentful_paint</code>.</aside>
+
+<h3 id="collection_period" data-text="Collection period" tabindex="-1">Collection period</h3>
+
+<p>As of October 2022, the CrUX API contains a <code translate="no" dir="ltr">collectionPeriod</code> object with <code translate="no" dir="ltr">firstDate</code> and <code translate="no" dir="ltr">endDate</code> fields representing the beginning and end dates of the aggregation window. For example:</p>
+<pre class="prettyprint lang-json" translate="no" dir="ltr"><code translate="no" dir="ltr">    &#34;collectionPeriod&#34;: {
+      &#34;firstDate&#34;: {
+        &#34;year&#34;: 2022,
+        &#34;month&#34;: 9,
+        &#34;day&#34;: 12
+      },
+      &#34;lastDate&#34;: {
+        &#34;year&#34;: 2022,
+        &#34;month&#34;: 10,
+        &#34;day&#34;: 9
+      }
+    }
+</code></pre>
+<p>This allows better understanding of the data and whether it&#39;s been updated yet for that day or is returning the same data as yesterday.</p>
+
+<p>Note that the CrUX API is approximately two days behind today&#39;s date since it waits for completed data for the day, and there is some processing time involved before it is available in the API. The timezone used is Pacific Standard Time (PST) with no changes for daylight savings.</p>
+
+<h2 id="example_queries" data-text="Example queries" tabindex="-1">Example queries</h2>
+
+<p>Queries are submitted as JSON objects using a POST request to <code translate="no" dir="ltr">https://chromeuxreport.googleapis.com/v1/records:queryRecord?key=[YOUR_API_KEY]&quot;</code> with query data as a JSON object in the POST body:</p>
+<pre class="prettyprint lang-json" translate="no" dir="ltr"><code translate="no" dir="ltr">{
+  &#34;origin&#34;: &#34;https://example.com&#34;,
+  &#34;formFactor&#34;: &#34;PHONE&#34;,
+  &#34;metrics&#34;: [
+    &#34;largest_contentful_paint&#34;,
+    &#34;experimental_time_to_first_byte&#34;
+  ]
+}
+</code></pre>
+<p>For example, this can be called from <code translate="no" dir="ltr">curl</code> with the following command line (replacing <code translate="no" dir="ltr">API_KEY</code> with your key):</p>
+<pre class="prettyprint lang-bash" translate="no" dir="ltr"><code translate="no" dir="ltr">curl -s --request POST &#39;https://chromeuxreport.googleapis.com/v1/records:queryRecord?key=API_KEY&#39; \
+    --header &#39;Accept: application/json&#39; \
+    --header &#39;Content-Type: application/json&#39; \
+    --data &#39;{&#34;formFactor&#34;:&#34;PHONE&#34;,&#34;origin&#34;:&#34;https://www.example.com&#34;,&#34;metrics&#34;:[&#34;largest_contentful_paint&#34;, &#34;experimental_time_to_first_byte&#34;]}&#39;
+</code></pre>
+<aside class="note"><b>Note:</b> The previous example is for macOS or Linux based systems—including the Git BASH shell for Windows. Other systems may require slight modifications. For example, the <code translate="no" dir="ltr">cmd.exe</code> command line does not allow single quotes for parameters, nor the line continuations (<code translate="no" dir="ltr">&#92;</code>), so requires using double quotes (escaping inner quotes as appropriate with <code translate="no" dir="ltr">\"</code>), and also using a single line.</aside>
+
+<p>Page-level data is available through the API by passing a <code translate="no" dir="ltr">url</code> property in the query, instead of <code translate="no" dir="ltr">origin</code>:</p>
+<pre class="prettyprint lang-json" translate="no" dir="ltr"><code translate="no" dir="ltr">{
+  &#34;url&#34;: &#34;https://example.com/page&#34;,
+  &#34;formFactor&#34;: &#34;PHONE&#34;,
+  &#34;metrics&#34;: [
+    &#34;largest_contentful_paint&#34;,
+    &#34;experimental_time_to_first_byte&#34;
+  ]
+}
+</code></pre>
+<p>If the <code translate="no" dir="ltr">metrics</code> property is not set then all available metrics will be returned:</p>
+
+<ul>
+<li><code translate="no" dir="ltr">cumulative_layout_shift</code></li>
+<li><code translate="no" dir="ltr">first_contentful_paint</code></li>
+<li><code translate="no" dir="ltr">first_input_delay</code> <em>(deprecated)</em></li>
+<li><code translate="no" dir="ltr">interaction_to_next_paint</code></li>
+<li><code translate="no" dir="ltr">largest_contentful_paint</code></li>
+<li><code translate="no" dir="ltr">experimental_time_to_first_byte</code></li>
+<li><code translate="no" dir="ltr">navigation_types</code></li>
+<li><code translate="no" dir="ltr">form_factors</code> (only reported if no <code translate="no" dir="ltr">formFactor</code> is specified in the request)</li>
+</ul>
+
+<p>If no <code translate="no" dir="ltr">formFactor</code> value is provided then the values will be aggregated across all form factors.</p>
+
+<p>See <a href="/blog/chrome-ux-report-api">Using the Chrome UX Report API</a> for more example queries.</p>
+
+<h2 id="data_pipeline" data-text="Data pipeline" tabindex="-1">Data pipeline</h2>
+
+<p>The CrUX dataset is processed through a pipeline to consolidate, aggregate and filter the data before becoming available using the API.</p>
+
+<h3 id="the_rolling_average" data-text="The rolling average" tabindex="-1">The rolling average</h3>
+
+<p>The data in the Chrome UX Report is a 28-day rolling average of aggregated metrics. This means that the data presented in the Chrome UX Report at any given time is actually data for the past 28 days aggregated together.</p>
+
+<p>This is similar to how the <a href="/docs/crux/bigquery">CrUX dataset on BigQuery</a> aggregates monthly reports.</p>
+
+<h3 id="daily_updates" data-text="Daily updates" tabindex="-1">Daily updates</h3>
+
+<p>Data is updated daily around 04:00 UTC. There is no service level agreement for update times; it is run on a best-effort basis every day.</p>
+
+<aside class="caution"><b>Caution:</b> Data won't differ within the same day after it has been updated around 04:00 UTC, repeated calls will yield the same results.</aside>
+
+<h2 id="schema" data-text="Schema" tabindex="-1">Schema</h2>
+
+<p>There is a single endpoint for the CrUX API which accepts <code translate="no" dir="ltr">POST</code> HTTP requests. The API returns a <code translate="no" dir="ltr">record</code> which contains one or more <code translate="no" dir="ltr">metrics</code> corresponding to performance data about the requested origin or page.</p>
+
+<h3 id="http_request" data-text="HTTP request" tabindex="-1">HTTP request</h3>
+<pre class="prettyprint lang-http" translate="no" dir="ltr"><code translate="no" dir="ltr">POST https://chromeuxreport.googleapis.com/v1/records:queryRecord
+</code></pre>
+<p>The URL uses <a href="https://google.aip.dev/127">gRPC Transcoding</a> syntax.</p>
+
+<h3 id="request_body" data-text="Request body" tabindex="-1">Request body</h3>
+
+<p>The request body should contain data with the following structure:</p>
+<pre class="prettyprint lang-json" translate="no" dir="ltr"><code translate="no" dir="ltr">{
+  &#34;effectiveConnectionType&#34;: string,
+  &#34;formFactor&#34;: enum (FormFactor),
+  &#34;metrics&#34;: [
+    string
+  ],
+
+  // Union field url_pattern can be only one of the following:
+  &#34;origin&#34;: string,
+  &#34;url&#34;: string
+  // End of list of possible types for union field url_pattern.
+}
+</code></pre>
+<table class="width-full with-heading-tint">
+  <colgroup>
+    <col width="25%">
+    <col>
+  </colgroup>
+  <thead>
+    <tr>
+      <th colspan="2">Fields</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code translate="no" dir="ltr">effectiveConnectionType</code></td>
+      <td>
+        <p><strong><code class="apitype" translate="no" dir="ltr">string</code></strong></p>
+        <p>The effective connection type is a query dimension that specifies the effective network class that the record's data should belong to.</p>
+        <p>This field uses the values <code translate="no" dir="ltr">["offline", "slow-2G", "2G", "3G", "4G"]</code> as specified in the <a href="https://wicg.github.io/netinfo/#effective-connection-types">Network Information API specification</a></p>
+        <p>Note: If no effective connection type is specified, then a special record with aggregated data over all effective connection types will be returned.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">formFactor</code></td>
+      <td>
+        <p><strong><code class="apitype" translate="no" dir="ltr">enum</code> (<a href="#form_factor"><code translate="no" dir="ltr">FormFactor</code></a>)</strong></p>
+        <p>The form factor is a query dimension that specifies the device class that the record's data should belong to.</p>
+        <p>This field uses the values <code translate="no" dir="ltr">DESKTOP</code>, <code translate="no" dir="ltr">PHONE</code>,
+        or <code translate="no" dir="ltr">TABLET</code>.</p>
+        <p>Note: If no form factor is specified, then a special record with aggregated data over all form factors will be returned.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">metrics[]</code></td>
+      <td>
+        <p><strong><code class="apitype" translate="no" dir="ltr">string</code></strong></p>
+        <p>The metrics that should be included in the response. If none are specified then any metrics found will be returned.</p><p>Allowed values: <code translate="no" dir="ltr">["cumulative_layout_shift", "first_contentful_paint", "first_input_delay", "interaction_to_next_paint", "largest_contentful_paint", "experimental_time_to_first_byte"]</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">Union field <code translate="no" dir="ltr">url_<wbr>pattern</code>. The <code translate="no" dir="ltr">url_pattern</code>  is the main identifier for a record lookup. It can be only one of the following:</td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">origin</code></td>
+      <td>
+        <p><strong><code class="apitype" translate="no" dir="ltr">string</code></strong></p>
+        <p>The <code translate="no" dir="ltr">url_pattern</code> "origin" refers to a URL pattern that is the origin of a website.</p><p>Examples: <code translate="no" dir="ltr">"https://example.com"</code>, <code translate="no" dir="ltr">"https://cloud.google.com"</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">url</code></td>
+      <td>
+        <p><strong><code class="apitype" translate="no" dir="ltr">string</code></strong></p>
+        <p>The <code translate="no" dir="ltr">url_pattern</code> <code translate="no" dir="ltr">url</code> refers to a URL pattern that is any arbitrary URL.</p><p>Examples: <code translate="no" dir="ltr">"https://example.com/</code>, <code translate="no" dir="ltr">https://cloud.google.com/why-google-cloud/"</code></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For example, to request the desktop largest contentful paint values for the Chrome developer documentation homepage:</p>
+<pre class="prettyprint lang-json" translate="no" dir="ltr"><code translate="no" dir="ltr">{
+  &#34;url&#34;: &#34;https://developer.chrome.com/docs/&#34;,
+  &#34;formFactor&#34;: &#34;DESKTOP&#34;,
+  &#34;metrics&#34;: [
+    &#34;largest_contentful_paint&#34;
+  ]
+}
+</code></pre>
+<h3 id="response_body" data-text="Response body" tabindex="-1">Response body</h3>
+
+<p>Successful requests return responses with a <code translate="no" dir="ltr">record</code> object and <code translate="no" dir="ltr">urlNormalizationDetails</code> in the following structure:</p>
+<pre class="prettyprint lang-json" translate="no" dir="ltr"><code translate="no" dir="ltr">{
+  &#34;record&#34;: {
+    &#34;key&#34;: {
+      object (Key)
+    },
+    &#34;metrics&#34;: [
+      string: {
+        object (Metric)
+      }
+    ]
+  },
+  &#34;urlNormalizationDetails&#34;: {
+    object (UrlNormalization)
+  }
+}
+</code></pre>
+<p>For example, the response to the request body in the previous request could be:</p>
+<pre class="prettyprint lang-json" translate="no" dir="ltr"><code translate="no" dir="ltr">{
+  &#34;record&#34;: {
+    &#34;key&#34;: {
+      &#34;formFactor&#34;: &#34;DESKTOP&#34;,
+      &#34;url&#34;: &#34;https://developer.chrome.com/docs/&#34;
+    },
+    &#34;metrics&#34;: {
+      &#34;largest_contentful_paint&#34;: {
+        &#34;histogram&#34;: [
+          {
+            &#34;start&#34;: 0,
+            &#34;end&#34;: 2500,
+            &#34;density&#34;: 0.9815
+          },
+          {
+            &#34;start&#34;: 2500,
+            &#34;end&#34;: 4000,
+            &#34;density&#34;: 0.0108
+          },
+          {
+            &#34;start&#34;: 4000,
+            &#34;density&#34;: 0.0077
+          }
+        ],
+        &#34;percentiles&#34;: {
+          &#34;p75&#34;: 651
+        }
+      }
+    },
+    &#34;collectionPeriod&#34;: {
+      &#34;firstDate&#34;: {
+        &#34;year&#34;: 2022,
+        &#34;month&#34;: 9,
+        &#34;day&#34;: 12
+      },
+      &#34;lastDate&#34;: {
+        &#34;year&#34;: 2022,
+        &#34;month&#34;: 10,
+        &#34;day&#34;: 9
+      }
+    }
+  }
+}
+</code></pre>
+<h4 id="api-response-key" data-text="Key" tabindex="-1">Key</h4>
+
+<p><code translate="no" dir="ltr">Key</code> defines all the dimensions that identify this record as unique.</p>
+<pre class="prettyprint lang-json" translate="no" dir="ltr"><code translate="no" dir="ltr">{
+  &#34;effectiveConnectionType&#34;: string,
+  &#34;formFactor&#34;: enum (FormFactor),
+
+  // Union field url_pattern can be only one of the following:
+  &#34;origin&#34;: string,
+  &#34;url&#34;: string
+  // End of list of possible types for union field url_pattern.
+}
+</code></pre>
+<table class="width-full with-heading-tint">
+  <colgroup>
+    <col width="25%">
+    <col>
+  </colgroup>
+  <thead>
+    <tr>
+      <th colspan="2">Fields</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code translate="no" dir="ltr">formFactor</code></td>
+      <td>
+        <p><strong><code class="apitype" translate="no" dir="ltr">enum (<a href="#form_factor">FormFactor</a>)</code></strong></p>
+        <p>The form factor is the device class that all users used to access the site for this record.</p><p>If the form factor is unspecified, then aggregated data over all form factors will be returned.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">effectiveConnectionType</code></td>
+      <td>
+        <p><strong><code class="apitype" translate="no" dir="ltr">string</code></strong></p>
+        <p>The effective connection type is the general connection class that all users experienced for this record. This field uses the values ["offline", "slow-2G", "2G", "3G", "4G"] as specified in: <a href="https://wicg.github.io/netinfo/#effective-connection-types">https://wicg.github.io/netinfo/#effective-connection-types</a></p><p>If the effective connection type is unspecified, then aggregated data over all effective connection types will be returned.</p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">Union field <code translate="no" dir="ltr">url_<wbr>pattern</code>. The URL pattern is the URL that the record applies to. <code translate="no" dir="ltr">url_<wbr>pattern</code> can be only one of the following:</td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">origin</code></td>
+      <td>
+        <p><strong><code class="apitype" translate="no" dir="ltr">string</code></strong></p>
+        <p><code translate="no" dir="ltr">origin</code> specifies the origin that this record is for.</p><p>Note: When specifying an <code translate="no" dir="ltr">origin</code>, data for loads under this origin over all pages are aggregated into origin level user experience data.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">url</code></td>
+      <td>
+        <p><strong><code class="apitype" translate="no" dir="ltr">string</code></strong></p>
+        <p><code translate="no" dir="ltr">url</code> specifies a specific URL that this record is for.</p><p>Note: When specifying a <code translate="no" dir="ltr">url</code> only data for that specific URL will be aggregated.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="api-response-metrics" data-text="Metrics" tabindex="-1">Metrics</h4>
+
+<p>A <code translate="no" dir="ltr">metric</code> is a set of aggregated user experience data for a single web performance metric, such as first contentful paint.
+It may contains a summary histogram of real world Chrome usage as a series of <code translate="no" dir="ltr">bins</code>, specific percentile data
+(such as the p75), or it may contain labeled fractions.</p>
+<pre class="prettyprint lang-json" translate="no" dir="ltr"><code translate="no" dir="ltr">{
+  &#34;histogram&#34;: [
+    {
+      object (Bin)
+    }
+  ],
+  &#34;percentiles&#34;: {
+    object (Percentiles)
+  }
+}
+</code></pre>
+<p>or</p>
+<pre class="prettyprint lang-json" translate="no" dir="ltr"><code translate="no" dir="ltr">{
+  &#34;fractions&#34;: {
+    object (Fractions)
+  }
+}
+</code></pre>
+<table class="width-full with-heading-tint">
+  <colgroup>
+    <col width="25%">
+    <col>
+  </colgroup>
+  <thead>
+    <tr>
+      <th colspan="2">Fields</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code translate="no" dir="ltr">histogram[]</code></td>
+      <td>
+        <p><strong><code class="apitype" translate="no" dir="ltr">object (<a href="#api-response-bin">Bin</a>)</code></strong></p>
+        <p>The histogram of user experiences for a metric. The histogram will have at least one bin and the densities of all bins will add up to ~1.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">percentiles</code></td>
+      <td>
+        <p><strong><code class="apitype" translate="no" dir="ltr">object (<a href="#api-response-percentiles">Percentiles</a>)</code></strong></p>
+        <p>Common useful percentiles of the Metric. The value type for the percentiles will be the same as the value types given for the Histogram bins.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">fractions</code></td>
+      <td>
+        <p><strong><code class="apitype" translate="no" dir="ltr">object (<a href="#api-response-fractions">Fractions</a>)</code></strong></p>
+        <p>This object contains labeled fractions, which add up to ~1.</p>
+        <p>Fractions are rounded to 4 decimal places.</p>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+<h4 id="api-response-bin" data-text="Bin" tabindex="-1">Bin</h4>
+
+<p>A <code translate="no" dir="ltr">bin</code> is a discrete portion of data spanning from start to end, or if no end is given from start to positive infinity.</p>
+
+<p>A bin&#39;s start and end values are given in the value type of the metric it represents. For example, first contentful paint is measured in milliseconds and exposed as ints, therefore its metric bins will use int32s for its start and end types. However cumulative layout shift is measured in unitless decimals and is exposed as a decimal encoded as a string, therefore its metric bins will use strings for its value type.</p>
+<pre class="prettyprint lang-json" translate="no" dir="ltr"><code translate="no" dir="ltr">{
+  &#34;start&#34;: value,
+  &#34;end&#34;: value,
+  &#34;density&#34;: number
+}
+</code></pre>
+<table class="width-full with-heading-tint">
+  <colgroup>
+    <col width="25%">
+    <col>
+  </colgroup>
+  <thead>
+    <tr>
+      <th colspan="2">Fields</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code translate="no" dir="ltr">start</code></td>
+      <td>
+        <p><strong><code class="apitype" translate="no" dir="ltr">(integer | string)</code></strong></p>
+        <p>Start is the beginning of the data bin.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">end</code></td>
+      <td>
+        <p><strong><code class="apitype" translate="no" dir="ltr">(integer | string)</code></strong></p>
+        <p>End is the end of the data bin. If end is not populated, then the bin has no end and is valid from start to +inf.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code translate="no" dir="ltr">density</code></td>
+      <td>
+        <p><strong><code class="apitype" translate="no" dir="ltr">number</code></strong></p>
+        <p>The proportion of users that experienced this bin's value for the given metric.</p>
+        <p>Densities are rounded to 4 decimal places.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="api-response-percentiles" data-text="Percentiles" tabindex="-1">Percentiles</h4>
+
+<p><code translate="no" dir="ltr">Percentiles</code> contains synthetic values of a metric at a given statistical percentile. These are used for estimating a metric&#39;s value as experienced by a percentage of users out of the total number of users.</p>
+<pre class="prettyprint lang-json" translate="no" dir="ltr"><code translate="no" dir="ltr">{
+  &#34;P75&#34;: value
+}
+</code></pre>
+<table class="width-full with-heading-tint">
+  <colgroup>
+    <col width="25%">
+    <col>
+  </colgroup>
+  <thead>
+    <tr>
+      <th colspan="2">Fields</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id="Percentiles.FIELDS.p75">
+      <td><code translate="no" dir="ltr">p75</code></td>
+      <td>
+        <p><strong><code class="apitype" translate="no" dir="ltr">(integer | string)</code></strong></p>
+        <p>75% of page loads experienced the given metric at or less than this value.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="api-response-fractions" data-text="Fractions" tabindex="-1">Fractions</h4>
+
+<p><code translate="no" dir="ltr">Fractions</code> contains labeled fractions that add up to ~1. Each label describes a
+page load in some way, so metrics represented in this way can be thought of as
+producing distinct values instead of numerical values, and the fractions express
+how frequently a particular distinct value was measured.</p>
+<pre class="prettyprint lang-json" translate="no" dir="ltr"><code translate="no" dir="ltr">{
+  &#34;label_1&#34;: fraction,
+  &#34;label_2&#34;: fraction,
+  ...
+  &#34;label_n&#34;: fraction
+}
+</code></pre>
+<p>Much like the density values in histogram bins, each <code translate="no" dir="ltr">fraction</code> is a number
+<code translate="no" dir="ltr">0.0 &lt;= value &lt;= 1.0</code>, and they add up to ~1.0.</p>
+
+<h4 id="api-response-urlnormalization" data-text="UrlNormalization" tabindex="-1">UrlNormalization</h4>
+
+<p>Object representing the normalization actions taken to normalize a URL to achieve a higher chance of successful lookup. These are simple automated changes that are taken when looking up the provided <code translate="no" dir="ltr">url_pattern</code> would be known to fail. Complex actions like following redirects are not handled.</p>
+<pre class="prettyprint lang-json" translate="no" dir="ltr"><code translate="no" dir="ltr">{
+  &#34;originalUrl&#34;: string,
+  &#34;normalizedUrl&#34;: string
+}
+</code></pre>
+<table class="width-full with-heading-tint">
+  <colgroup>
+    <col width="25%">
+    <col>
+  </colgroup>
+  <thead>
+    <tr>
+      <th colspan="2">Fields</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id="UrlNormalization.FIELDS.original_url">
+      <td><code translate="no" dir="ltr">originalUrl</code></td>
+      <td>
+        <p><strong><code class="apitype" translate="no" dir="ltr">string</code></strong></p>
+        <p>The original requested URL prior to any normalization actions.</p>
+      </td>
+    </tr>
+    <tr id="UrlNormalization.FIELDS.normalized_url">
+      <td><code translate="no" dir="ltr">normalizedUrl</code></td>
+      <td>
+        <p><strong><code class="apitype" translate="no" dir="ltr">string</code></strong></p>
+        <p>The URL after any normalization actions. This is a valid user experience URL that could reasonably be looked up.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="rate_limits" data-text="Rate limits" tabindex="-1">Rate limits</h2>
+
+<p>The CrUX API is limited to 150 queries per minute per Google Cloud project, which is offered without charge. This limit, and your current usage, can be seen in the <a href="https://console.cloud.google.com/apis/api/chromeuxreport.googleapis.com/quotas">Google Cloud Console</a>. This generous quota should be sufficient for the vast majority of use cases and it is not possible to pay for an increased quota.</p>
+
+  
+
+  
+</div>
+
+  
+
+  
+    
+    
+      
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+  
+       
+    
+    
+  
+
+  
+  
+</article>
+
+
+<devsite-content-footer class="nocontent">
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  <p>Last updated 2024-04-09 UTC.</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  <template class="devsite-thumb-rating-down-categories">
+  [{
+      "type": "thumb-down",
+      "id": "missingTheInformationINeed",
+      "label":"Missing the information I need"
+    },{
+      "type": "thumb-down",
+      "id": "tooComplicatedTooManySteps",
+      "label":"Too complicated / too many steps"
+    },{
+      "type": "thumb-down",
+      "id": "outOfDate",
+      "label":"Out of date"
+    },{
+      "type": "thumb-down",
+      "id": "samplesCodeIssue",
+      "label":"Samples / code issue"
+    },{
+      "type": "thumb-down",
+      "id": "otherDown",
+      "label":"Other"
+    }]
+  </template>
+  <template class="devsite-thumb-rating-up-categories">
+  [{
+      "type": "thumb-up",
+      "id": "easyToUnderstand",
+      "label":"Easy to understand"
+    },{
+      "type": "thumb-up",
+      "id": "solvedMyProblem",
+      "label":"Solved my problem"
+    },{
+      "type": "thumb-up",
+      "id": "otherUp",
+      "label":"Other"
+    }]
+  </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent" aria-label="Footer links">
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Contribute</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://issuetracker.google.com/issues/new?component=1400036&amp;template=1897236"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            File a bug
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://issuetracker.google.com/issues?q=status:open%20componentid:1400036&amp;s=created_time:desc"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+              
+              
+            
+          
+            See open issues
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Related content</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://blog.chromium.org/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Chromium updates
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/case-studies"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Case studies
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/deprecated"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Archive
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://web.dev/shows"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+              
+              
+            
+          
+            Podcasts &amp; shows
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Connect</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://twitter.com/ChromiumDev"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            @ChromiumDev on X
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.youtube.com/user/ChromeDevelopers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            YouTube
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.linkedin.com/showcase/chrome-for-developers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+              
+              
+            
+          
+            Chrome for Developers on LinkedIn
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent">
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Utility links">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          Terms
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privacy
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="nl"
+        >Nederlands</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel></devsite-panel>
+        
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar
+    
+    >
+</devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics analytics-iframe enable-cb>
+      
+        <script type="application/json" analytics>[]</script>
+<script type="application/json" tag-management>{&#34;ga4&#34;: [], &#34;ga4p&#34;: [], &#34;gtm&#34;: [{&#34;id&#34;: &#34;GTM-5QF3RT2&#34;, &#34;purpose&#34;: 0}], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;False&#34;, &#34;requested&#34;: &#34;en&#34;, &#34;served&#34;: &#34;en&#34;}, &#34;pageType&#34;: &#34;article&#34;, &#34;projectName&#34;: &#34;Chrome UX Report&#34;, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;chrome&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    <script nonce="74Gu7bw5oB2UEsDV5yqWahf0iLwXAK">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/js/app_loader.js', '[53,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome","https://chrome-dot-devsite-v2-prod-3p.appspot.com",null,null,["/_pwa/chrome/manifest.json","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/favicon.png","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup.svg","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,112,113,116,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,147,148,149,151,152,156,157,158,159,161,163,164,168,169,170,179,180,182,183,186,191,193,196],"AIzaSyCNm9YxQumEXwGJgTDjxoxXK6m1F-9720Q","AIzaSyCc76DZePGtoyUjqKrLdsMGk_ry7sljLbY","developer.chrome.com","AIzaSyB9bqgQ2t11WJsOX8qNsCQ6U-w91mmqF-I","AIzaSyAdYnStPdzjcJJtQ0mvIaeaMKj7_t6J_Fg",null,null,null,["MiscFeatureFlags__enable_firebase_utm","Profiles__enable_profile_collections","MiscFeatureFlags__developers_footer_image","MiscFeatureFlags__emergency_css","Cloud__enable_cloudx_experiment_ids","Profiles__require_profile_eligibility_for_signin","CloudShell__cloud_shell_button","Search__enable_faceted_search","Cloud__enable_cloud_facet_chat","Profiles__enable_public_developer_profiles","CloudShell__cloud_code_overflow_menu","OnSwitch__enable","Profiles__enable_developer_profiles_callout","MiscFeatureFlags__enable_project_variables","Profiles__enable_awarding_url","Search__enable_suggestions_from_borg","Cloud__enable_cloud_shell","Cloud__enable_free_trial_server_call","BookNav__enable_tenant_cache_key","EngEduTelemetry__enable_engedu_telemetry","MiscFeatureFlags__enable_explain_this_code","Search__enable_dynamic_content_confidential_banner","MiscFeatureFlags__enable_new_sitemap","Analytics__enable_cookie_bar","Concierge__enable_pushui","Search__enable_ai_eligibility_checks","Profiles__enable_release_notes_notifications","MiscFeatureFlags__developers_footer_dark_image","Cloud__enable_cloudx_ping","Cloud__enable_cloud_shell_fte_user_flow","Profiles__enable_page_saving","Experiments__reqs_query_experiments","Cloud__enable_cloud_dlp_service","TpcFeatures__enable_mirror_tenant_redirects","MiscFeatureFlags__enable_variable_operator","Search__enable_page_map"],null,null,"AIzaSyA58TaKli1DculwmAmbpzLVGuWc8eCQgQc","https://developerscontentserving-pa.googleapis.com","AIzaSyDWBU60w0P9hEkr29kkksYs8Z7gvZ8u_wc","https://developerscontentsearch-pa.googleapis.com",2,4]')
+  
+</script>
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>

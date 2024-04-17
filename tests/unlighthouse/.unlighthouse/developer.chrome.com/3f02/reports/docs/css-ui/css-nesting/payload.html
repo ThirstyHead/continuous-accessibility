@@ -1,0 +1,1624 @@
+<!doctype html>
+<html 
+      lang="en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="157101835696-ooapojlodmuabs2do2vuhhnf90bccmoi.apps.googleusercontent.com">
+    <meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award">
+    <meta property="og:site_name" content="Chrome for Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#1a73e8"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/chrome/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//apis.google.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/css/app.css">
+      
+        <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/css/dark-theme.css" disabled>
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/touchicon-180.png"><link rel="canonical" href="https://developer.chrome.com/docs/css-ui/css-nesting"><link rel="search" type="application/opensearchdescription+xml"
+            title="Chrome for Developers" href="https://developer.chrome.com/s/opensearch.xml">
+      <link rel="alternate" hreflang="en"
+          href="https://developer.chrome.com/docs/css-ui/css-nesting" /><link rel="alternate" hreflang="x-default" href="https://developer.chrome.com/docs/css-ui/css-nesting" /><link rel="alternate" hreflang="ar"
+          href="https://developer.chrome.com/docs/css-ui/css-nesting?hl=ar" /><link rel="alternate" hreflang="bn"
+          href="https://developer.chrome.com/docs/css-ui/css-nesting?hl=bn" /><link rel="alternate" hreflang="zh-Hans"
+          href="https://developer.chrome.com/docs/css-ui/css-nesting?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant"
+          href="https://developer.chrome.com/docs/css-ui/css-nesting?hl=zh-tw" /><link rel="alternate" hreflang="nl"
+          href="https://developer.chrome.com/docs/css-ui/css-nesting?hl=nl" /><link rel="alternate" hreflang="fa"
+          href="https://developer.chrome.com/docs/css-ui/css-nesting?hl=fa" /><link rel="alternate" hreflang="fr"
+          href="https://developer.chrome.com/docs/css-ui/css-nesting?hl=fr" /><link rel="alternate" hreflang="de"
+          href="https://developer.chrome.com/docs/css-ui/css-nesting?hl=de" /><link rel="alternate" hreflang="he"
+          href="https://developer.chrome.com/docs/css-ui/css-nesting?hl=he" /><link rel="alternate" hreflang="hi"
+          href="https://developer.chrome.com/docs/css-ui/css-nesting?hl=hi" /><link rel="alternate" hreflang="id"
+          href="https://developer.chrome.com/docs/css-ui/css-nesting?hl=id" /><link rel="alternate" hreflang="it"
+          href="https://developer.chrome.com/docs/css-ui/css-nesting?hl=it" /><link rel="alternate" hreflang="ja"
+          href="https://developer.chrome.com/docs/css-ui/css-nesting?hl=ja" /><link rel="alternate" hreflang="ko"
+          href="https://developer.chrome.com/docs/css-ui/css-nesting?hl=ko" /><link rel="alternate" hreflang="pl"
+          href="https://developer.chrome.com/docs/css-ui/css-nesting?hl=pl" /><link rel="alternate" hreflang="pt-BR"
+          href="https://developer.chrome.com/docs/css-ui/css-nesting?hl=pt-br" /><link rel="alternate" hreflang="ru"
+          href="https://developer.chrome.com/docs/css-ui/css-nesting?hl=ru" /><link rel="alternate" hreflang="es-419"
+          href="https://developer.chrome.com/docs/css-ui/css-nesting?hl=es-419" /><link rel="alternate" hreflang="th"
+          href="https://developer.chrome.com/docs/css-ui/css-nesting?hl=th" /><link rel="alternate" hreflang="tr"
+          href="https://developer.chrome.com/docs/css-ui/css-nesting?hl=tr" /><link rel="alternate" hreflang="vi"
+          href="https://developer.chrome.com/docs/css-ui/css-nesting?hl=vi" /><link rel="alternate" hreflang="en-cn"
+          href="https://developer.chrome.google.cn/docs/css-ui/css-nesting" /><link rel="alternate" hreflang="x-default" href="https://developer.chrome.google.cn/docs/css-ui/css-nesting" /><link rel="alternate" hreflang="ar-cn"
+          href="https://developer.chrome.google.cn/docs/css-ui/css-nesting?hl=ar" /><link rel="alternate" hreflang="bn-cn"
+          href="https://developer.chrome.google.cn/docs/css-ui/css-nesting?hl=bn" /><link rel="alternate" hreflang="zh-Hans-cn"
+          href="https://developer.chrome.google.cn/docs/css-ui/css-nesting?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant-cn"
+          href="https://developer.chrome.google.cn/docs/css-ui/css-nesting?hl=zh-tw" /><link rel="alternate" hreflang="nl-cn"
+          href="https://developer.chrome.google.cn/docs/css-ui/css-nesting?hl=nl" /><link rel="alternate" hreflang="fa-cn"
+          href="https://developer.chrome.google.cn/docs/css-ui/css-nesting?hl=fa" /><link rel="alternate" hreflang="fr-cn"
+          href="https://developer.chrome.google.cn/docs/css-ui/css-nesting?hl=fr" /><link rel="alternate" hreflang="de-cn"
+          href="https://developer.chrome.google.cn/docs/css-ui/css-nesting?hl=de" /><link rel="alternate" hreflang="he-cn"
+          href="https://developer.chrome.google.cn/docs/css-ui/css-nesting?hl=he" /><link rel="alternate" hreflang="hi-cn"
+          href="https://developer.chrome.google.cn/docs/css-ui/css-nesting?hl=hi" /><link rel="alternate" hreflang="id-cn"
+          href="https://developer.chrome.google.cn/docs/css-ui/css-nesting?hl=id" /><link rel="alternate" hreflang="it-cn"
+          href="https://developer.chrome.google.cn/docs/css-ui/css-nesting?hl=it" /><link rel="alternate" hreflang="ja-cn"
+          href="https://developer.chrome.google.cn/docs/css-ui/css-nesting?hl=ja" /><link rel="alternate" hreflang="ko-cn"
+          href="https://developer.chrome.google.cn/docs/css-ui/css-nesting?hl=ko" /><link rel="alternate" hreflang="pl-cn"
+          href="https://developer.chrome.google.cn/docs/css-ui/css-nesting?hl=pl" /><link rel="alternate" hreflang="pt-BR-cn"
+          href="https://developer.chrome.google.cn/docs/css-ui/css-nesting?hl=pt-br" /><link rel="alternate" hreflang="ru-cn"
+          href="https://developer.chrome.google.cn/docs/css-ui/css-nesting?hl=ru" /><link rel="alternate" hreflang="es-419-cn"
+          href="https://developer.chrome.google.cn/docs/css-ui/css-nesting?hl=es-419" /><link rel="alternate" hreflang="th-cn"
+          href="https://developer.chrome.google.cn/docs/css-ui/css-nesting?hl=th" /><link rel="alternate" hreflang="tr-cn"
+          href="https://developer.chrome.google.cn/docs/css-ui/css-nesting?hl=tr" /><link rel="alternate" hreflang="vi-cn"
+          href="https://developer.chrome.google.cn/docs/css-ui/css-nesting?hl=vi" /><title>CSS Nesting &nbsp;|&nbsp; Chrome for Developers</title>
+
+<meta property="og:title" content="CSS Nesting &nbsp;|&nbsp; Chrome for Developers"><meta name="description" content="One of our favorite CSS preprocessor features is now built into the language: nesting style rules.">
+  <meta property="og:description" content="One of our favorite CSS preprocessor features is now built into the language: nesting style rules."><meta property="og:url" content="https://developer.chrome.com/docs/css-ui/css-nesting"><meta property="og:locale" content="en"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "dateModified": "2023-03-08",
+    "headline": "CSS Nesting"
+  }
+</script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+    
+      <link rel="stylesheet" href="/extras.css"></head>
+  <body class=""
+        template="page"
+        theme="chrome-theme"
+        type="article"
+        
+        
+        appearance
+        layout="docs"
+        
+        
+        
+        
+        display-toc
+        pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+    <section class="devsite-wrapper">
+      
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar>
+      <devsite-header role="banner">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner nocontent">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="chromeForDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme"
+            alt="Chrome for Developers">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup.svg" class="devsite-site-logo" alt="Chrome for Developers">
+  </picture>
+  
+</a>
+
+
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    
+    
+    tenant-name="Chrome for Developers"
+    
+    
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://developer.chrome.com/s/results" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Open search"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Search"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Search"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Close search"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+        
+
+        <devsite-appearance-selector></devsite-appearance-selector>
+
+        
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="nl"
+        >Nederlands</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+        
+
+        
+          
+          
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>Sign in</span>
+            
+        </devsite-user>
+           
+        
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+
+  
+</devsite-header>
+      <devsite-book-nav scrollbars hidden>
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     hidden>
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="Filter"
+         
+         aria-label="Type to filter"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="Clear filter"
+        aria-label="Clear filter"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent"
+     aria-label="Side menu">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  <a href="/" class="devsite-site-logo-link gc-analytics-event"
+   data-category="Site-Wide Custom Events" data-label="Site logo" track-type="globalNav"
+   track-name="chromeForDevelopers" track-metadata-position="nav"
+   track-metadata-eventDetail="nav">
+  
+  <picture>
+    
+    <source srcset="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup-dark-theme.svg"
+            media="(prefers-color-scheme: dark)"
+            class="devsite-dark-theme"
+            alt="Chrome for Developers">
+    
+    <img src="https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup.svg" class="devsite-site-logo" alt="Chrome for Developers">
+  </picture>
+  
+</a>
+
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+  </div>
+</nav>
+        
+      </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+            
+              
+              has-sidebar
+            >
+          
+          
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="On this page"
+                            depth="2"
+                            scrollbars
+                  ></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav">
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article">
+  
+  
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation">
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  >
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+  
+    
+  </div>
+  
+      <h1 class="devsite-page-title" tabindex="-1">CSS Nesting</h1>
+  <devsite-feature-tooltip
+          ack-key="AckCollectionsBookmarkTooltipDismiss"
+          analytics-category="Site-Wide Custom Events"
+          analytics-action-show="Callout Profile displayed"
+          analytics-action-close="Callout Profile dismissed"
+          analytics-label="Create Collection Callout"
+          class="devsite-page-bookmark-tooltip nocontent"
+          dismiss-button="true"
+          id="devsite-collections-dropdown"
+
+          
+          dismiss-button-text="Dismiss"
+
+          
+          close-button-text="Got it">
+
+        
+        <devsite-bookmark></devsite-bookmark>
+
+        <span slot="popout-heading">
+          
+          Stay organized with collections
+        </span>
+        <span slot="popout-contents">
+          
+          Save and categorize content based on your preferences.
+        </span>
+      </devsite-feature-tooltip>
+  <div class="devsite-page-title-meta"><devsite-view-release-notes></devsite-view-release-notes></div>
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    >
+  </devsite-toc>
+  
+    
+  
+
+  
+
+
+
+
+
+
+<div class="devsite-article-body clearfix
+  ">
+
+  
+    
+
+
+
+
+<p>One of our favorite CSS preprocessor features is now built into the language: nesting style rules.</p>
+
+<p><style>
+.wd-authors {
+  --avatar-size: 65px;
+  display: flex;
+  gap: 2em;
+}
+
+.wd-author {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  line-height: calc(var(--avatar-size) / 2);
+}
+
+.wd-author img {
+  border-radius: 50%;
+  height: var(--avatar-size, 65px);
+  width: var(--avatar-size, 65px);
+}
+
+.dcc-authors {
+  --avatar-size: 65px;
+  display: flex;
+  gap: 2em;
+}
+
+.dcc-author {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  line-height: calc(var(--avatar-size) / 2);
+}
+
+.dcc-author img {
+  border-radius: 50%;
+  height: var(--avatar-size, 65px);
+  width: var(--avatar-size, 65px);
+}
+
+.dcc-author__links a {
+  margin-inline-end: 6px;
+}
+
+.dcc-author__links a:last-of-type {
+  margin-inline-end: 0;
+}
+</style>
+
+<div class="dcc-authors" translate="no">
+  
+    
+    
+      <div class="dcc-author">
+        
+          <img class="devsite-landing-row-item-icon" alt="Adam Argyle" 
+            src="https://web.dev/images/authors/argyle.jpg" 
+            decoding="async" height="64" loading="lazy" width="64"> 
+        
+        <div>
+          <span> 
+            Adam Argyle
+          </span>
+          <div class="dcc-author__links">
+            
+              <a href="https://twitter.com/argyleink" aria-label="Adam Argyle on X">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 300 271">
+                  <title>X</title>
+                  <path fill="currentColor" d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z"></path>
+                </svg></a>
+            
+            
+              <a href="https://github.com/argyleink" aria-label="Adam Argyle on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 32.6 31.8">
+                  <title>GitHub</title>
+                  <path d="M16.3 0C7.3 0 0 7.3 0 16.3c0 7.2 4.7 13.3 11.1 15.5.8.1 1.1-.4 1.1-.8v-2.8c-4.5 1-5.5-2.2-5.5-2.2-.7-1.9-1.8-2.4-1.8-2.4-1.5-1 .1-1 .1-1 1.6.1 2.5 1.7 2.5 1.7 1.5 2.5 3.8 1.8 4.7 1.4.1-1.1.6-1.8 1-2.2-3.6-.4-7.4-1.8-7.4-8.1 0-1.8.6-3.2 1.7-4.4-.1-.3-.7-2 .2-4.2 0 0 1.4-.4 4.5 1.7 1.3-.4 2.7-.5 4.1-.5 1.4 0 2.8.2 4.1.5 3.1-2.1 4.5-1.7 4.5-1.7.9 2.2.3 3.9.2 4.3 1 1.1 1.7 2.6 1.7 4.4 0 6.3-3.8 7.6-7.4 8 .6.5 1.1 1.5 1.1 3V31c0 .4.3.9 1.1.8 6.5-2.2 11.1-8.3 11.1-15.5C32.6 7.3 25.3 0 16.3 0z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" />
+                </svg></a>
+            
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+    
+  
+</div></p>
+
+<p>Before nesting, every selector needed to be explicitly declared, separately from
+one another. This leads to repetition, stylesheet bulk and a scattered authoring
+experience.</p>
+
+<div class="dcc-compare">
+  <div class="compare-worse">Before</div>
+  <pre class="prettyprint lang-css" translate="no" dir="ltr">.nesting {
+  color: hotpink;
+}
+
+.nesting > .is {
+  color: rebeccapurple;
+}
+
+.nesting > .is > .awesome {
+  color: deeppink;
+}
+</pre>
+
+</div>
+
+<p>After <a href="https://www.w3.org/TR/css-nesting-1/">nesting</a>, selectors can be
+continued and related style rules to it can be grouped within.</p>
+
+<div class="dcc-compare">
+  <div class="compare-better">After</div>
+  <pre class="prettyprint lang-css" translate="no" dir="ltr">.nesting {
+  color: hotpink;
+
+  > .is {
+    color: rebeccapurple;
+
+    > .awesome {
+      color: deeppink;
+    }
+  }
+}
+</pre>
+
+</div>
+
+<p><a href="https://codepen.io/web-dot-dev/pen/RwYLRdr">Try this in browser</a>.</p>
+
+<p>Nesting helps developers by reducing the need to repeat selectors while also
+co-locating style rules for related elements. It can also help styles match the
+HTML they target. If the <code translate="no" dir="ltr">.nesting</code> component in the previous example was
+removed from the project, you could delete the entire group instead of searching
+files for related selector instances.</p>
+
+<p><strong>Nesting can help with:</strong>
+- Organization
+- Reducing file size
+- Refactoring</p>
+
+<!-- 
+  
+    
+    
+    
+    
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+   
+
+    
+    
+      
+      <div class="dcc-browser-compat">
+        <p>Browser Support</p>
+        <ul>
+          
+  
+  
+    
+      
+        
+          
+          
+        
+      
+    
+    
+  
+  <li
+    data-browser="chrome"
+    data-support="yes">120</li>
+  
+  
+          
+  
+  
+    
+      
+        
+          
+          
+        
+      
+    
+    
+  
+  <li
+    data-browser="edge"
+    data-support="yes">120</li>
+  
+  
+          
+  
+  
+    
+      
+        
+          
+          
+        
+      
+    
+    
+  
+  <li
+    data-browser="firefox"
+    data-support="yes">117</li>
+  
+  
+          
+  
+  
+    
+      
+        
+          
+          
+        
+      
+    
+    
+  
+  <li
+    data-browser="safari"
+    data-support="yes">17.2</li>
+  
+  
+        </ul>
+        
+        <p><a href="https://developer.mozilla.org/docs/Web/CSS/Nesting_selector">Source</a></p>
+        
+      </div>
+    
+    
+    
+   -->
+
+<p>Nesting is available from Chrome 112 and also available to <a href="https://webkit.org/blog/13813/try-css-nesting-today-in-safari-technology-preview/">try in Safari Technical Preview 162</a>.</p>
+
+<h2 id="getting_started_with_css_nesting" data-text="Getting started with CSS Nesting" tabindex="-1">Getting started with CSS Nesting</h2>
+
+<p>Throughout the rest of this post,the following demo sandbox is used to help you
+visualize the selections. In this default state, nothing is selected and
+everything is visible. By selecting the various shapes and sizes, you can
+practice the syntax and see it in action.</p>
+
+<p><img src="/static/docs/css-ui/css-nesting/image/a-colorful-grid-small-l-9a5c98ee59a19.png" alt="A colorful grid of small and large circles, triangles and squares." width="800" height="357" srcset="https://developer.chrome.com/static/docs/css-ui/css-nesting/image/a-colorful-grid-small-l-9a5c98ee59a19_36.png 36w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/a-colorful-grid-small-l-9a5c98ee59a19_48.png 48w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/a-colorful-grid-small-l-9a5c98ee59a19_72.png 72w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/a-colorful-grid-small-l-9a5c98ee59a19_96.png 96w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/a-colorful-grid-small-l-9a5c98ee59a19_480.png 480w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/a-colorful-grid-small-l-9a5c98ee59a19_720.png 720w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/a-colorful-grid-small-l-9a5c98ee59a19_856.png 856w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/a-colorful-grid-small-l-9a5c98ee59a19_960.png 960w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/a-colorful-grid-small-l-9a5c98ee59a19_1440.png 1440w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/a-colorful-grid-small-l-9a5c98ee59a19_1920.png 1920w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/a-colorful-grid-small-l-9a5c98ee59a19_2880.png 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<p>Inside the sandbox are circles, triangles, and squares. Some are small, medium
+or large. Others are blue, pink or purple. They&#39;re all inside the <code translate="no" dir="ltr">.demo</code>
+containing element. The following is a preview of the HTML elements you&#39;ll be
+targeting.</p>
+<pre class="prettyprint lang-html" translate="no" dir="ltr"><code translate="no" dir="ltr">&lt;div class=&#34;demo&#34;&gt;
+  &lt;div class=&#34;sm triangle pink&#34;&gt;&lt;/div&gt;
+  &lt;div class=&#34;sm triangle blue&#34;&gt;&lt;/div&gt;
+  &lt;div class=&#34;square blue&#34;&gt;&lt;/div&gt;
+  &lt;div class=&#34;sm square pink&#34;&gt;&lt;/div&gt;
+  &lt;div class=&#34;sm square blue&#34;&gt;&lt;/div&gt;
+  &lt;div class=&#34;circle pink&#34;&gt;&lt;/div&gt;
+  …
+&lt;/div&gt;
+</code></pre>
+<h3 id="nesting_examples" data-text="Nesting examples" tabindex="-1">Nesting examples</h3>
+
+<p>CSS nesting allows you to define styles for an element within the context of
+another selector.</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.parent {
+  color: blue;
+
+  .child {
+    color: red;
+  }
+}
+</code></pre>
+<p>In this example, the <code translate="no" dir="ltr">.child</code> <a href="https://web.dev/learn/css/selectors#class_selector">class selector</a> is nested within
+the <code translate="no" dir="ltr">.parent</code> class selector. This means that the nested <code translate="no" dir="ltr">.child</code> selector will
+only apply to elements that are children of elements with a <code translate="no" dir="ltr">.parent</code> class.</p>
+
+<p>This example could alternatively be written using the <code translate="no" dir="ltr">&amp;</code> symbol, to explicitly
+signify where the parent class should be placed.</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.parent {
+  color: blue;
+
+  &amp; .child {
+    color: red;
+  }
+}
+</code></pre>
+<p>These two examples are functionally equivalent and the reason you have options
+will become clearer as more advanced examples are explored in this article.</p>
+
+<h4 id="selecting_the_circles" data-text="Selecting the circles" tabindex="-1">Selecting the circles</h4>
+
+<p>For this first example, the task is to add styles to fade and blur just the
+circles inside the demo.</p>
+
+<p><strong>Without nesting</strong>, CSS today:</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.demo .circle {
+  opacity: .25;
+  filter: blur(25px);
+}
+</code></pre>
+<p><strong>With nesting</strong>, there are two valid ways:</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">/* &amp; is explicitly placed in front of .circle */
+.demo {
+  &amp; .circle {
+    opacity: .25;
+    filter: blur(25px);
+  }
+}
+</code></pre>
+<p>or</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">/* &amp; + &#34; &#34; space is added for you */
+.demo {
+  .circle {
+    opacity: .25;
+    filter: blur(25px);
+  }
+}
+</code></pre>
+<p><strong>The result</strong>, all the elements inside <code translate="no" dir="ltr">.demo</code> with a <code translate="no" dir="ltr">.circle</code> class are
+blurred out and nearly invisible:</p>
+
+<figure>
+  <img src="/static/docs/css-ui/css-nesting/image/the-colorful-grid-shapes-f1beac5a4a5be.png" alt="The colorful grid of shapes no longer has circles,
+    they're very faint in the background." width="800" height="419">
+
+  <figcaption class="dcc-caption">
+    <a href="https://codepen.io/web-dot-dev/pen/xxaXOvo">
+      Try a demo
+    </a>
+  </figcaption>
+</figure>
+
+<h4 id="selecting_any_triangles_and_squares" data-text="Selecting any triangles and squares" tabindex="-1">Selecting any triangles and squares</h4>
+
+<p>This task requires selecting multiple nested elements, also called a <a href="https://web.dev/learn/css/selectors#grouping_selectors">group selector</a>.</p>
+
+<p><strong>Without nesting</strong>, CSS today, there are two ways:</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.demo .triangle,
+.demo .square {
+  opacity: .25;
+  filter: blur(25px);
+}
+</code></pre>
+<p>or, using <a href="https://web.dev/learn/css/pseudo-classes#is"><code translate="no" dir="ltr">:is()</code></a></p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">/* grouped with :is() */
+.demo :is(.triangle, .square) {
+  opacity: .25;
+  filter: blur(25px);
+}
+</code></pre>
+<p><strong>With nesting</strong>, here are two valid ways:</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.demo {
+  &amp; .triangle,
+  &amp; .square {
+    opacity: .25;
+    filter: blur(25px);
+  }
+}
+</code></pre>
+<p>or</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.demo {
+  .triangle, .square {
+    opacity: .25;
+    filter: blur(25px);
+  }
+}
+</code></pre>
+<p><strong>The result</strong>, only <code translate="no" dir="ltr">.circle</code> elements remain inside <code translate="no" dir="ltr">.demo</code>:</p>
+
+<figure>
+  <img src="/static/docs/css-ui/css-nesting/image/the-colorful-grid-shapes-5baea09e41652.png" alt="The colorful grid of shapes is left with only circles,
+    all other shapes are nearly invisible." width="800" height="414">
+
+  <figcaption class="dcc-caption">
+    <a href="https://codepen.io/web-dot-dev/pen/XWPejbG">
+      Try a demo
+    </a>
+  </figcaption>
+</figure>
+
+<h4 id="selecting_large_triangles_and_circles" data-text="Selecting large triangles and circles" tabindex="-1">Selecting large triangles and circles</h4>
+
+<p>This task requires a <a href="https://web.dev/learn/css/selectors#compound_selectors">compound selector</a>, where
+elements must have both classes present in order to be selected.</p>
+
+<p><strong>Without nesting</strong>, CSS today:</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.demo .lg.triangle,
+.demo .lg.square {
+  opacity: .25;
+  filter: blur(25px);
+}
+</code></pre>
+<p>or</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.demo .lg:is(.triangle, .circle) {
+  opacity: .25;
+  filter: blur(25px);
+}
+</code></pre>
+<p><strong>With nesting</strong>, here are two valid ways:</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.demo {
+  .lg.triangle,
+  .lg.circle {
+    opacity: .25;
+    filter: blur(25px);
+  }
+}
+</code></pre>
+<p>or</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.demo {
+  .lg {
+    &amp;.triangle,
+    &amp;.circle {
+      opacity: .25;
+      filter: blur(25px);
+    }
+  }
+}
+</code></pre>
+<p><strong>The result</strong>, all the large triangles and circles are hidden inside <code translate="no" dir="ltr">.demo</code>:</p>
+
+<figure>
+  <img src="/static/docs/css-ui/css-nesting/image/the-colorful-grid-has-sm-5a9e56b5c62b4.png" alt="The colorful grid only has small and medium shapes visible." width="800" height="423" srcset="https://developer.chrome.com/static/docs/css-ui/css-nesting/image/the-colorful-grid-has-sm-5a9e56b5c62b4_36.png 36w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/the-colorful-grid-has-sm-5a9e56b5c62b4_48.png 48w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/the-colorful-grid-has-sm-5a9e56b5c62b4_72.png 72w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/the-colorful-grid-has-sm-5a9e56b5c62b4_96.png 96w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/the-colorful-grid-has-sm-5a9e56b5c62b4_480.png 480w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/the-colorful-grid-has-sm-5a9e56b5c62b4_720.png 720w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/the-colorful-grid-has-sm-5a9e56b5c62b4_856.png 856w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/the-colorful-grid-has-sm-5a9e56b5c62b4_960.png 960w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/the-colorful-grid-has-sm-5a9e56b5c62b4_1440.png 1440w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/the-colorful-grid-has-sm-5a9e56b5c62b4_1920.png 1920w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/the-colorful-grid-has-sm-5a9e56b5c62b4_2880.png 2880w" sizes="(max-width: 840px) 100vw, 856px">
+
+  <figcaption class="dcc-caption">
+    <a href="https://codepen.io/web-dot-dev/pen/WNgZGrz">
+      Try a demo
+    </a>
+  </figcaption>
+</figure>
+
+<h5 id="pro_tip_with_compound_selectors_and_nesting" data-text="Pro tip with compound selectors and nesting" tabindex="-1">Pro tip with compound selectors and nesting</h5>
+
+<p>The <code translate="no" dir="ltr">&amp;</code> symbol is your friend here as it shows explicitly how to adjoin nested
+selectors. Consider the following example:</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.demo {
+  .lg {
+    .triangle,
+    .circle {
+      opacity: .25;
+      filter: blur(25px);
+    }
+  }
+}
+</code></pre>
+<p>While a valid way to nest, the results won&#39;t match the elements you may expect.
+The reason is that without <code translate="no" dir="ltr">&amp;</code> to specify the desired outcome of <code translate="no" dir="ltr">.lg.triangle,
+.lg.circle</code> compounded together, the actual result would be <code translate="no" dir="ltr">.lg .triangle, .lg
+.circle</code>; <a href="https://web.dev/learn/css/selectors#descendant_combinator">descendant selectors</a>.</p>
+
+<aside class="key-term"><b>Key term:</b> Nesting classes without <code translate="no" dir="ltr">&amp;</code> will always result in descendant selectors.
+Use the <code translate="no" dir="ltr">&amp;</code> symbol to change that result.</aside>
+
+<h4 id="selecting_all_the_shapes_except_the_pink_ones" data-text="Selecting all the shapes except the pink ones" tabindex="-1">Selecting all the shapes except the pink ones</h4>
+
+<p>This task requires a <a href="https://web.dev/learn/css/pseudo-classes#not">negation functional pseudo class</a>, where elements must not
+have the specified selector.</p>
+
+<p><strong>Without nesting</strong>, CSS today:</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.demo :not(.pink) {
+  opacity: .25;
+  filter: blur(25px);
+}
+</code></pre>
+<p><strong>With nesting</strong>, here are two valid ways:</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.demo {
+  :not(.pink) {
+    opacity: .25;
+    filter: blur(25px);
+  }
+}
+</code></pre>
+<p>or</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.demo {
+  &amp; :not(.pink) {
+    opacity: .25;
+    filter: blur(25px);
+  }
+}
+</code></pre>
+<p><strong>The result</strong>, all the shapes that aren&#39;t pink are hidden inside <code translate="no" dir="ltr">.demo</code>:</p>
+
+<figure>
+  <img src="/static/docs/css-ui/css-nesting/image/the-colorful-grid-is-mon-0203fb32e8aea.png" alt="The colorful grid is now monochrome, only showing pink shapes." width="800" height="431" srcset="https://developer.chrome.com/static/docs/css-ui/css-nesting/image/the-colorful-grid-is-mon-0203fb32e8aea_36.png 36w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/the-colorful-grid-is-mon-0203fb32e8aea_48.png 48w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/the-colorful-grid-is-mon-0203fb32e8aea_72.png 72w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/the-colorful-grid-is-mon-0203fb32e8aea_96.png 96w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/the-colorful-grid-is-mon-0203fb32e8aea_480.png 480w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/the-colorful-grid-is-mon-0203fb32e8aea_720.png 720w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/the-colorful-grid-is-mon-0203fb32e8aea_856.png 856w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/the-colorful-grid-is-mon-0203fb32e8aea_960.png 960w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/the-colorful-grid-is-mon-0203fb32e8aea_1440.png 1440w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/the-colorful-grid-is-mon-0203fb32e8aea_1920.png 1920w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/the-colorful-grid-is-mon-0203fb32e8aea_2880.png 2880w" sizes="(max-width: 840px) 100vw, 856px">
+
+  <figcaption class="dcc-caption">
+    <a href="https://codepen.io/web-dot-dev/pen/VwGMKKj">
+      Try a demo
+    </a>
+  </figcaption>
+</figure>
+
+<h5 id="precision_and_flexibility_with_" data-text="Precision and flexibility with &amp;" tabindex="-1">Precision and flexibility with <code translate="no" dir="ltr">&amp;</code></h5>
+
+<p>Say you wanted to target <code translate="no" dir="ltr">.demo</code> with the <code translate="no" dir="ltr">:not()</code> selector. <code translate="no" dir="ltr">&amp;</code> <strong>is required</strong> for
+that:</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.demo {
+  &amp;:not() {
+    ...
+  }
+}
+</code></pre>
+<p>This compounds <code translate="no" dir="ltr">.demo</code> and <code translate="no" dir="ltr">:not()</code> to <code translate="no" dir="ltr">.demo:not()</code>, as opposed to the previous
+example which needed <code translate="no" dir="ltr">.demo :not()</code>. This reminder is made very important when
+wanting to nest a <code translate="no" dir="ltr">:hover</code> interaction.</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.demo {
+  &amp;:hover {
+    /* .demo:hover */
+  }
+
+  :hover {
+    /* .demo :hover */
+  }
+}
+</code></pre>
+<h3 id="more_nesting_examples" data-text="More nesting examples" tabindex="-1">More nesting examples</h3>
+
+<p>The <a href="https://www.w3.org/TR/css-nesting-1/">CSS specification for nesting</a> is
+packed with more examples. If you&#39;re looking to learn more about the syntax
+through examples, it covers a wide range of valid and invalid examples.</p>
+
+<p>The next few examples will briefly introduce a CSS nesting feature, to help you
+understand the breadth of capabilities it introduces.</p>
+
+<h4 id="nesting_media" data-text="Nesting @media" tabindex="-1">Nesting @media</h4>
+
+<p>It can be very distracting to move to a different area of the stylesheet to find
+media query conditions that modify a selector and its styles. That distraction
+is gone with the ability to nest the conditions right inside the context.</p>
+
+<p>For syntax convenience, if the nested media query is only modifying the styles
+for the current selector context, then a minimal syntax can be used.</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.card {
+  font-size: 1rem;
+
+  @media (width &gt;= 1024px) {
+    font-size: 1.25rem;
+  }
+}
+</code></pre>
+<p>Using <code translate="no" dir="ltr">&amp;</code> explicitly can also be used:</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.card {
+  font-size: 1rem;
+
+  @media (width &gt;= 1024px) {
+    &amp;.large {
+      font-size: 1.25rem;
+    }
+  }
+}
+</code></pre>
+<p>This example shows the expanded syntax with <code translate="no" dir="ltr">&amp;</code>, while also targeting <code translate="no" dir="ltr">.large</code>
+cards to demonstrate additional nesting features continue working.</p>
+
+<p>Learn more about <a href="https://www.w3.org/TR/css-nesting-1/#conditionals">nesting @rules</a>.</p>
+
+<h4 id="nesting_anywhere" data-text="Nesting anywhere" tabindex="-1">Nesting anywhere</h4>
+
+<p>All examples up to this point have continued or appended to a previous context.
+You can completely change or rearrange the context if needed.</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.card {
+  .featured &amp; {
+    /* .featured .card */
+  }
+}
+</code></pre>
+<p>The <code translate="no" dir="ltr">&amp;</code> symbol represents a reference to a selector object (not a string) and
+can be placed anywhere in a nested selector. It can even be placed multiple
+times:</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.card {
+  .featured &amp; &amp; &amp; {
+    /* .featured .card .card .card */
+  }
+}
+</code></pre>
+<p>While this example is a bit useless looking, there are certainly scenarios where
+being able to repeat a selector context is handy.</p>
+
+<h3 id="invalid_nesting_examples" data-text="Invalid nesting examples" tabindex="-1">Invalid nesting examples</h3>
+
+<p>There are a few nesting syntax scenarios that are invalid and may surprise you
+if you&#39;ve been nesting in preprocessors. </p>
+
+<h4 id="nesting_and_concatenation" data-text="Nesting and concatenation" tabindex="-1">Nesting and concatenation</h4>
+
+<p>Many CSS class naming conventions count on nesting being able to concatenate or
+append selectors as if they were strings. This does not work in CSS nesting as
+the selectors are not strings, they&#39;re object references.</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.card {
+  &amp;--header {
+    /* is not equal to &#34;.card--header&#34; */
+  }
+}
+</code></pre>
+<p>A more in depth explanation can be found in <a href="https://www.w3.org/TR/css-nesting-1/#conditionals:%7E:text=Some%20CSS%2Dgenerating%20tools%20that%20preprocess%20nesting%20will%20concatenate%20selectors%20as%20strings%2C">the spec</a>.</p>
+
+<h3 id="tricky_nesting_example" data-text="Tricky nesting example" tabindex="-1">Tricky nesting example</h3>
+
+<h4 id="nesting_within_selector_lists_and_is" data-text="Nesting within selector lists and :is()" tabindex="-1">Nesting within selector lists and <code translate="no" dir="ltr">:is()</code></h4>
+
+<p>Consider the following nesting CSS block:</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.one, #two {
+  .three {
+    /* some styles */
+  }
+}
+</code></pre>
+<p>This is the first example that begins with a <a href="https://developer.mozilla.org/docs/Web/CSS/Selector_list">selector list</a> and then continues to nest further. Previous examples had only ended with a selector list. There&#39;s nothing invalid in this nesting example, but there is a potentially tricky implementation detail about nesting inside selector lists, especially those which include an ID selector.</p>
+
+<p>In order for the intent of the nesting to work, any selector list that isn&#39;t the inner most nesting, will be wrapped with <code translate="no" dir="ltr">:is()</code> by the browser. This wrapping maintains the grouping of the selector list within any authored contexts. The side effect of this grouping, <code translate="no" dir="ltr">:is(.one, #two)</code>, is that it adopts the specificity of the highest score within the selectors within the parenthesis. This is how <code translate="no" dir="ltr">:is()</code> always <a href="https://web.dev/articles/css-is-and-where">works</a>, but may be a surprise when using nesting syntax because it&#39;s not exactly what was authored. The trick summarized; nesting with IDs and selector lists can lead to very high specificity selectors.</p>
+
+<p>To clearly recap the tricky example, the previous nesting block will be applied to the document as this:</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">:is(.one, #two) .three {
+  /* some styles */
+}
+</code></pre>
+<p>Keep an eye out or teach your linters to warn when nesting inside a selector list that&#39;s using an ID selector, the specificity of all nesting within that selector list will be high.</p>
+
+<h4 id="mixing_nesting_and_declarations" data-text="Mixing nesting and declarations" tabindex="-1">Mixing nesting and declarations</h4>
+
+<p>Consider the following nesting CSS block:</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.card {
+  color: green;
+  &amp; { color: blue; }
+  color: red;
+}
+</code></pre>
+<p>The color of <code translate="no" dir="ltr">.card</code> elements will be <code translate="no" dir="ltr">blue</code>.</p>
+
+<p>Any intermixed style declarations are hoisted to the top, as if they were
+authored before any nesting occurred. More details can be found in <a href="https://www.w3.org/TR/css-nesting-1/#mixing">the spec</a>.</p>
+
+<p>There are ways around it. The following wraps the three color styles in <code translate="no" dir="ltr">&amp;</code>, which
+maintains the cascade order as the author may have intended. The color of
+<code translate="no" dir="ltr">.card</code> elements will be red.</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.card {
+  color: green;
+  &amp; { color: blue; }
+  &amp; { color: red; }
+}
+</code></pre>
+<p>In fact, it&#39;s good practice to wrap any styles that follow nesting with an <code translate="no" dir="ltr">&amp;</code>.</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">.card {
+  color: green;
+
+  @media (prefers-color-scheme: dark) {
+    color: lightgreen;
+  }
+
+  &amp; {
+    aspect-ratio: 4/3;
+  }
+}
+</code></pre>
+<h2 id="feature_detection" data-text="Feature detection" tabindex="-1">Feature detection</h2>
+
+<p>There are two great ways to feature detect CSS nesting: use nesting or use
+<code translate="no" dir="ltr">@supports</code> to check for nesting selector parsing capability.</p>
+
+<p><img src="/static/docs/css-ui/css-nesting/image/a-screenshot-bramuss-co-b46bdb4e0b4bd.png" alt="A screenshot of Bramus's Codepen demo, asking if your browser supports
+  CSS nesting. Under that question is a green box, signaling support." width="800" height="238"></p>
+
+<p>Using nesting:</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">html {
+  .has-nesting {
+    display: block;
+  }
+
+  .no-nesting {
+    display: none;
+  }
+}
+</code></pre>
+<p>Using <code translate="no" dir="ltr">@supports</code>:</p>
+<pre class="prettyprint lang-css" translate="no" dir="ltr"><code translate="no" dir="ltr">@supports (selector(&amp;)) {
+  /* nesting parsing available */
+}
+</code></pre>
+<p>My colleague <a href="https://www.bram.us/about/">Bramus</a> has a <a href="https://codepen.io/bramus/pen/oNdrypM">great Codepen</a> showing this strategy.</p>
+
+<h2 id="debugging_with_chrome_devtools" data-text="Debugging with Chrome DevTools" tabindex="-1">Debugging with Chrome DevTools</h2>
+
+<p>Current support in DevTools for nesting is minimal. Currently you will find
+styles are represented in the Styles pane as expected, but tracing the nesting
+and its full selector context is not yet supported. We have design and plans to
+make this transparent and clear.</p>
+
+<p><img src="/static/docs/css-ui/css-nesting/image/a-screenshot-chrome-devt-fbd9f71852d23.png" alt="A screenshot of Chrome DevTools nesting syntax." width="306" height="124" srcset="https://developer.chrome.com/static/docs/css-ui/css-nesting/image/a-screenshot-chrome-devt-fbd9f71852d23_36.png 36w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/a-screenshot-chrome-devt-fbd9f71852d23_48.png 48w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/a-screenshot-chrome-devt-fbd9f71852d23_72.png 72w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/a-screenshot-chrome-devt-fbd9f71852d23_96.png 96w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/a-screenshot-chrome-devt-fbd9f71852d23_480.png 480w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/a-screenshot-chrome-devt-fbd9f71852d23_720.png 720w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/a-screenshot-chrome-devt-fbd9f71852d23_856.png 856w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/a-screenshot-chrome-devt-fbd9f71852d23_960.png 960w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/a-screenshot-chrome-devt-fbd9f71852d23_1440.png 1440w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/a-screenshot-chrome-devt-fbd9f71852d23_1920.png 1920w,https://developer.chrome.com/static/docs/css-ui/css-nesting/image/a-screenshot-chrome-devt-fbd9f71852d23_2880.png 2880w" sizes="(max-width: 840px) 100vw, 856px"></p>
+
+<p>Chrome 113 plans to have additional support for CSS nesting. Stay tuned.</p>
+
+<h2 id="the_future" data-text="The future" tabindex="-1">The future</h2>
+
+<p><a href="https://www.w3.org/TR/css-nesting-1/">CSS Nesting</a> is only at version 1.
+Version 2 will introduce more syntactic sugar and potentially fewer rules to
+memorize. There&#39;s a lot of demand for the parsing of nesting to not be limited
+or have tricky moments.</p>
+
+<p><strong>Nesting is a big enhancement to the CSS language.</strong> It has authoring implications
+to almost every architectural aspect of CSS. This big impact needs to be deeply
+explored and understood before version 2 can effectively be specified.</p>
+
+<p>As a final thought, <a href="https://codepen.io/argyleink/pen/GRBMXyR">here&#39;s a demo</a>
+that uses <code translate="no" dir="ltr">@scope</code>, nesting, and <code translate="no" dir="ltr">@layer</code> all together. It&#39;s all very exciting!</p>
+
+<p><img src="/static/docs/css-ui/css-nesting/image/a-light-card-a-gray-back-e00900e741eaa.png" alt="A light card on a gray background. The card has a title and text,
+  a few action buttons, and a cyber punk style image." width="800" height="460"></p>
+
+  
+
+  
+</div>
+
+  
+
+  
+    
+    
+      
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+  
+       
+    
+    
+  
+
+  
+  
+</article>
+
+
+<devsite-content-footer class="nocontent">
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  <p>Last updated 2023-03-08 UTC.</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  <template class="devsite-thumb-rating-down-categories">
+  [{
+      "type": "thumb-down",
+      "id": "missingTheInformationINeed",
+      "label":"Missing the information I need"
+    },{
+      "type": "thumb-down",
+      "id": "tooComplicatedTooManySteps",
+      "label":"Too complicated / too many steps"
+    },{
+      "type": "thumb-down",
+      "id": "outOfDate",
+      "label":"Out of date"
+    },{
+      "type": "thumb-down",
+      "id": "samplesCodeIssue",
+      "label":"Samples / code issue"
+    },{
+      "type": "thumb-down",
+      "id": "otherDown",
+      "label":"Other"
+    }]
+  </template>
+  <template class="devsite-thumb-rating-up-categories">
+  [{
+      "type": "thumb-up",
+      "id": "easyToUnderstand",
+      "label":"Easy to understand"
+    },{
+      "type": "thumb-up",
+      "id": "solvedMyProblem",
+      "label":"Solved my problem"
+    },{
+      "type": "thumb-up",
+      "id": "otherUp",
+      "label":"Other"
+    }]
+  </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent" aria-label="Footer links">
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent">
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Utility links">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          Terms
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privacy
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="nl"
+        >Nederlands</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel></devsite-panel>
+        
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar
+    
+    >
+</devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics analytics-iframe enable-cb>
+      
+        <script type="application/json" analytics>[]</script>
+<script type="application/json" tag-management>{&#34;ga4&#34;: [], &#34;ga4p&#34;: [], &#34;gtm&#34;: [{&#34;id&#34;: &#34;GTM-5QF3RT2&#34;, &#34;purpose&#34;: 0}], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;False&#34;, &#34;requested&#34;: &#34;en&#34;, &#34;served&#34;: &#34;en&#34;}, &#34;pageType&#34;: &#34;article&#34;, &#34;projectName&#34;: null, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;chrome&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    <script nonce="6X9OSJDilRady5T/uP6CS3/ZTfgfwF">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/js/app_loader.js', '[53,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome","https://chrome-dot-devsite-v2-prod-3p.appspot.com",1,null,["/_pwa/chrome/manifest.json","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/favicon.png","https://www.gstatic.com/devrel-devsite/prod/v66c4dc9b65fea2172a0927d7be81b5b5d946ea60fc02578dd7c264b2c2852152/chrome/images/lockup.svg","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,112,113,116,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,147,148,149,151,152,156,157,158,159,161,163,164,168,169,170,179,180,182,183,186,191,193,196],"AIzaSyCNm9YxQumEXwGJgTDjxoxXK6m1F-9720Q","AIzaSyCc76DZePGtoyUjqKrLdsMGk_ry7sljLbY","developer.chrome.com","AIzaSyB9bqgQ2t11WJsOX8qNsCQ6U-w91mmqF-I","AIzaSyAdYnStPdzjcJJtQ0mvIaeaMKj7_t6J_Fg",null,null,null,["Search__enable_ai_eligibility_checks","Cloud__enable_free_trial_server_call","Experiments__reqs_query_experiments","Search__enable_faceted_search","Search__enable_page_map","Cloud__enable_cloudx_experiment_ids","MiscFeatureFlags__enable_new_sitemap","MiscFeatureFlags__developers_footer_image","CloudShell__cloud_code_overflow_menu","Profiles__enable_public_developer_profiles","Cloud__enable_cloud_dlp_service","TpcFeatures__enable_mirror_tenant_redirects","Cloud__enable_cloud_shell","Profiles__enable_profile_collections","Analytics__enable_cookie_bar","Profiles__enable_developer_profiles_callout","Profiles__enable_awarding_url","MiscFeatureFlags__developers_footer_dark_image","BookNav__enable_tenant_cache_key","Profiles__require_profile_eligibility_for_signin","MiscFeatureFlags__enable_explain_this_code","EngEduTelemetry__enable_engedu_telemetry","Search__enable_dynamic_content_confidential_banner","Search__enable_suggestions_from_borg","Cloud__enable_cloud_shell_fte_user_flow","Concierge__enable_pushui","CloudShell__cloud_shell_button","Profiles__enable_release_notes_notifications","MiscFeatureFlags__enable_variable_operator","Profiles__enable_page_saving","Cloud__enable_cloudx_ping","MiscFeatureFlags__emergency_css","Cloud__enable_cloud_facet_chat","MiscFeatureFlags__enable_project_variables","MiscFeatureFlags__enable_firebase_utm","OnSwitch__enable"],null,null,"AIzaSyA58TaKli1DculwmAmbpzLVGuWc8eCQgQc","https://developerscontentserving-pa.googleapis.com","AIzaSyDWBU60w0P9hEkr29kkksYs8Z7gvZ8u_wc","https://developerscontentsearch-pa.googleapis.com",2,4]')
+  
+</script>
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>
